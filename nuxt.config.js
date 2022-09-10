@@ -38,7 +38,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/contentful", 
-    "~/plugins/posts"
+    "~/plugins/members",
+    "~/plugins/cases",
   ],
 
   // Contentful
@@ -54,11 +55,15 @@ export default {
       return Promise.all([
         client.getEntries({
           content_type: "member"
-        })
+        }),
+        client.getEntries({
+          content_type: "cases"
+        }),
       ]).then(([member]) => {
-        return [...member.items.map(entry => entry.fields.slug)];
+        return [...member.items.map(entry => entry.fields.slug), ...cases.items.map(entry => entry.fields.slug)];
       });
-    }
+    },
+    
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components

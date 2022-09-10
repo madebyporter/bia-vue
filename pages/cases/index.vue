@@ -5,9 +5,9 @@
     </section>
     <section class="content" >
       <ul>
-        <li v-for="member in members" :key="member.fields.slug">
-          <h2><NuxtLink :to="/collective/+`${member.fields.slug}`">{{ member.fields.name }}</NuxtLink></h2>
-          <p>{{ member.fields.title }}</p>
+        <li v-for="c in cases" :key="c.fields.slug">
+          <h2><NuxtLink :to="/cases/+`${c.fields.slug}`">{{ c.fields.title }}</NuxtLink></h2>
+          <p>{{ c.fields.summary }}</p>
         </li>
       </ul>
     </section>
@@ -18,7 +18,7 @@
   export default {
     data() {
       return {
-        title: 'Collective'
+        title: 'Cases'
       }
     },
     head() {
@@ -34,8 +34,8 @@
       }
     },
     computed: {
-      members() {
-        return this.$store.state.memberData.members;
+      cases() {
+        return this.$store.state.caseData.cases;
       }
     },
   }

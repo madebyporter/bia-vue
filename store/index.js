@@ -1,25 +1,15 @@
-import client from "~/plugins/contentful";
+import Vuex from "vuex";
+import members from '/store/members';
+import cases from '/store/cases';
 
-export const state = () => ({
- posts: null
-});
-
-export const mutations = {
- updatePosts: (state, posts) => {
-   state.posts = posts;
- }
+const store = () => {
+  return new Vuex.Store({
+    namespaced: true,
+    modules: {
+      memberData: members,
+      caseData: cases
+    }
+  });
 };
 
-export const actions = {
- async getPosts({ commit }) {
-   try {
-     if (!client) return;
-     const response = await client.getEntries({
-       content_type: "member"
-     });
-     if (response.items.length > 0) commit("updatePosts", response.items);
-   } catch (err) {
-     console.error(err);
-   }
- }
-};
+export default store
