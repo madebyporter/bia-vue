@@ -47,23 +47,14 @@ export default {
   },
 
   generate: {
-    async routes() {
-      const contentPaths = ['member'];
-
-      const files = [];
-      contentPaths.forEach(async (path) => {
-        const file = await $content(path).fetch();
-        files.push(file);
+    routes() {
+      return Promise.all([
+        client.getEntries({
+          content_type: "member"
+        })
+      ]).then(([member]) => {
+        return [...member.items.map(entry => entry.fields.slug)];
       });
-
-      const generated = files.map((file) => {
-        return {
-          route: file.path === '/index' ? '/' : file.path,
-          payload: fs.readFileSync(`./collective/${file.path}${file.extension}`, 'utf-8'),
-        };
-      });
-
-      return generated;
     }
   },
 
