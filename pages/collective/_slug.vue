@@ -18,7 +18,7 @@
       <h2>Disciplines:</h2>
       <ul>
         <li v-for="discipline in post.fields.disciplines">
-          {{ discipline }}
+          {{ discipline.fields.title }}
         </li>
       </ul>
     </div>
