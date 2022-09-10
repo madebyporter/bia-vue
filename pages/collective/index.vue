@@ -36,7 +36,7 @@
     computed: {
       members() {
         return this.$store.state.memberData.members;
-      }
+      },
     },
   }
 </script>
