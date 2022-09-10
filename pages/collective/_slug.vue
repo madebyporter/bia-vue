@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <h1>{{ post.fields.name }}</h1>
     <p>{{ post.fields.title }}</p>
   </section>
