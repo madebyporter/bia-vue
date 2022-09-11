@@ -7,6 +7,29 @@ const client = contentful.createClient({
  accessToken: process.env.CONTENTFUL_ACCESSTOKEN
 });
 
+const dynamicRoutes = async () => {
+  // Fetch Members
+  const memberRoute = Promise.all([
+    client.getEntries({
+      content_type: "member"
+    })
+  ]).then(([member]) => {
+    return [...member.items.map(entry => entry.fields.slug)];
+  })
+
+  // Fetch Cases
+  const casesRoute = Promise.all([
+    client.getEntries({
+      content_type: "cases"
+    })
+  ]).then(([cases]) => {
+    return [...cases.items.map(entry => entry.fields.slug)];
+  })
+
+  const routes = memberRoute.concat(caseRoute)
+  return routes
+}
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -51,19 +74,7 @@ export default {
 
   generate: {
     fallback: true,
-    routes() {
-      return Promise.all([
-        client.getEntries({
-          content_type: "member"
-        }),
-        client.getEntries({
-          content_type: "cases"
-        }),
-      ]).then(([member]) => {
-        return [...member.items.map(entry => entry.fields.slug), ...cases.items.map(entry => entry.fields.slug)];
-      });
-    },
-    
+    routes: dynamicRoutes
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
