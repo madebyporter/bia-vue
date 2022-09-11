@@ -26,7 +26,7 @@ const dynamicRoutes = async () => {
     return [...cases.items.map(entry => entry.fields.slug)];
   })
 
-  const routes = memberRoute.concat(caseRoute)
+  const routes = memberRoute.concat(casesRoute)
   return routes
 }
 
