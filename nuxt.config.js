@@ -26,7 +26,16 @@ const dynamicRoutes = async () => {
     return [...cases.items.map(entry => entry.fields.slug)];
   })
 
-  return memberRoute, casesRoute
+  // Fetch Ventures
+  const venturesRoute = Promise.all([
+    client.getEntries({
+      content_type: "ventures"
+    })
+  ]).then(([ventures]) => {
+    return [...ventures.items.map(entry => entry.fields.slug)];
+  })
+
+  return memberRoute, casesRoute, venturesRoute
 }
 
 export default {
@@ -62,6 +71,7 @@ export default {
     "~/plugins/contentful", 
     "~/plugins/members",
     "~/plugins/cases",
+    "~/plugins/ventures"
   ],
 
   // Contentful

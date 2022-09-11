@@ -47,6 +47,20 @@
       </div>
     </div>
 
+    <div>
+      <h2>Ventures:</h2>
+      <div v-for="venture in ventures">
+        <div v-for="team in venture.fields.team">
+          <ul v-if="team.fields.slug === member.fields.slug">
+            <li :key="venture.fields.slug">
+              <h2><NuxtLink :to="/cases/+`${venture.fields.slug}`">{{ venture.fields.title }}</NuxtLink></h2>
+              <p>{{ venture.fields.summary }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     
   </section>
 </template>
@@ -67,6 +81,9 @@
       },
       cases() {
         return this.$store.state.caseData.cases;
+      },
+      ventures() {
+        return this.$store.state.ventureData.ventures;
       }
     },
     head() {
