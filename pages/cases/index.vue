@@ -7,6 +7,7 @@
       <ul>
         <li v-for="c in cases" :key="c.fields.slug">
           <h2><NuxtLink :to="/cases/+`${c.fields.slug}`">{{ c.fields.title }}</NuxtLink></h2>
+          <p>{{ c.fields.type }}</p>
           <p>{{ c.fields.summary }}</p>
         </li>
       </ul>

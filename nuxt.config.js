@@ -35,6 +35,15 @@ const dynamicRoutes = async () => {
     return [...ventures.items.map(entry => entry.fields.slug)];
   })
 
+  // Fetch Journal
+  const journalRoute = Promise.all([
+    client.getEntries({
+      content_type: "journal"
+    })
+  ]).then(([ventures]) => {
+    return [...journal.items.map(entry => entry.fields.slug)];
+  })
+
   return memberRoute, casesRoute, venturesRoute
 }
 
@@ -71,7 +80,8 @@ export default {
     "~/plugins/contentful", 
     "~/plugins/members",
     "~/plugins/cases",
-    "~/plugins/ventures"
+    "~/plugins/ventures",
+    "~/plugins/journal"
   ],
 
   // Contentful
@@ -97,7 +107,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/markdownit'
   ],
+
+  // Markdown
+  markdownit: {
+    runtime: true // Support `$md()`
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

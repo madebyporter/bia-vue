@@ -1,6 +1,7 @@
 <template>
   <section>
     <h1>{{ cases.fields.title }}</h1>
+    <p v-if="cases.fields.type">{{ cases.fields.type }}</p>
     <p v-if="cases.fields.summary">{{ cases.fields.summary }}</p>
     <div v-if="cases.fields.delivarables">
       <h2>Deliverables:</h2>
