@@ -1,9 +1,9 @@
 <template>
-  <section>
-    <section class="hero">
+  <section class="section">
+    <div class="hero content-full">
       <h1>{{title}}</h1>
-    </section>
-    <section class="content" >
+    </div>
+    <div class="content-full">
       <ul>
         <li v-for="c in cases" :key="c.fields.slug">
           <h2><NuxtLink :to="/cases/+`${c.fields.slug}`">{{ c.fields.title }}</NuxtLink></h2>
@@ -11,7 +11,7 @@
           <p>{{ c.fields.summary }}</p>
         </li>
       </ul>
-    </section>
+    </div>
   </section>
 </template>
 

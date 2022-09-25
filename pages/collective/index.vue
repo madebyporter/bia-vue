@@ -1,16 +1,16 @@
 <template>
-  <section>
-    <section class="hero">
+  <section class="section">
+    <div class="hero content-full">
       <h1>{{title}}</h1>
-    </section>
-    <section class="content" >
+    </div>
+    <div class="content content-full">
       <ul>
         <li v-for="member in members" :key="member.fields.slug">
           <h2><NuxtLink :to="/collective/+`${member.fields.slug}`">{{ member.fields.name }}</NuxtLink></h2>
           <p>{{ member.fields.title }}</p>
         </li>
       </ul>
-    </section>
+    </div>
   </section>
 </template>
 

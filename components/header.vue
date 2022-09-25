@@ -1,8 +1,8 @@
 <template>
   <header class="global-header">
-    <div class="global-header--logo">
+    <NuxtLink to="/" class="global-header--logo">
       <Logo />
-    </div>
+    </NuxtLink>
     <nav class="global-header--nav">
       <NuxtLink to="/collective">Collective</NuxtLink>
       <NuxtLink to="/cases">Cases</NuxtLink>

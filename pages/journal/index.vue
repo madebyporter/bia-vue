@@ -1,9 +1,9 @@
 <template>
-  <section>
-    <section class="hero">
+  <section class="section">
+    <div class="hero content-full">
       <h1>{{title}}</h1>
-    </section>
-    <section class="content" >
+    </div>
+    <div class="content-full">
       <ul>
         <li v-for="journal in journal" :key="journal.fields.slug">
           <h2><NuxtLink :to="/journal/+`${journal.fields.slug}`">{{ journal.fields.title }}</NuxtLink></h2>
@@ -29,7 +29,7 @@
           <div v-html="$md.render(journal.fields.content)"></div>
         </li>
       </ul>
-    </section>
+    </div>
   </section>
 </template>
 

@@ -1,44 +1,44 @@
 <template>
-  <section>
-    <h1>{{ venture.fields.title }}</h1>
-    <p v-if="venture.fields.summary">{{ venture.fields.summary }}</p>
-    <div v-if="venture.fields.delivarables">
-      <h2>Deliverables:</h2>
-      <ul>
-        <li v-for="delivarables in venture.fields.delivarables">
-          {{ delivarables }}
-        </li>
-      </ul>
-    </div>
-    <div v-if="venture.fields.team">
-      <h2>Team:</h2>
-      <ul>
-        <li v-for="team in venture.fields.team">
-          {{ team.fields.name }}
-        </li>
-      </ul>
-    </div>
-    <div v-if="venture.fields.disciplines">
-      <h2>Disciplines:</h2>
-      <ul>
-        <li v-for="disciplines in venture.fields.disciplines">
-          {{ disciplines.fields.title }}
-        </li>
-      </ul>
-    </div>
-    
-    <p v-if="venture.fields.featuredImage"><img :src="`${venture.fields.featuredImage.fields.file.url}`" /></p>
+  <section class="section">
+    <div class="content-full">
+      <h1>{{ venture.fields.title }}</h1>
+      <p v-if="venture.fields.summary">{{ venture.fields.summary }}</p>
+      <div v-if="venture.fields.delivarables">
+        <h2>Deliverables:</h2>
+        <ul>
+          <li v-for="delivarables in venture.fields.delivarables">
+            {{ delivarables }}
+          </li>
+        </ul>
+      </div>
+      <div v-if="venture.fields.team">
+        <h2>Team:</h2>
+        <ul>
+          <li v-for="team in venture.fields.team">
+            {{ team.fields.name }}
+          </li>
+        </ul>
+      </div>
+      <div v-if="venture.fields.disciplines">
+        <h2>Disciplines:</h2>
+        <ul>
+          <li v-for="disciplines in venture.fields.disciplines">
+            {{ disciplines.fields.title }}
+          </li>
+        </ul>
+      </div>
+      
+      <p v-if="venture.fields.featuredImage"><img :src="`${venture.fields.featuredImage.fields.file.url}`" /></p>
 
-    <div v-if="venture.fields.postImages">
-      <h2>postImages:</h2>
-      <ul>
-        <li v-for="postImage in venture.fields.postImages">
-          <img :src="`${postImage.fields.file.url}`" />
-        </li>
-      </ul>
+      <div v-if="venture.fields.postImages">
+        <h2>postImages:</h2>
+        <ul>
+          <li v-for="postImage in venture.fields.postImages">
+            <img :src="`${postImage.fields.file.url}`" />
+          </li>
+        </ul>
+      </div>
     </div>
-
-    
   </section>
 </template>
 
