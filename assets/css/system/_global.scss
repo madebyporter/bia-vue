@@ -1,0 +1,44 @@
+// Header
+  .global-header {
+    @extend .grid;
+    border-bottom: 1px solid $clGrayLight;
+    padding: $sp20 0;
+  }
+  .global-header--logo {
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(2,2);
+    }
+    svg {
+      height: 40px;
+      width: 86px;
+    }
+  }
+  .global-header--nav {
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(4,6);
+      display: flex;
+      align-items: center;
+      gap: $sp40;
+    }
+  }
+  .global-header--partner {
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(10,2);
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:before {
+        background: $clGreen;
+        content: "";
+        border-radius: 24px;
+        position: absolute;
+        height: 24px;
+        width: 24px;
+      }
+      a {
+        padding: 0 0 0 34px;
+        position: relative;
+        text-decoration: underline;
+      }
+    }
+  }

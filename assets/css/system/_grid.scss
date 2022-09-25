@@ -1,0 +1,14 @@
+.grid {
+  display: block;
+  @media screen and (min-width: $ssPhone) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+@mixin grid-column($start, $span) {
+  grid-column: $start / span $span;
+}
+
+

@@ -1,6 +1,8 @@
 <template>
-  <section>
-    <h1>Hello world!</h1>
+  <section class="section">
+    <div class="content-full">
+      <h1>Hello world!</h1>
+    </div>
   </section>
 </template>
 
