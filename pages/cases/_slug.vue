@@ -12,19 +12,28 @@
           </li>
         </ul>
       </aside>
-      <aside v-if="cases.fields.team">
+      <aside>
         <h2>Team:</h2>
         <ul>
-          <li v-for="team in cases.fields.team">
-            {{ team.fields.name }}
+          <li v-if="cases.fields.teamMemberA">
+            <p v-if="cases.fields.teamMemberA.fields.avatar"><img :src="`${cases.fields.teamMemberA.fields.avatar.fields.file.url}`" /></p>
+            <h3>{{ cases.fields.teamMemberA.fields.name }}</h3>
+            <p>{{ cases.fields.teamRoleA.fields.title }}</p>
           </li>
-        </ul>
-      </aside>
-      <aside v-if="cases.fields.disciplines">
-        <h2>Disciplines:</h2>
-        <ul>
-          <li v-for="disciplines in cases.fields.disciplines">
-            {{ disciplines.fields.title }}
+          <li v-if="cases.fields.teamMemberB">
+            <p v-if="cases.fields.teamMemberB.fields.avatar"><img :src="`${cases.fields.teamMemberB.fields.avatar.fields.file.url}`" /></p>
+            <h3>{{ cases.fields.teamMemberB.fields.name }}</h3>
+            <p>{{ cases.fields.teamRoleB.fields.title }}</p>
+          </li>
+          <li v-if="cases.fields.teamMemberC">
+            <p v-if="cases.fields.teamMemberC.fields.avatar"><img :src="`${cases.fields.teamMemberC.fields.avatar.fields.file.url}`" /></p>
+            <h3>{{ cases.fields.teamMemberC.fields.name }}</h3>
+            <p>{{ cases.fields.teamRoleC.fields.title }}</p>
+          </li>
+          <li v-if="cases.fields.teamMemberD">
+            <p v-if="cases.fields.teamMemberD.fields.avatar"><img :src="`${cases.fields.teamMemberD.fields.avatar.fields.file.url}`" /></p>
+            <h3>{{ cases.fields.teamMemberD.fields.name }}</h3>
+            <p>{{ cases.fields.teamRoleD.fields.title }}</p>
           </li>
         </ul>
       </aside>

@@ -35,14 +35,30 @@
       <div>
         <h2>Cases:</h2>
         <div v-for="cases in cases">
-          <div v-for="team in cases.fields.team">
-            <ul v-if="team.fields.slug === member.fields.slug">
-              <li :key="cases.fields.slug">
-                <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
-                <p>{{ cases.fields.summary }}</p>
-              </li>
-            </ul>
-          </div>
+          <ul v-if="cases.fields.teamMemberA.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberA">
+            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
+              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
+              <p>{{ cases.fields.challenge }}</p>
+            </li>
+          </ul>
+          <ul v-if="cases.fields.teamMemberB.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberB">
+            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
+              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
+              <p>{{ cases.fields.challenge }}</p>
+            </li>
+          </ul>
+          <ul v-if="cases.fields.teamMemberC.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberC">
+            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
+              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
+              <p>{{ cases.fields.challenge }}</p>
+            </li>
+          </ul>
+          <ul v-if="cases.fields.teamMemberD.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberD">
+            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
+              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
+              <p>{{ cases.fields.challenge }}</p>
+            </li>
+          </ul>
         </div>
       </div>
 
