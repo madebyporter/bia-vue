@@ -57,12 +57,17 @@
       <div v-if="cases.fields.bodyContent" v-html="$md.render(cases.fields.bodyContent)"></div>
 
       <div v-if="cases.fields.postImages">
-        <h2>postImages:</h2>
+        <h2>Carousel Images:</h2>
         <ul>
           <li v-for="postImage in cases.fields.postImages">
             <img :src="`${postImage.fields.file.url}`" />
           </li>
         </ul>
+      </div>
+
+      <div v-if="cases.fields.finalMockupImage">
+        <h2>Final Mockup Image:</h2>
+        <img :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
       </div>
     </div>
   </section>
