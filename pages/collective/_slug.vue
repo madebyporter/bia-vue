@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="content-full">
-      <h1>{{ member.fields.name }}</h1>
+      <h1 class="h1">{{ member.fields.name }}</h1>
       <p v-if="member.fields.title">{{ member.fields.title }}</p>
       <p v-if="member.fields.bio">{{ member.fields.bio }}</p>
       <p v-if="member.fields.avatar"><img :src="`${member.fields.avatar.fields.file.url}`" /></p>

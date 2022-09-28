@@ -1,3 +1,9 @@
+/* **
+    Tokens
+ * **/
+
+@use 'sass:math';
+
 // Media Queries
   $ssPhone:         425px;
   $ssTablet:        768px;
@@ -15,12 +21,21 @@
 
 // Colors
   $clBlack:        #111;
-  $clGrayDark:    #333;
-  $clGrayLight:   #BBB;
-  $clWhite:       #FFF;
-  $clGreen:       #E5EA00;
+  $clGrayDark:     #333;
+  $clGrayLight:    #BBB;
+  $clWhite:        #FFF;
+  $clGreen:        #E5EA00;
 
 // Type
   $ffPrimary:       'Sora', sans-serif;
+
+  $fsRoot:          16;
+  $fsXXXL:          6rem; //96
+  $fsXXL:           5rem; //80
+  $fsXL:            4rem; //64
+  $fsLarge:         3rem; //48
+  $fsMedium:        2rem; //32
+  $fsSmall:         1rem; //16
+  
   $fwLight:         300;
   $fwNormal:        400;

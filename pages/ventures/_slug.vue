@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="content-full">
-      <h1>{{ venture.fields.title }}</h1>
+      <h1 class="h1">{{ venture.fields.title }}</h1>
       <p v-if="venture.fields.summary">{{ venture.fields.summary }}</p>
       <div v-if="venture.fields.delivarables">
         <h2>Deliverables:</h2>

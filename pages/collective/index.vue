@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="hero content-full">
-      <h1>{{title}}</h1>
+      <h1 class="h1">{{title}}</h1>
     </div>
     <div class="content content-full">
       <ul>

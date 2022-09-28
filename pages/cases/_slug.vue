@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="content-full">
-      <h1>{{ cases.fields.title }}</h1>
+      <h1 class="h1">{{ cases.fields.title }}</h1>
       <div v-if="cases.fields.featuredImage"><img :src="`${cases.fields.featuredImage.fields.file.url}`" /></div>
       <p v-if="cases.fields.type">{{ cases.fields.type }}</p>
       <aside v-if="cases.fields.delivarables">

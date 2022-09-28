@@ -2,7 +2,7 @@
   .global-header {
     @extend .grid;
     border-bottom: 1px solid $clGrayLight;
-    padding: $sp20 0;
+    padding: $sp20 $sp40;
   }
   .global-header--logo {
     @media screen and (min-width: $ssLaptop) {

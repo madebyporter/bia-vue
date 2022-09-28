@@ -1,14 +1,12 @@
 .grid {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $sp40 $sp10;
   @media screen and (min-width: $ssPhone) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 40px;
+    gap: $sp80 $sp40;
   }
-}
-
-@mixin grid-column($start, $span) {
-  grid-column: $start / span $span;
 }
 
 

@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="content-full">
-      <h1>{{ journal.fields.title }}</h1>
+      <h1 class="h1">{{ journal.fields.title }}</h1>
       <div v-if="journal.fields.collaborators">
         <h2>Collaborators:</h2>
         <ul>

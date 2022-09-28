@@ -1,3 +1,17 @@
 .section {
   @extend .grid;
+  padding: $sp40;
+}
+.section-x0 {
+  @extend .section;
+  padding-left: 0;
+  padding-right: 0;
+}
+.section-small {
+  @extend .section;
+  padding: $sp20 $sp40;
+}
+.section-large {
+  @extend .section;
+  padding: $sp80 $sp40;
 }
