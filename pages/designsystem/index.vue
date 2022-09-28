@@ -20,6 +20,12 @@
       </header>
       <p class="p-large">We believe in the power of sustainability. Increasing on-site solar and storage through distributed grid design and operations, including fueling, insurance, battery, inverter, and UPS component repair provides quarterly sales and finance reports. This concludes our 77/100 character counter generated through an AI text generator on Monday, September 26th, 2022.</p>
     </article>
+    <article class="content-full">
+      <header>
+        <h2 class="h6">Small Paragraph</h2>
+      </header>
+      <p class="p-small">Our case studies will attract quality clients.</p>
+    </article>
   </section>
 </template>
 
