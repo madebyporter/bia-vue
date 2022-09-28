@@ -5,3 +5,29 @@
       @include grid-column(2,10);
     }
   }
+  .content-wide {
+    @include grid-column(1,4);
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(1,12);
+    }
+  }
+  .content-sidebar {
+    @include grid-column(1,4);
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(2,3);
+    }
+  }
+  .content-post-sidebar {
+    @include grid-column(1,4);
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(5,6);
+    }
+  }
+  .content-header {
+    border-bottom: 1px solid $clGrayLight;
+    padding-bottom: $sp10;
+    margin-bottom: $sp10;
+  }
+  .content-inner {
+    margin: 0 0 $sp40;
+  }

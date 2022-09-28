@@ -10,6 +10,10 @@
   padding-left: 0;
   padding-right: 0;
 }
+.section-xy0 {
+  @extend .section;
+  padding: 0;
+}
 .section-small {
   @extend .section;
   @media screen and (min-width: $ssTablet) {

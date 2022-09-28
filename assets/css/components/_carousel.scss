@@ -1,0 +1,36 @@
+// Carousel
+  $heightDesktop: 910px;
+
+  .carousel {
+    @extend .grid;
+    height: $heightDesktop;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-track {
+    list-style: none;
+    @include grid-column(2,11);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $sp40;
+    height: 100%;
+    margin: 0;
+    padding: 0 $sp40 0 0;
+    position: absolute;
+  }
+  .carousel-element {
+    width: 844px;
+    height: $heightDesktop;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }

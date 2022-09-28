@@ -1,0 +1,12 @@
+// Avatars
+  .avatar-small {
+    border-radius: 36px;
+    height: 36px;
+    overflow: hidden;
+    width: 36px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }

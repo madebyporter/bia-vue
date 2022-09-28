@@ -1,0 +1,23 @@
+// Lists
+  .list-header {
+    border-bottom: 1px solid $clGrayLight;
+    padding-bottom: $sp10;
+    margin-bottom: $sp10;
+  }
+  .list-default {
+    list-style: none;
+    margin: 0 0 $sp40;
+    padding: 0;
+
+    li {
+      display: flex;
+      margin-bottom: $sp10;
+    }
+  }
+  .list-avatar {
+    background: $clGrayLight;
+    border-radius: 36px;
+    margin-right: $sp10;
+    height: 36px;
+    width: 36px;
+  }
