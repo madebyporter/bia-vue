@@ -2,10 +2,18 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: $sp40 $sp10;
-  @media screen and (min-width: $ssPhone) {
+  @media screen and (min-width: $ssLaptop) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: $sp80 $sp40;
+  }
+}
+
+.grid-y-small {
+  @extend .grid;
+  gap: $sp10 $sp10;
+  @media screen and (min-width: $ssLaptop) {
+    gap: $sp10 $sp40;
   }
 }
 

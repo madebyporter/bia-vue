@@ -1,7 +1,7 @@
 // Content
   .content-full {
     @include grid-column(1,4);
-    @media screen and (min-width: $ssPhone) {
+    @media screen and (min-width: $ssLaptop) {
       @include grid-column(2,10);
     }
   }

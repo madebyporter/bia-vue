@@ -1,6 +1,9 @@
 .section {
   @extend .grid;
-  padding: $sp40;
+  padding: $sp20;
+  @media screen and (min-width: $ssTablet) {
+    padding: $sp40;
+  }
 }
 .section-x0 {
   @extend .section;
@@ -9,9 +12,14 @@
 }
 .section-small {
   @extend .section;
-  padding: $sp20 $sp40;
+  @media screen and (min-width: $ssTablet) {
+    padding: $sp20 $sp40;
+  }
 }
 .section-large {
   @extend .section;
-  padding: $sp80 $sp40;
+  padding: $sp80 $sp20;
+  @media screen and (min-width: $ssTablet) {
+    padding: $sp80 $sp40;
+  }
 }

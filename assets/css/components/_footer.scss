@@ -1,0 +1,40 @@
+.global-footer {
+  @extend .grid-y-small;
+  align-items: center;
+  background: $clBlack;
+  height: auto;
+  padding: $sp20;
+  & > * {
+    color: $clWhite;
+  }
+  @media screen and (min-width: $ssLaptop) {
+    padding: $sp20 $sp40;
+  }
+}
+.global-footer--copyright {
+  @include grid-column(1,2);
+  @media screen and (min-width: $ssLaptop) {
+    @include grid-column(2,4);
+  }
+}
+.global-footer--rights {
+  display: none;
+  @media screen and (min-width: $ssLaptop) {
+    display: block;
+    @include grid-column(6,3);
+  }
+}
+.global-footer--slogan {
+  @include grid-column(3,2);
+  justify-self: end;
+  white-space: nowrap;
+
+  & > * {
+    display: inline;
+  }
+  
+  @media screen and (min-width: $ssLaptop) {
+    @include grid-column(9,3);
+    justify-self: normal;
+  }
+}

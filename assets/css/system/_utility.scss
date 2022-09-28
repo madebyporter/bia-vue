@@ -1,0 +1,30 @@
+// Media Query Visibility
+  .ssPhone-hide {
+    display: none !important;
+    @media screen and (min-width: $ssPhone) {
+      display: inline-block !important;
+    }
+  }
+
+  .ssTablet-down-hide {
+    display: none !important;
+    @media screen and (min-width: $ssTablet) {
+      display: inline-block !important;
+    }
+  }
+
+  .ssLaptop-down-hide {
+    display: none !important;
+    @media screen and (min-width: $ssLaptop) {
+      display: inline-block !important;
+    }
+  }
+
+// Flex & Grid Options
+  .align-start {align-items: start;}
+  .align-end {align-items: end;}
+  .align-center {align-items: center;}
+
+  .justify-start {align-items: start;}
+  .justify-end {justify-content: end;}
+  .justify-center {align-items: center;}
