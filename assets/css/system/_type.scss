@@ -87,4 +87,7 @@ html {
     @include font-size($fsMedium);
     font-weight: $fwLight;
     letter-spacing: -1.8%;
+    p {
+      margin: 0 0 $sp40;
+    }
   }
