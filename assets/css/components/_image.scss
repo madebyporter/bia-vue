@@ -2,3 +2,12 @@
   .image-rounded {
     border-radius: $sp40;
   }
+
+  .case-image-full {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    @media screen and (min-width: $ssLaptop) {
+      height: 800px;
+    }
+  }

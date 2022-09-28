@@ -1,36 +1,51 @@
 // Carousel
-  $heightDesktop: 910px;
+  $heightMobile: 400px;
+  $heightDesktop: 900px;
+  $widthMobile: 200px;
+  $widthDesktop: 800px;
 
   .carousel {
     @extend .grid;
-    height: $heightDesktop;
+    height: $heightMobile;
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
     width: 100%;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    @media screen and (min-width: $ssLaptop) {
+      height: $heightDesktop;
+    }
   }
   .carousel::-webkit-scrollbar {
     display: none;
   }
   .carousel-track {
     list-style: none;
-    @include grid-column(2,11);
+    @include grid-column(1,4);
     display: flex;
     flex-wrap: nowrap;
-    gap: $sp40;
+    gap: $sp20;
     height: 100%;
     margin: 0;
-    padding: 0 $sp40 0 0;
+    padding: 0 $sp20 0 $sp20;
     position: absolute;
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(1,12);
+      gap: $sp40;
+      padding: 0 $sp40 0 $sp40;
+    }
   }
   .carousel-element {
-    width: 844px;
-    height: $heightDesktop;
+    width: $widthMobile;
+    height: $heightMobile;
     img {
       object-fit: cover;
       height: 100%;
       width: 100%;
+    }
+    @media screen and (min-width: $ssLaptop) {
+      width: $widthDesktop;
+      height: $heightDesktop;
     }
   }

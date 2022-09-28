@@ -12,7 +12,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-large">
       <div class="content-sidebar">
         <ul class="list-default">
           <li><h3 v-if="cases.fields.type">{{ cases.fields.type }}</h3></li>
@@ -85,7 +85,7 @@
 
     <section class="section">
       <div class="content-wide">
-        <div v-if="cases.fields.bodyImage"><img class="image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" /></div>
+        <div v-if="cases.fields.bodyImage"><img class="case-image-full image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" /></div>
       </div>
     </section>
 
@@ -110,7 +110,7 @@
     <section class="section">
       <div class="content-wide">
         <div v-if="cases.fields.finalMockupImage">
-          <img class="image-rounded" :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
+          <img class="case-image-full image-rounded" :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
         </div>
       </div>
     </section>
