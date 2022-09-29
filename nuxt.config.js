@@ -1,4 +1,4 @@
-import dotenv from "dotenv"; 
+import dotenv from "dotenv";
 dotenv.config();
 
 const contentful = require("contentful");
@@ -20,7 +20,8 @@ const dynamicRoutes = async () => {
   // Fetch Cases
   const casesRoute = Promise.all([
     client.getEntries({
-      content_type: "cases"
+      content_type: "cases",
+      include: 6
     })
   ]).then(([cases]) => {
     return [...cases.items.map(entry => entry.fields.slug)];
@@ -78,7 +79,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/contentful", 
+    "~/plugins/contentful",
     "~/plugins/members",
     "~/plugins/cases",
     "~/plugins/ventures",

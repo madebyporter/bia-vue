@@ -15,7 +15,8 @@ export const actions = {
     try {
       if (!client) return;
       const response = await client.getEntries({
-        content_type: "cases"
+        content_type: "cases",
+        include: 6
       });
       if (response.items.length > 0) commit("updateCases", response.items);
     } catch (err) {
