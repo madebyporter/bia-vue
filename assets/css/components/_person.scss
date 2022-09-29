@@ -6,3 +6,6 @@
   .person-role {
     @include font-size(12px);
   }
+  .person-role-title:not(:last-child):after {
+    content: ', ';
+  }

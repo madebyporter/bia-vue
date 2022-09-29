@@ -30,46 +30,21 @@
         <aside>
           <h2 class="list-header h6">Team</h2>
           <ul class="list-default">
-            <li v-if="cases.fields.teamMemberA">
+            <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
               <div class="list-avatar">
-                <p class="avatar-small" v-if="cases.fields.teamMemberA.fields.avatar"><img :src="`${cases.fields.teamMemberA.fields.avatar.fields.file.url}`" /></p>
+                <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
               </div>
               <div class="list-content person">
-                <h3 class="h-mb-0 person-name">{{ cases.fields.teamMemberA.fields.name }}</h3>
-                <p class="person-role">{{ cases.fields.teamRoleA.fields.title }}</p>
-              </div>
-            </li>
-            <li v-if="cases.fields.teamMemberB">
-              <div class="list-avatar">
-                <p class="avatar-small" v-if="cases.fields.teamMemberB.fields.avatar"><img :src="`${cases.fields.teamMemberB.fields.avatar.fields.file.url}`" /></p>
-              </div>
-              <div class="list-content person">
-                <h3 class="h-mb-0 person-name">{{ cases.fields.teamMemberB.fields.name }}</h3>
-                <p class="person-role">{{ cases.fields.teamRoleB.fields.title }}</p>
-              </div>
-            </li>
-            <li v-if="cases.fields.teamMemberC">
-              <div class="list-avatar">
-                <p class="avatar-small" v-if="cases.fields.teamMemberC.fields.avatar"><img :src="`${cases.fields.teamMemberC.fields.avatar.fields.file.url}`" /></p>
-              </div>
-              <div class="list-content person">
-                <h3 class="h-mb-0 person-name">{{ cases.fields.teamMemberC.fields.name }}</h3>
-                <p class="person-role">{{ cases.fields.teamRoleC.fields.title }}</p>
-              </div>
-            </li>
-            <li v-if="cases.fields.teamMemberD">
-              <div class="list-avatar">
-                <p class="avatar-small" v-if="cases.fields.teamMemberD.fields.avatar"><img :src="`${cases.fields.teamMemberD.fields.avatar.fields.file.url}`" /></p>
-              </div>
-              <div class="list-content person">
-                <h3 class="h-mb-0 person-name">{{ cases.fields.teamMemberD.fields.name }}</h3>
-                <p class="person-role">{{ cases.fields.teamRoleD.fields.title }}</p>
+                <h3 class="h-mb-0 person-name">{{ role.fields.member.fields.name }}</h3>
+                <p class="person-role">
+                  <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
+                </p>
               </div>
             </li>
           </ul>
         </aside>
       </div>
-      
+
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="cases.fields.challenge">
           <h2 class="content-header h6">Challenge:</h2>
@@ -115,7 +90,7 @@
       </div>
     </section>
   </div>
-  
+
 </template>
 
 <script>
@@ -127,9 +102,11 @@
     },
     computed: {
       cases() {
+        console.log(this.$store.state.caseData.cases)
         let cases = this.$store.state.caseData.cases.filter(
           el => el.fields.slug === this.slug
         );
+        console.log({cases})
         return cases[0];
       }
     },
