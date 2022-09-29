@@ -102,11 +102,9 @@
     },
     computed: {
       cases() {
-        console.log(this.$store.state.caseData.cases)
         let cases = this.$store.state.caseData.cases.filter(
           el => el.fields.slug === this.slug
         );
-        console.log({cases})
         return cases[0];
       }
     },
