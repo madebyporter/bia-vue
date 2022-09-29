@@ -14,7 +14,7 @@
           </li>
         </ul>
       </div>
-      
+
       <div v-if="member.fields.disciplines">
         <h2>Disciplines:</h2>
         <ul>
@@ -34,32 +34,12 @@
       </div>
       <div>
         <h2>Cases:</h2>
-        <div v-for="cases in cases">
-          <ul v-if="cases.fields.teamMemberA.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberA">
-            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
-              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
-              <p>{{ cases.fields.challenge }}</p>
-            </li>
-          </ul>
-          <ul v-if="cases.fields.teamMemberB.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberB">
-            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
-              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
-              <p>{{ cases.fields.challenge }}</p>
-            </li>
-          </ul>
-          <ul v-if="cases.fields.teamMemberC.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberC">
-            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
-              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
-              <p>{{ cases.fields.challenge }}</p>
-            </li>
-          </ul>
-          <ul v-if="cases.fields.teamMemberD.fields.slug === member.fields.slug" v-for="team in cases.fields.teamMemberD">
-            <li v-if="team.slug === member.fields.slug" :key="cases.fields.slug">
-              <h2><NuxtLink :to="/cases/+`${cases.fields.slug}`">{{ cases.fields.title }}</NuxtLink></h2>
-              <p>{{ cases.fields.challenge }}</p>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li v-for="caseStudy in cases" :key="caseStudy.fields.slug">
+            <h2><NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">{{ caseStudy.fields.title }}</NuxtLink></h2>
+            <p>{{ caseStudy.fields.challenge }}</p>
+          </li>
+        </ul>
       </div>
 
       <div>
@@ -94,7 +74,11 @@
         return member[0];
       },
       cases() {
-        return this.$store.state.caseData.cases;
+        return this.$store.state.caseData.cases.filter((caseStudy) => {
+          if (caseStudy.fields.roles) {
+            return caseStudy.fields.roles.filter((role) => role.fields.member.fields.slug === this.slug);
+          }
+        });
       },
       ventures() {
         return this.$store.state.ventureData.ventures;
