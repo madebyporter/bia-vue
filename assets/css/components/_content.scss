@@ -15,7 +15,7 @@
   .content-normal {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(3,9);
+      @include grid-column(3,8);
     }
   }
   .content-narrow {
