@@ -35,7 +35,11 @@
                 <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
               </div>
               <div class="list-content person">
-                <h3 class="h-mb-0 person-name">{{ role.fields.member.fields.name }}</h3>
+                <h3 class="h-mb-0 person-name">
+                  <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
+                    {{ role.fields.member.fields.name }}
+                  </NuxtLink>
+                </h3>
                 <p class="person-role">
                   <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
                 </p>
