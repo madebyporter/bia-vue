@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  & > * {
+    width: 50%;
+    display: flex;
+    @include font-size($fsXM);
+    align-items: center;
+    gap: $sp10;
+  }
+}
+.pagination-nav-left {
+}
+.pagination-nav-right {
+  justify-content: flex-end;
+}

@@ -1,14 +1,27 @@
 // Content
+
+  .content-wide {
+    @include grid-column(1,4);
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(1,12);
+    }
+  }
   .content-full {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
       @include grid-column(2,10);
     }
   }
-  .content-wide {
+  .content-normal {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(1,12);
+      @include grid-column(3,9);
+    }
+  }
+  .content-narrow {
+    @include grid-column(1,4);
+    @media screen and (min-width: $ssLaptop) {
+      @include grid-column(4,6);
     }
   }
   .content-sidebar {

@@ -1,45 +1,68 @@
 <template>
-  <section class="section">
-    <div class="content-full">
-      <h1 class="h1">{{ venture.fields.title }}</h1>
-      <p v-if="venture.fields.summary">{{ venture.fields.summary }}</p>
-      <div v-if="venture.fields.delivarables">
-        <h2>Deliverables:</h2>
-        <ul>
-          <li v-for="delivarables in venture.fields.delivarables">
-            {{ delivarables }}
-          </li>
-        </ul>
+  <div>
+    <section class="section-large">
+      <div class="content-full">
+        <h1 class="h1 h-mb-0">{{ venture.fields.title }}</h1>
       </div>
-      <div v-if="venture.fields.team">
-        <h2>Team:</h2>
-        <ul>
-          <li v-for="team in venture.fields.team">
-            {{ team.fields.name }}
-          </li>
-        </ul>
-      </div>
-      <div v-if="venture.fields.disciplines">
-        <h2>Disciplines:</h2>
-        <ul>
-          <li v-for="disciplines in venture.fields.disciplines">
-            {{ disciplines.fields.title }}
-          </li>
-        </ul>
-      </div>
-      
-      <p v-if="venture.fields.featuredImage"><img :src="`${venture.fields.featuredImage.fields.file.url}`" /></p>
+    </section>
 
-      <div v-if="venture.fields.postImages">
-        <h2>postImages:</h2>
-        <ul>
-          <li v-for="postImage in venture.fields.postImages">
-            <img :src="`${postImage.fields.file.url}`" />
-          </li>
-        </ul>
+    <section class="section-xy0">
+      <div class="content-wide">
+        <div class="hero-image" v-if="venture.fields.featuredImage">
+          <img :src="`${venture.fields.featuredImage.fields.file.url}`" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section-large">
+      <div class="content-sidebar">
+        <aside v-if="venture.fields.delivarables">
+          <h2 class="list-header h6">Deliverables</h2>
+          <ul class="list-default">
+            <li v-for="delivarables in venture.fields.delivarables">
+              {{ delivarables }}
+            </li>
+          </ul>
+        </aside>
+
+        <aside>
+          <h2 class="list-header h6">Team</h2>
+          <ul class="list-default">
+            <li v-for="(role, i) in venture.fields.roles" :key="'role-'+i">
+              <div class="list-avatar">
+                <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
+              </div>
+              <div class="list-content person">
+                <h3 class="h-mb-0 person-name">{{ role.fields.member.fields.name }}</h3>
+                <p class="person-role">
+                  <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="content-post-sidebar">
+        <div class="content-inner" v-if="venture.fields.bodyContent">
+          <div class="p-large">{{ venture.fields.bodyContent }}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-x0">
+      <div class="content-wide">
+        <div class="carousel">
+          <ul class="carousel-track">
+            <li class="carousel-element" v-for="postImage in venture.fields.postImages">
+              <img class="image-rounded" :src="`${postImage.fields.file.url}`" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  
 </template>
 
 <style>

@@ -1,6 +1,6 @@
 // Images
   .image-rounded {
-    border-radius: $sp40;
+    border-radius: $sp80;
   }
 
   .case-image-full {
@@ -8,6 +8,25 @@
     width: 100%;
     object-fit: cover;
     @media screen and (min-width: $ssLaptop) {
+      height: 800px;
+    }
+  }
+  .case-image-left {
+    height: 400px;
+    width: 200px;
+    object-fit: cover;
+    @media screen and (min-width: $ssLaptop) {
+      width: 600px;
+      height: 800px;
+    }
+  }
+  .case-image-right {
+    height: 400px;
+    width: 200px;
+    object-fit: cover;
+    float: right;
+    @media screen and (min-width: $ssLaptop) {
+      width: 600px;
       height: 800px;
     }
   }

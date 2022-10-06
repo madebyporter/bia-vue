@@ -33,7 +33,7 @@
     @media screen and (min-width: $ssLaptop) {
       @include grid-column(1,12);
       gap: $sp40;
-      padding: 0 $sp40 0 $sp40;
+      padding: 0 $sp160 0 $sp320;
     }
   }
   .carousel-element {

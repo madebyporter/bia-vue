@@ -30,7 +30,8 @@ const dynamicRoutes = async () => {
   // Fetch Ventures
   const venturesRoute = Promise.all([
     client.getEntries({
-      content_type: "ventures"
+      content_type: "ventures",
+      include: 6
     })
   ]).then(([ventures]) => {
     return [...ventures.items.map(entry => entry.fields.slug)];
@@ -69,7 +70,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      {
+        src: "https://unpkg.com/phosphor-icons",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

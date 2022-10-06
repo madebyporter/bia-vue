@@ -59,14 +59,8 @@
     </section>
 
     <section class="section">
-      <div class="content-wide">
-        <div v-if="cases.fields.bodyImage"><img class="case-image-full image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" /></div>
-      </div>
-    </section>
-
-    <section class="section-large">
       <div class="content-full">
-        <div class="p-large" v-if="cases.fields.bodyContent" v-html="$md.render(cases.fields.bodyContent)"></div>
+        <div v-if="cases.fields.bodyImage"><img class="case-image-full image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" /></div>
       </div>
     </section>
 
@@ -83,12 +77,47 @@
     </section>
 
     <section class="section">
+      <div class="content-full">
+        <div v-if="cases.fields.imageFloatLeft"><img class="case-image-left image-rounded" :src="`${cases.fields.imageFloatLeft.fields.file.url}`" /></div>
+      </div>
+    </section>
+
+    <section class="section-large">
+      <div class="content-normal">
+        <div class="p-large" v-if="cases.fields.bodyContent" v-html="$md.render(cases.fields.bodyContent)"></div>
+      </div>
+    </section>
+
+    
+    <section class="section">
       <div class="content-wide">
         <div v-if="cases.fields.finalMockupImage">
           <img class="case-image-full image-rounded" :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
         </div>
       </div>
     </section>
+
+    <section class="section" v-if="cases.fields.imageFloatRight">
+      <div class="content-full">
+        <img class="case-image-right image-rounded" :src="`${cases.fields.imageFloatRight.fields.file.url}`" />
+      </div>
+    </section>
+
+    <section class="section" v-if="cases.fields.imageFloatRight">
+      <div class="content-narrow">
+        <div class="pagination">
+          <div class="pagination-nav-left">
+            <i class="ph-arrow-left"></i>
+            <span class="pagination-nav-text">Prev</span> 
+          </div>
+          <div class="pagination-nav-right">
+            <span class="pagination-nav-text">Next</span>
+            <i class="ph-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
 </template>
