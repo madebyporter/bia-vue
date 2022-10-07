@@ -42,8 +42,8 @@ export default {
       this.$store.state[this.content.store][this.content.name].forEach((elem, index, array) => {
         this.all.push(elem.fields.slug)
         if (this.slug === elem.fields.slug) {
-          this.currentIndex = index
           this.active.push(elem.fields.slug)
+          this.currentIndex = index
         }
       })
     },
@@ -57,9 +57,9 @@ export default {
             window.history.pushState({}, document.title, nextEntry);
             window.scrollTo({top: this.screenHeight, behavior: 'smooth'});
             window.setTimeout(() => {
-              this.active.shift()
               this.screenHeight = document.body.scrollHeight
-            }, 600)
+              this.active.shift()
+            }, 1000)
           }
         });
       });
