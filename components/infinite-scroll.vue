@@ -65,14 +65,7 @@ export default {
       });
 
       loadNew.observe(document.querySelector('.global-footer'));
-    },
-    snapToNext() {
-      var x = 0;
-      var y = this.bottomOfScreen;
-    },
-    disableSnapping(){
-      window.onscroll = function() { };
-    },
+    }
   },
   mounted() {
     this.populateEntries();
