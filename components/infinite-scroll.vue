@@ -7,6 +7,9 @@
       <div v-if="content.name === 'journal'">
         <single-journal :slug="entry" />
       </div>
+      <div v-if="content.name === 'ventures'">
+        <single-venture :slug="entry" />
+      </div>
     </div>
   </div>
 </template>
@@ -14,11 +17,13 @@
 <script>
 import SingleCase from '@/pages/cases/single-case.vue'
 import SingleJournal from '@/pages/journal/single-journal.vue'
+import SingleVenture from '@/pages/ventures/single-venture.vue'
 
 export default {
   components: {
     SingleCase,
-    SingleJournal
+    SingleJournal,
+    SingleVenture
   },
   data() {
     return {
