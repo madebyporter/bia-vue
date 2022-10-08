@@ -1,9 +1,8 @@
 .global-header {
   @extend .grid;
-  border-bottom: 1px solid $clGrayLight;
-  padding: $sp20;
+  padding: $sp20 $sp20;
   @media screen and (min-width: $ssLaptop) {
-    padding: $sp20 $sp40;
+    padding: $sp40 $sp40;
   }
 }
 .global-header--logo {
@@ -11,37 +10,16 @@
     @include grid-column(2,2);
   }
   svg {
-    height: 40px;
-    width: 86px;
+    height: 48px;
+    width: 110px;
   }
 }
 .global-header--nav {
   @media screen and (min-width: $ssLaptop) {
-    @include grid-column(4,6);
-    display: flex;
-    align-items: center;
-    gap: $sp40;
-  }
-}
-.global-header--partner {
-  @media screen and (min-width: $ssLaptop) {
     @include grid-column(10,2);
     display: flex;
-    align-items: center;
-    position: relative;
-    &:before {
-      background: $clGreen;
-      content: "";
-      border-radius: 24px;
-      position: absolute;
-      height: 24px;
-      width: 24px;
-    }
-    a {
-      padding: 0 0 0 34px;
-      position: relative;
-      text-decoration: underline;
-      white-space: nowrap;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $sp5;
   }
 }

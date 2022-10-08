@@ -1,12 +1,7 @@
 <template>
   <div>
-    <section class="hero section">
-      <div class="content-full sub-grid-50 align-center">
-        <h1 class="h1">{{title}}</h1>
-        <p>A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained.</p>
-      </div>
-    </section>
-    <section class="section">
+    <Hero :title="title" description="A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained."></Hero>
+    <section class="section-large">
       <div class="content-full">
         <ul class="list-content">
           <li v-for="cases in cases" :key="cases.fields.slug">
