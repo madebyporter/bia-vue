@@ -14,11 +14,13 @@
 
     <section class="section-large">
       <div class="content-sidebar">
-        <ul class="list-default">
-          <li><h3 v-if="cases.fields.type">{{ cases.fields.type }}</h3></li>
-        </ul>
+        <aside class="content-sidebar-aside" v-if="cases.fields.type">
+          <ul class="list-default">
+            <li><h3>{{ cases.fields.type }}</h3></li>
+          </ul>
+        </aside>
 
-        <aside v-if="cases.fields.delivarables">
+        <aside class="content-sidebar-aside" v-if="cases.fields.delivarables">
           <h2 class="list-header h6">Deliverables</h2>
           <ul class="list-default">
             <li v-for="delivarables in cases.fields.delivarables">
@@ -27,14 +29,14 @@
           </ul>
         </aside>
 
-        <aside>
+        <aside class="content-sidebar-aside" v-if="cases.fields.roles">
           <h2 class="list-header h6">Team</h2>
           <ul class="list-default">
             <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
               <div class="list-avatar">
                 <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
               </div>
-              <div class="list-content person">
+              <div class="list-person">
                 <h3 class="h-mb-0 person-name">
                   <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
                     {{ role.fields.member.fields.name }}
