@@ -28,7 +28,17 @@
     align-items: center;
   }
 }
-.sub-grid-50 {
+.sub-grid-thirds {
+  @extend .sub-grid;
+  & > * {
+    margin: 0;
+    width: 100%;
+    @media screen and (min-width: $ssLaptop) {
+      width: 33.3%;
+    }
+  }
+}
+.sub-grid-half {
   @extend .sub-grid;
   & > * {
     margin: 0;
