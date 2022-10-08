@@ -24,7 +24,7 @@ html {
   }
   .h1 {
     @include font-size($fs48);
-    letter-spacing: -0.2rem;
+    margin-left: -2px;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs96);
       margin-left: -4px;
@@ -32,7 +32,6 @@ html {
   }
   .h2 {
     @include font-size($fs20);
-    letter-spacing: -0.1rem;
     margin-left: -2px;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs36);
@@ -41,7 +40,6 @@ html {
   }
   .h3 {
     @include font-size($fs14);
-    letter-spacing: -0.1rem;
     margin-left: 0px;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs24);
@@ -54,8 +52,11 @@ html {
 
 // Paragraphs
   p {
-    margin: 0 0 $sp10;
+    margin: 0;
     @include font-size($fs14);
+    & + p {
+      margin: $sp20 0 0 0;
+    }
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs24);
     }

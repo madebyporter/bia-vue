@@ -23,7 +23,7 @@
               </div>
               <div class="list-content-data">
                 <div class="list-content-data-left">
-                  <h3 class="h3">Team</h3>
+                  <h3 class="h3 list-content-data-heading">Team</h3>
                   <ul class="list-default">
                     <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
                       <div class="list-item-avatar">
@@ -43,10 +43,10 @@
                   </ul>
                 </div>
                 <div class="list-content-data-right">
-                  <h3 class="h3">Verticals</h3>
+                  <h3 class="h3 list-content-data-heading">Verticals</h3>
                   <ul class="list-default">
                     <li v-for="(vertical, i) in cases.fields.verticals">
-                      {{ vertical.fields.title }}
+                      <p>{{ vertical.fields.title }}</p>
                     </li>
                   </ul>
                 </div>

@@ -1,6 +1,9 @@
 // Images
   .image-rounded {
-    border-radius: $sp80;
+    border-radius: $sp40;
+    @media screen and (min-width: $ssLaptop) {
+      border-radius: $sp80;
+    }
   }
 
   .case-image-full {

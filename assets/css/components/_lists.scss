@@ -11,9 +11,13 @@
     & + ul, & + ol {
       margin: $sp40 0 0;
     }
-
-    li {
-      display: flex;
+  }
+  .list-default > li {
+    display: flex;
+    margin-bottom: $sp10;
+    align-items: center;
+    @media screen and (min-width: $ssLaptop) {
+      align-items: flex-start;
       margin-bottom: $sp10;
     }
   }
@@ -25,7 +29,10 @@
     width: 36px;
   }
   .list-item-image {
-    height: 520px;
+    height: 354px;
+    @media screen and (min-width: $ssLaptop) {
+      height: 520px;
+    }
     img {
       height: 100%;
       width: 100%;
@@ -42,27 +49,52 @@
   }
   .list-content > li {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    gap: $sp10 $sp40;
+    gap: $sp20 $sp40;
     align-items: center;
     & > * {
-      width: 50%;
+      width: 100%;
+    }
+    @media screen and (min-width: $ssLaptop) {
+      gap: $sp10 $sp40;
+      flex-direction: row;
+      & > * {
+        width: 50%;
+      }
     }
   }
   .list-content-header {
     border-bottom: 1px solid $clGrayLight;
-    padding: 0 0 $sp40;
-    margin: 0 0 $sp40;
+    padding: 0 0 $sp20;
+    margin: 0 0 $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      padding: 0 0 $sp40;
+      margin: 0 0 $sp40;
+    }
+    & > * {
+      margin-bottom: $sp10;
+    }
   }
   .list-content-data {
     display: flex;
     flex-wrap: wrap;
-    gap: $sp40;
+    gap: $sp20;
     @media screen and (min-width: $ssLaptop) {
+      gap: $sp40;
       flex-wrap: nowrap;
+      & > * {
+        width: 50%;
+      }
     }
     & > * {
-      width: 50%;
+      width: 100%;
+    }
+  }
+  .list-content-data-heading {
+    margin-bottom: $sp10;
+    @media screen and (min-width: $ssLaptop) {
+      margin-bottom: $sp20;
     }
   }
 
@@ -79,10 +111,16 @@
     margin: 0;
     padding: 0;
   }
+  .list-people h2 {
+    margin: 0 0 $sp5 0;
+  }
   .list-people > li {
     @include bottom-border();
-    padding: $sp60 0;
+    padding: $sp40 0;
     position: relative;
+    @media screen and (min-width: $ssLaptop) {
+      padding: $sp60 0;
+    }
     &:after {
       content: "\f31c";
       font: normal normal normal 1em/1 "Phosphor";

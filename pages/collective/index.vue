@@ -7,7 +7,7 @@
           <li v-if="member.fields.showInCollective === true" v-for="member in members" :key="member.fields.slug">
             <NuxtLink :to="/collective/+`${member.fields.slug}`">
               <h2 class="h2">{{ member.fields.name }}</h2>
-              <p class="p-small margin-b-0">{{ member.fields.title }}</p>
+              <p class="p-gray">{{ member.fields.title }}</p>
             </NuxtLink>
           </li>
         </ul>

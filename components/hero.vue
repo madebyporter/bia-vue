@@ -4,7 +4,8 @@
       <h1 class="h1">{{title}}</h1>
     </div>
     <div class="content-50 align-self-center">
-      <p class="margin-b-0 p-small">{{ description }}</p>
+      <p>{{ description }}</p>
+      <p v-if="description2" >{{ description2 }}</p>
     </div>
   </section>
 </template>
@@ -13,7 +14,8 @@
   export default {
     props: {
       title: String,
-      description: String
+      description: String,
+      description2: String,
     }
   }
 </script>

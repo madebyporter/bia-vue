@@ -1,10 +1,10 @@
 // Persons
   .person-name {
-    @include font-size(18px);
     margin-bottom: 5px;
   }
   .person-role {
-    @include font-size(12px);
+    @include font-size($fs14);
+    margin: 0 0 $sp5 0;
   }
   .person-role-title:not(:last-child):after {
     content: ', ';
