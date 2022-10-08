@@ -53,9 +53,10 @@
 }
 .accordion-content {
   overflow: hidden;
-  padding: $sp40 0 0 0;
+  padding: $sp20 0 0 0;
   @include grid-column(1,4);
   @media screen and (min-width: $ssLaptop) {
+    padding: $sp40 0 0 0;
     @include grid-column(5,7);
   }
 }

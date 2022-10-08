@@ -43,3 +43,12 @@
   .padding-t-0 {padding-top: 0}
   .margin-y-0 {margin-top: 0; margin-bottom: 0;}
   .padding-y-0 {padding-top: 0; padding-bottom: 0;}
+
+// Breaks
+  .break-mobile {
+    display: inline-block;
+    width: 100%;
+    @media screen and (min-width: $ssLaptop) {
+      display: inline;
+    }
+  }

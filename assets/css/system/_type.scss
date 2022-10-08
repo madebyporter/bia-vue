@@ -25,7 +25,6 @@ html {
   .h1 {
     @include font-size($fs48);
     letter-spacing: -0.2rem;
-    margin-left: -4px;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs96);
       margin-left: -4px;
@@ -77,5 +76,8 @@ html {
 
 // Spans
   .s-underline-white {
-    box-shadow: inset 0 -6px 0 $clWhite;
+    box-shadow: inset 0 -3px 0 $clWhite;
+    @media screen and (min-width: $ssLaptop) {
+      box-shadow: inset 0 -6px 0 $clWhite;
+    }
   }
