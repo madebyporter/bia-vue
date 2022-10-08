@@ -3,7 +3,7 @@
   & > * {
     width: 50%;
     display: flex;
-    @include font-size($fsXM);
+    @include font-size($fs36);
     align-items: center;
     gap: $sp10;
   }

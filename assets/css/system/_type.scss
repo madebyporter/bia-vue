@@ -23,43 +23,30 @@ html {
     margin: 0 0 $sp20;
   }
   .h1 {
-    @include font-size($fsXXXL);
+    @include font-size($fs48);
     letter-spacing: -0.2rem;
     margin-left: -4px;
     @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs96);
       margin-left: -4px;
     }
   }
   .h2 {
-    @include font-size($fsXM);
+    @include font-size($fs20);
     letter-spacing: -0.1rem;
     margin-left: -2px;
     @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs36);
       margin-left: -1px;
     }
   }
   .h3 {
-    @include font-size($fsMedium);
+    @include font-size($fs14);
     letter-spacing: -0.1rem;
     margin-left: 0px;
     @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs24);
       margin-left: 0;
-    }
-  }
-  .h4 {
-    @include font-size($fsBook);
-    letter-spacing: -0.1rem;
-    margin-left: -3px;
-    @media screen and (min-width: $ssLaptop) {
-      margin-left: 0;
-    }
-  }
-  .h5 {
-    @include font-size($fsSmall);
-    letter-spacing: -0.1rem;
-    margin-left: -2px;
-    @media screen and (min-width: $ssLaptop) {
-      margin-left: 0px;
     }
   }
   .h-mb-0 {
@@ -69,15 +56,17 @@ html {
 // Paragraphs
   p {
     margin: 0 0 $sp10;
-    @include font-size($fsBook);
-  }
-  .p-small {
-    @include font-size($fsSmall);
-    font-weight: $fwLight;
+    @include font-size($fs14);
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs24);
+    }
   }
   .p-large {
-    @include font-size($fsMedium);
     font-weight: $fwLight;
+    @include font-size($fs20);
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs36);
+    }
     p {
       margin: 0 0 $sp40;
     }
