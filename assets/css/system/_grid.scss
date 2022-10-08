@@ -17,4 +17,26 @@
   }
 }
 
+.sub-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp10 $sp40;
+  @media screen and (min-width: $ssLaptop) {
+    flex-wrap: nowrap;
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+.sub-grid-50 {
+  @extend .sub-grid;
+  & > * {
+    margin: 0;
+    width: 100%;
+    @media screen and (min-width: $ssLaptop) {
+      width: 50%;
+    }
+  }
+}
+
 

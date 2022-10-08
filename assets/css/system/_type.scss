@@ -31,43 +31,35 @@ html {
     }
   }
   .h2 {
-    @include font-size($fsXXL);
-    letter-spacing: -0.2rem;
-    margin-left: -5px;
+    @include font-size($fsXM);
+    letter-spacing: -0.1rem;
+    margin-left: -2px;
     @media screen and (min-width: $ssLaptop) {
-      margin-left: -8px;
+      margin-left: -3px;
     }
   }
   .h3 {
-    @include font-size($fsXL);
-    letter-spacing: -0.2rem;
-    margin-left: -4px;
-    @media screen and (min-width: $ssLaptop) {
-      margin-left: -6px;
-    }
-  }
-  .h4 {
-    @include font-size($fsLarge);
-    letter-spacing: -0.1rem;
-    margin-left: -3px;
-    @media screen and (min-width: $ssLaptop) {
-      margin-left: -4px;
-    }
-  }
-  .h5 {
     @include font-size($fsMedium);
     letter-spacing: -0.1rem;
-    margin-left: -2px;
+    margin-left: 0px;
     @media screen and (min-width: $ssLaptop) {
       margin-left: -2px;
     }
   }
-  .h6 {
-    @include font-size($fsSmall);
-    letter-spacing: 0rem;
-    margin-left: -1px;
+  .h4 {
+    @include font-size($fsBook);
+    letter-spacing: -0.1rem;
+    margin-left: -3px;
     @media screen and (min-width: $ssLaptop) {
-      margin-left: 0;
+      margin-left: -1px;
+    }
+  }
+  .h5 {
+    @include font-size($fsSmall);
+    letter-spacing: -0.1rem;
+    margin-left: -2px;
+    @media screen and (min-width: $ssLaptop) {
+      margin-left: 0px;
     }
   }
   .h-mb-0 {

@@ -25,10 +25,6 @@
   </section>
 </template>
 
-<style>
-  img {width: 50%;}
-</style>
-
 <script>
   export default {
     props: [
