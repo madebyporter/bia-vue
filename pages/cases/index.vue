@@ -6,7 +6,7 @@
         <ul class="list-content">
           <li v-for="cases in cases" :key="cases.fields.slug">
             <div class="list-content-left">
-              <div class="list-image" v-if="cases.fields.featuredImage">
+              <div class="list-item-image" v-if="cases.fields.featuredImage">
                 <NuxtLink :to="/cases/+`${cases.fields.slug}`">
                   <img class="image-rounded" :src="`${cases.fields.featuredImage.fields.file.url}`" />
                 </NuxtLink>
@@ -26,10 +26,10 @@
                   <h3 class="h3">Team</h3>
                   <ul class="list-default">
                     <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
-                      <div class="list-avatar">
+                      <div class="list-item-avatar">
                         <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
                       </div>
-                      <div class="list-person">
+                      <div class="list-item-person">
                         <h3 class="h-mb-0 person-name">
                           <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
                             {{ role.fields.member.fields.name }}

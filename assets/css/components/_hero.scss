@@ -1,6 +1,6 @@
 // Hero Components
   .hero {
-    border-bottom: 1px solid $clGrayLight;
+    @include bottom-border();
     padding: $sp80 $sp40;
   }
   .hero-image {

@@ -17,14 +17,14 @@
       margin-bottom: $sp10;
     }
   }
-  .list-avatar {
+  .list-item-avatar {
     background: $clGrayLight;
     border-radius: 36px;
     margin-right: $sp10;
     height: 36px;
     width: 36px;
   }
-  .list-image {
+  .list-item-image {
     height: 520px;
     img {
       height: 100%;
@@ -73,6 +73,34 @@
     padding: 0;
     list-style: none;
   }
-  .list-tag > li {
-
+  
+  .list-people {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .list-people > li {
+    @include bottom-border();
+    padding: $sp60 0;
+    position: relative;
+    &:after {
+      content: "\f31c";
+      font: normal normal normal 1em/1 "Phosphor";
+      @include font-size(36px);
+      color: inherit;
+      flex-shrink: 0;
+      speak: none;
+      text-transform: none;
+      text-decoration: inherit;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      @include vertical-center;
+      right: 0;
+      z-index: 0;
+    }
+  }
+  .list-people a {
+    position: relative;
+    display: block;
+    z-index: 1;
   }

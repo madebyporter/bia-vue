@@ -29,7 +29,7 @@
           <h2 class="list-header h6">Team</h2>
           <ul class="list-default">
             <li v-for="(role, i) in venture.fields.roles" :key="'role-'+i">
-              <div class="list-avatar">
+              <div class="list-item-avatar">
                 <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
               </div>
               <div class="list-content person">

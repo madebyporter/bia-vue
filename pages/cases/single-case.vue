@@ -33,10 +33,10 @@
           <h2 class="list-header h6">Team</h2>
           <ul class="list-default">
             <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
-              <div class="list-avatar">
+              <div class="list-item-avatar">
                 <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
               </div>
-              <div class="list-person">
+              <div class="list-item-person">
                 <h3 class="h-mb-0 person-name">
                   <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
                     {{ role.fields.member.fields.name }}

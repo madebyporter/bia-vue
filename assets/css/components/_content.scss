@@ -52,7 +52,7 @@
     }
   }
   .content-header {
-    border-bottom: 1px solid $clGrayLight;
+    @include bottom-border();
     padding-bottom: $sp10;
     margin-bottom: $sp10;
   }
