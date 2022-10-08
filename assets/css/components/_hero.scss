@@ -1,7 +1,10 @@
 // Hero Components
   .hero {
     @include bottom-border();
-    padding: $sp80 $sp40;
+    padding: $sp40 $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      padding: $sp80 $sp40;
+    }
   }
   .hero-image {
     height: 400px;
