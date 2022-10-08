@@ -3,6 +3,8 @@
   padding: $sp20 $sp20;
   @media screen and (min-width: $ssLaptop) {
     padding: $sp40 $sp40;
+    position: sticky;
+    top: 0;
   }
 }
 .global-header--logo {
