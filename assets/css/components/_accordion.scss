@@ -1,0 +1,61 @@
+.accordion {
+
+}
+.accordion-item {
+  @extend .grid-y-medium;
+  @include bottom-border($color: $clWhite);
+  padding: $sp40 0;
+  &.closed .accordion-panel {
+    &:after {
+      content: "\f531";
+      font: normal normal normal 1em/1 "Phosphor";
+      @include font-size(36px);
+      color: inherit;
+      flex-shrink: 0;
+      speak: none;
+      text-transform: none;
+      text-decoration: inherit;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      @include vertical-center;
+      right: 0;
+      z-index: 0;
+    }
+  }
+  &.closed .accordion-content {
+    display: none;
+  }
+  &.opened .accordion-panel {
+    &:after {
+      content: "\f4bf";
+      font: normal normal normal 1em/1 "Phosphor";
+      @include font-size(36px);
+      color: inherit;
+      flex-shrink: 0;
+      speak: none;
+      text-transform: none;
+      text-decoration: inherit;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      @include vertical-center;
+      right: 0;
+      z-index: 0;
+    }
+  }
+}
+.accordion-panel {
+  cursor: pointer;
+  @include grid-column(1,4);
+  position: relative;
+  @media screen and (min-width: $ssLaptop) {
+    @include grid-column(1,12);
+  }
+}
+.accordion-content {
+  overflow: hidden;
+  padding: $sp40 0 0 0;
+  @include grid-column(1,4);
+  @media screen and (min-width: $ssLaptop) {
+    @include grid-column(5,7);
+  }
+}

@@ -1,9 +1,14 @@
+// Bottom Border
+@mixin bottom-border($color: $clGrayLight){
+  border-bottom: 1px solid $color;
+}
+
 // Grids
   @mixin grid-column($start, $span) {
     grid-column: $start / span $span;
   }
 
-  // Transform
+// Transform
   @mixin transform($transforms) {
     -moz-transform: $transforms;
     -o-transform: $transforms;
@@ -38,11 +43,6 @@
 // Skew
   @mixin skew ($x, $y) {
     @include transform(skew(#{$x}deg, #{$y}deg));
-  }
-
-// Bottom Border
-  @mixin bottom-border(){
-    border-bottom: 1px solid $clGrayLight;
   }
 
 // Horizontal Center

@@ -8,7 +8,13 @@
     gap: $sp80 $sp40;
   }
 }
-
+.grid-y-medium {
+  @extend .grid;
+  gap: $sp20 $sp10;
+  @media screen and (min-width: $ssLaptop) {
+    gap: $sp20 $sp40;
+  }
+}
 .grid-y-small {
   @extend .grid;
   gap: $sp10 $sp10;

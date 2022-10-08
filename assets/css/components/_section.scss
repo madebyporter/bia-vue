@@ -27,3 +27,11 @@
     padding: $sp80 $sp40;
   }
 }
+
+.section-dark {
+  @extend .section;
+  background: $clBlack;
+  & > * {
+    color: $clWhite;
+  }
+}
