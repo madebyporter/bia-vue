@@ -25,9 +25,9 @@ html {
   .h1 {
     @include font-size($fsXXXL);
     letter-spacing: -0.2rem;
-    margin-left: -5px;
+    margin-left: -4px;
     @media screen and (min-width: $ssLaptop) {
-      margin-left: -10px;
+      margin-left: -6px;
     }
   }
   .h2 {
