@@ -1,5 +1,5 @@
 <template>
-  <footer class="global-footer">
+  <footer id="contact" class="global-footer">
     <div class="global-footer-contact">
       <p class="p-large">Create a new world together</p>
       <a class="h1" href="mailto:build@bia.partners">build@bia.partners</a>
