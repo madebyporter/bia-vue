@@ -1,6 +1,6 @@
 .section {
   @extend .grid;
-  padding: $sp20;
+  padding: $sp40 $sp20;
   @media screen and (min-width: $ssTablet) {
     padding: $sp40;
   }
