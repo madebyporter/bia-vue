@@ -32,7 +32,7 @@ html {
   }
   .h2 {
     @include font-size($fs20);
-    margin-left: -2px;
+    margin-left: 0;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs36);
       margin-left: -1px;
@@ -40,7 +40,7 @@ html {
   }
   .h3 {
     @include font-size($fs14);
-    margin-left: 0px;
+    margin-left: 0;
     @media screen and (min-width: $ssLaptop) {
       @include font-size($fs24);
       margin-left: 0;
