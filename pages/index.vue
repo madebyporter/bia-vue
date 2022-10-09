@@ -7,7 +7,7 @@
     <div class="content-50 hero-home-right">
       <p>Together we work both as a collective and individuals to solve future challenges of humanity. Through our intimate craft, authentic voice, and intricate eye on aesthetics, we deliver the best necessary results for you</p>
     </div>
-    <div class="hero-home-img"><img src="~/assets/img/backgrounds/hero-home-desktop.jpg"></img></div>
+    <div class="hero-home-img"><img src="~/assets/img/backgrounds/hero-home-desktop.jpg" alt="BIA Background" /></div>
   </section>
 </template>
 
