@@ -1,5 +1,5 @@
 <template>
-  <section class="section-y-0 hero-home" :style="{ backgroundImage: `url(${image})`}">
+  <section class="section-y-0 hero-home">
     <div class="content-50 hero-home-left">
       <p class="p-large">FuturexForwardxPartners</p>
       <Logo-Tertiary></Logo-Tertiary>
@@ -11,13 +11,10 @@
 </template>
 
 <script>
-  import heroHomeImg from "~/assets/img/backgrounds/hero-home-desktop.jpg";
-
   export default {
     data() {
       return {
-        title: 'Home',
-        image: heroHomeImg,
+        title: 'Home'
       }
     },
     head() {
