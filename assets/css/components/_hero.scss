@@ -19,15 +19,17 @@
     }
   }
   .hero-home {
-    // background: radial-gradient(61.32% 94.87% at 25.32% 76.14%, #E5EA00 0%, #FF7B51 31.28%, #5177FD 86.79%, #111111 100%);
-    background: url('@/assets/img/backgrounds/hero-home-desktop.jpg') $clBlack bottom left;
-    background-size: 100% auto;
     align-items: flex-end;
+    position: relative;
     @media screen and (min-width: $ssLaptop) {
       height: 680px;
     }
     & * {
       color: $clWhite;
+    }
+    & > * {
+      position: relative;
+      z-index: 10;
     }
   }
   .hero-home-left {
@@ -43,5 +45,19 @@
   .hero-home-right {
     p {
       padding-bottom: $sp60;
+    }
+  }
+  .hero-home-img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
