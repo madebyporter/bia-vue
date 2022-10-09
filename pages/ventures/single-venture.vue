@@ -6,7 +6,7 @@
       </div>
     </section>
 
-    <section class="section-xy0">
+    <section class="section-xy-0">
       <div class="content-wide">
         <div class="hero-image" v-if="venture.fields.featuredImage">
           <img :src="`${venture.fields.featuredImage.fields.file.url}`" />
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <section class="section-x0">
+    <section class="section-x-0">
       <div class="content-wide">
         <div class="carousel">
           <ul class="carousel-track">

@@ -5,12 +5,17 @@
     padding: $sp40;
   }
 }
-.section-x0 {
+.section-x-0 {
   @extend .section;
   padding-left: 0;
   padding-right: 0;
 }
-.section-xy0 {
+.section-y-0 {
+  @extend .section;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.section-xy-0 {
   @extend .section;
   padding: 0;
 }

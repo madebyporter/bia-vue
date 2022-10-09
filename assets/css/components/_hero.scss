@@ -18,3 +18,30 @@
       height: 800px;
     }
   }
+  .hero-home {
+    // background: radial-gradient(61.32% 94.87% at 25.32% 76.14%, #E5EA00 0%, #FF7B51 31.28%, #5177FD 86.79%, #111111 100%);
+    background: url('assets/img/backgrounds/hero-home-desktop.jpg') $clBlack bottom left;
+    background-size: 100% auto;
+    align-items: flex-end;
+    @media screen and (min-width: $ssLaptop) {
+      height: 680px;
+    }
+    & * {
+      color: $clWhite;
+    }
+  }
+  .hero-home-left {
+    svg {
+      width: 100%;
+    }
+    p {
+      margin-bottom: $sp20;
+      margin-left: -4px;
+      letter-spacing: -0.07rem;
+    }
+  }
+  .hero-home-right {
+    p {
+      padding-bottom: $sp60;
+    }
+  }

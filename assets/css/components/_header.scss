@@ -8,6 +8,19 @@
     z-index: 100;
   }
 }
+.Home .global-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  & * {
+    color: $clWhite;
+    fill: $clWhite;
+  }
+  .global-header--logo svg {
+    width: 70px;
+  }
+}
+
 .global-header--logo {
   @include grid-column(1,2);
   @media screen and (min-width: $ssLaptop) {
