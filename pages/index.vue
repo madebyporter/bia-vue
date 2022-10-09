@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import heroHomeImg from "assets/img/backgrounds/hero-home-desktop.jpg";
+  import heroHomeImg from "~/assets/img/backgrounds/hero-home-desktop.jpg";
 
   export default {
     data() {
