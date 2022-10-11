@@ -1,4 +1,6 @@
-body {
+html, body {
+   /* Need bg for mix-blend-mode header */
+  background: #fff;
   margin: 0;
   padding: 0;
 }
