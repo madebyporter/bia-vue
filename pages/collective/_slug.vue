@@ -24,7 +24,7 @@
         </div>
         <ul v-if="member.fields.links" class="list-default">
           <li v-for="link in member.fields.links">
-            <a :href="`${link}`">{{ link }}</a>
+            <a :href="`${link.fields.linkUrl}`" target="_blank">{{ link.fields.linkType }}</a>
           </li>
         </ul>
       </div>
