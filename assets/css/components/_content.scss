@@ -3,37 +3,54 @@
   .content-wide {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(1,12);
+      @include grid-column(1,14);
     }
   }
   .content-full {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(2,10);
+      @include grid-column(2,12);
     }
   }
   .content-normal {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(3,8);
+      @include grid-column(3,10);
     }
   }
   .content-narrow {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(4,6);
+      @include grid-column(4,8);
     }
   }
-  .content-50 {
+  .content-half {
     @include grid-column(1,4);
-    & + .content-50 {
+    & + .content-half {
       @include grid-column(1,4);
     } 
     @media screen and (min-width: $ssLaptop) {
-      @include grid-column(2,5);
-      & + .content-50 {
-        @include grid-column(7,5);
+      @include grid-column(2,6);
+      & + .content-half {
+        @include grid-column(8,6);
       } 
+    }
+  }
+  .content-thirds {
+    @include grid-column(1,4);
+    & + .content-thirds {
+      @include grid-column(1,4);
+    } 
+    @media screen and (min-width: $ssLaptop) {
+      &:nth-child(1) {
+        @include grid-column(2,4);
+      }
+      &:nth-child(2) {
+        @include grid-column(6,4);
+      }
+      &:nth-child(3) {
+        @include grid-column(10,4);
+      }
     }
   }
   .content-sidebar {
@@ -52,6 +69,9 @@
     }
   }
   .content-header {
+    margin-bottom: $sp40;
+  }
+  .content-header-bordered {
     @include bottom-border();
     padding-bottom: $sp10;
     margin-bottom: $sp10;

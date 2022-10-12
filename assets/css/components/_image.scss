@@ -6,30 +6,23 @@
     }
   }
 
-  .case-image-full {
+  .profile-image {
     height: 400px;
-    width: 100%;
+    width: 200px;
     object-fit: cover;
     @media screen and (min-width: $ssLaptop) {
+      width: 600px;
       height: 800px;
     }
+  }
+
+  .case-image-full {
+    @extend .profile-image;
   }
   .case-image-left {
-    height: 400px;
-    width: 200px;
-    object-fit: cover;
-    @media screen and (min-width: $ssLaptop) {
-      width: 600px;
-      height: 800px;
-    }
+    @extend .profile-image;
   }
   .case-image-right {
-    height: 400px;
-    width: 200px;
-    object-fit: cover;
+    @extend .profile-image;
     float: right;
-    @media screen and (min-width: $ssLaptop) {
-      width: 600px;
-      height: 800px;
-    }
   }
