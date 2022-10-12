@@ -6,20 +6,20 @@
         <div class="card card-person">
           <img class="card-image image-rounded" src="~/assets/img/people/person-stephenmiller.jpg" alt="Stephen Miller" />
           <h2 class="h2">Stephen Miller</h2>
-          <p class="margin-b-0">ENTP</p>
-          <p class="p-gray">Seeker/inventor</p>
+          <p class="">ENTP</p>
+          <p class="p-gray margin-y-0">Seeker/inventor</p>
         </div>
         <div class="card card-person">
           <img class="card-image image-rounded" src="~/assets/img/people/person-chrisporter.jpg" alt="Chris Porter" />
           <h2 class="h2">Chris Porter</h2>
           <p class="margin-b-0">INTJ</p>
-          <p class="p-gray">Analyst/scientist</p>
+          <p class="p-gray margin-y-0">Analyst/scientist</p>
         </div>
         <div class="card card-person">
           <img class="card-image image-rounded" src="~/assets/img/people/person-monicathynguyen.jpg" alt="Monica Thy Nguyen" />
           <h2 class="h2">Monica Thy Nguyen</h2>
           <p class="margin-b-0">INFJ</p>
-          <p class="p-gray">Humanist/empath</p>
+          <p class="p-gray margin-y-0">Humanist/empath</p>
         </div>
       </div>
     </section>
