@@ -6,7 +6,7 @@
       </div>
       <div class="content-half align-self-center">
         <div class="content-header">
-          <h1 class="h1">{{ member.fields.name }}</h1>
+          <h1 class="h1 margin-b-5">{{ member.fields.name }}</h1>
           <p v-if="member.fields.title">{{ member.fields.title }}</p>
         </div>
         <div v-if="member.fields.bio"  v-html="$md.render(member.fields.bio)"></div>

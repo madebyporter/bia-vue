@@ -36,13 +36,25 @@
 // Margin and Padding Options
   .margin-0 {margin: 0 !important}
   .padding-0 {padding: 0 !important}
-
   .margin-b-0 {margin-bottom: 0 !important}
   .padding-b-0 {padding-bottom: 0 !important}
   .margin-t-0 {margin-top: 0 !important}
   .padding-t-0 {padding-top: 0 !important}
+  .margin-x-0 {margin-left: 0 !important; margin-right: 0 !important;}
+  .padding-x-0 {padding-left: 0 !important; padding-right: 0 !important;}
   .margin-y-0 {margin-top: 0 !important; margin-bottom: 0 !important;}
   .padding-y-0 {padding-top: 0 !important; padding-bottom: 0 !important;}
+
+  .margin-5 {margin: 0 !important}
+  .padding-5 {padding: $sp5 !important}
+  .margin-b-5 {margin-bottom: $sp5 !important}
+  .padding-b-5 {padding-bottom: $sp5 !important}
+  .margin-t-5 {margin-top: $sp5 !important}
+  .padding-t-5 {padding-top: $sp5 !important}
+  .margin-x-5 {margin-left: $sp5 !important; margin-right: $sp5 !important;}
+  .padding-x-5 {padding-left: $sp5 !important; padding-right: $sp5 !important;}
+  .margin-y-5 {margin-top: $sp5 !important; margin-bottom: $sp5 !important;}
+  .padding-y-5 {padding-top: $sp5 !important; padding-bottom: $sp5 !important;}
 
 // Breaks
   .break-mobile {

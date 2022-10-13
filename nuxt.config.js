@@ -21,7 +21,7 @@ const dynamicRoutes = async () => {
   const casesRoute = Promise.all([
     client.getEntries({
       content_type: "cases",
-      include: 6
+      include: 9
     })
   ]).then(([cases]) => {
     return [...cases.items.map(entry => entry.fields.slug)];
