@@ -29,7 +29,7 @@
 .global-header--logo {
   @include grid-column(1,2);
   @media screen and (min-width: $ssLaptop) {
-    @include grid-column(1,2);
+    @include grid-column(2,2);
   }
   svg {
     height: 48px;
