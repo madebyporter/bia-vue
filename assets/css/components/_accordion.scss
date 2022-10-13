@@ -53,7 +53,7 @@
   @include grid-column(1,4);
   position: relative;
   @media screen and (min-width: $ssLaptop) {
-    @include grid-column(1,12);
+    @include grid-column(1,14);
   }
 }
 .accordion-content {
