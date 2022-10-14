@@ -53,9 +53,7 @@ const dynamicRoutes = async () => {
       content_type: "feedTemplate",
       include: 9
     })
-  ]).then(([feedTemplate]) => {
-    return [...feedTemplate.items.map(entry => entry.fields.slug)];
-  })
+  ])
 
   return memberRoute, casesRoute, venturesRoute, journalRoute, feedRoute
 }

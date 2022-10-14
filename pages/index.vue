@@ -16,13 +16,13 @@
         <ul class="list-default-large">
           <li class="list-item" v-for="feedItem in feed.fields.feedContent" :key="feedItem.fields.slug">
             <div class="list-item-full">
-              <!-- <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">
+              <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">
                 <img class="image-rounded" :src="`${feedItem.fields.featuredImage.fields.file.url}`" />
-              </NuxtLink> -->
+              </NuxtLink>
             </div>
             <div class="list-item-half list-item-narrow">
               <h2 class="h2 margin-b-0">
-                <!-- <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">{{feedItem.fields.title}}</NuxtLink> -->
+                <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">{{feedItem.fields.title}}</NuxtLink>
               </h2>
               <p class="p-large">{{feedItem.fields.description}}</p>
             </div>
