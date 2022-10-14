@@ -27,7 +27,7 @@
 }
 .section-large {
   @extend .section;
-  padding: $sp80 $sp20;
+  padding: $sp40 $sp20;
   @media screen and (min-width: $ssTablet) {
     padding: $sp80 $sp40;
   }

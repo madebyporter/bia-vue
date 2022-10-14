@@ -68,14 +68,14 @@
       @include grid-column(6,7);
     }
   }
-  .content-header {
-    margin-bottom: $sp40;
-  }
+  // .content-header {
+  //   margin-bottom: $sp40;
+  // }
   .content-header-bordered {
     @include bottom-border();
     padding-bottom: $sp10;
     margin-bottom: $sp10;
   }
   .content-inner {
-    margin: 0 0 $sp40;
+    margin: 0 0 $sp80;
   }

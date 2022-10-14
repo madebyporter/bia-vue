@@ -40,13 +40,24 @@ const dynamicRoutes = async () => {
   // Fetch Journal
   const journalRoute = Promise.all([
     client.getEntries({
-      content_type: "journal"
+      content_type: "journal",
+      include: 9
     })
   ]).then(([ventures]) => {
     return [...journal.items.map(entry => entry.fields.slug)];
   })
 
-  return memberRoute, casesRoute, venturesRoute
+  // Fetch Homepage
+  const feedRoute = Promise.all([
+    client.getEntries({
+      content_type: "feedTemplate",
+      include: 9
+    })
+  ]).then(([ventures]) => {
+    return [...feedTemplate.items.map(entry => entry.fields.slug)];
+  })
+
+  return memberRoute, casesRoute, venturesRoute, journalRoute, feedRoute
 }
 
 export default {
@@ -89,7 +100,8 @@ export default {
     "~/plugins/members",
     "~/plugins/cases",
     "~/plugins/ventures",
-    "~/plugins/journal"
+    "~/plugins/journal",
+    "~/plugins/feedTemplate",
   ],
 
   // Contentful

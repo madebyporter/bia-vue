@@ -9,9 +9,13 @@
   }
 }
 .Home .global-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
+  z-index: 100;
+  @media screen and (min-width: $ssLaptop) {
+    position: fixed;
+  }
   & * {
     color: $clWhite;
     fill: $clWhite;
