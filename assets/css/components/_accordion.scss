@@ -43,15 +43,22 @@
     }
   }
   label {
-    display: block;
     width: 100%;
     overflow: hidden;
   }
 }
 .accordion-panel {
   cursor: pointer;
+  @extend .grid;
+  gap: $sp10 $sp40;
   @include grid-column(1,4);
   position: relative;
+  @media screen and (min-width: $ssLaptop) {
+    @include grid-column(1,14);
+  }
+}
+.accordion-header {
+  @include grid-column(1,4);
   @media screen and (min-width: $ssLaptop) {
     @include grid-column(1,14);
   }
@@ -62,6 +69,6 @@
   @include grid-column(1,4);
   @media screen and (min-width: $ssLaptop) {
     padding: $sp40 0 0 0;
-    @include grid-column(5,7);
+    @include grid-column(6,7);
   }
 }

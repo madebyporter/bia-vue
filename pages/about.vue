@@ -40,15 +40,15 @@ import AccordionItems from '@/components/accordion-items.vue'
         faqs: [
           {
             question: 'who we <span class="s-underline-white">be</span>lieve',
+            answer: "Companies, entities, and individuals who value communities, transparency interested in working with a small team to produce big results for humaity’s future."
+          },
+          {
+            question: 'how we <span class="s-underline-white">be</span>have',
             answer: 'First principle thinkers by design, they find themselves more at home in quantum physics creation myth we are so familiar with.'
           },
           {
-            question: 'who we <span class="s-underline-white">be</span>lieve',
-            answer: 'First principle thinkers by design, they find themselves more at home in quantum physics creation myth we are so familiar with.'
-          },
-          {
-            question: 'who we <span class="s-underline-white">be</span>lieve',
-            answer: 'First principle thinkers by design, they find themselves more at home in quantum physics creation myth we are so familiar with.'
+            question: 'why we <span class="s-underline-white">be</span>long',
+            answer: 'Quality, aesthetics, and care through experiences for people to build sustainable systems overtime for our Human problems.'
           },
         ]
       }
