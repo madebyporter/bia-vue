@@ -43,7 +43,7 @@ const dynamicRoutes = async () => {
       content_type: "journal",
       include: 9
     })
-  ]).then(([ventures]) => {
+  ]).then(([journal]) => {
     return [...journal.items.map(entry => entry.fields.slug)];
   })
 
@@ -53,7 +53,7 @@ const dynamicRoutes = async () => {
       content_type: "feedTemplate",
       include: 9
     })
-  ]).then(([ventures]) => {
+  ]).then(([feedTemplate]) => {
     return [...feedTemplate.items.map(entry => entry.fields.slug)];
   })
 
