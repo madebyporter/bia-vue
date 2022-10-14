@@ -5,42 +5,47 @@
   @extend .grid-y-medium;
   @include bottom-border($color: $clWhite);
   padding: $sp40 0;
-  &.closed .accordion-panel {
-    &:after {
-      content: "\f531";
-      font: normal normal normal 1em/1 "Phosphor";
-      @include font-size(36px);
-      color: inherit;
-      flex-shrink: 0;
-      speak: none;
-      text-transform: none;
-      text-decoration: inherit;
-      text-align: center;
-      -webkit-font-smoothing: antialiased;
-      @include vertical-center;
-      right: 0;
-      z-index: 0;
-    }
-  }
-  &.closed .accordion-content {
+  position: relative;
+  input[type="radio"] {
     display: none;
-  }
-  &.opened .accordion-panel {
-    &:after {
-      content: "\f4bf";
-      font: normal normal normal 1em/1 "Phosphor";
-      @include font-size(36px);
-      color: inherit;
-      flex-shrink: 0;
-      speak: none;
-      text-transform: none;
-      text-decoration: inherit;
-      text-align: center;
-      -webkit-font-smoothing: antialiased;
-      @include vertical-center;
-      right: 0;
-      z-index: 0;
+    /* closed */
+    & + .accordion-content {
+      transition: max-height 500ms ease;
+      max-height: 0;
+      &:after {
+        content: "\f531";
+        font: normal normal normal 1em/1 "Phosphor";
+        @include font-size(36px);
+        color: inherit;
+        flex-shrink: 0;
+        speak: none;
+        text-transform: none;
+        text-decoration: inherit;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        @include vertical-center;
+        right: 0;
+        z-index: 0;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        @media screen and (min-width: $ssLaptop) {
+          top: 60px;
+        }
+      }
     }
+    /* opneed */
+    &:checked + .accordion-content {
+      max-height: 600px; /* arbitrary, will go to 100% height max */
+      &:after {
+        content: "\f4bf";
+      }
+    }
+  }
+  label {
+    display: block;
+    width: 100%;
+    overflow: hidden;
   }
 }
 .accordion-panel {
@@ -48,7 +53,7 @@
   @include grid-column(1,4);
   position: relative;
   @media screen and (min-width: $ssLaptop) {
-    @include grid-column(1,12);
+    @include grid-column(1,14);
   }
 }
 .accordion-content {
