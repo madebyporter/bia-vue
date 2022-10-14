@@ -15,6 +15,17 @@ html {
     font-weight: $fwLight;
     text-decoration: none;
   }
+  a.link-underline {
+    @extend a;
+    text-decoration: underline;
+  }
+  a.link-large {
+    @extend a;
+    @include font-size($fs14);
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs24);
+    }
+  }
 
 // Headers
   h1, h2, h3, h4, h5, h6 {

@@ -7,3 +7,37 @@
 .card-person {
   margin: 0 0 $sp40 0;
 }
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  & > * {
+    width: 100%;
+  }
+}
+.card-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $sp10;
+  padding: $sp80 $sp40;
+  color: $clWhite;
+  & > * {
+    color: $clWhite !important;
+  }
+  @media screen and (min-width: $ssLaptop) {
+    gap: $sp10;
+  }
+}
+.card-color-yellow {
+  @extend .card-color;
+  background: $clYellow;
+}
+.card-color-orange {
+  @extend .card-color;
+  background: $clOrange;
+}
+.card-color-blue {
+  @extend .card-color;
+  background: $clBlue;
+}

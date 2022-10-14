@@ -68,9 +68,6 @@
       @include grid-column(6,7);
     }
   }
-  // .content-header {
-  //   margin-bottom: $sp40;
-  // }
   .content-header-bordered {
     @include bottom-border();
     padding-bottom: $sp10;
@@ -78,4 +75,12 @@
   }
   .content-inner {
     margin: 0 0 $sp80;
+  }
+  .content-subgrid-thirds {
+    @extend .grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: $ssLaptop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
