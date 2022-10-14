@@ -11,21 +11,12 @@
     width: 100%;
     object-fit: cover;
     @media screen and (min-width: $ssLaptop) {
-      width: 600px;
       height: 800px;
     }
   }
 
-  
-
   .case-image-full {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    @media screen and (min-width: $ssLaptop) {
-      width: 100%;
-      height: 800px;
-    }
+    @extend .profile-image;
   }
   .case-image-left {
     @extend .profile-image;
