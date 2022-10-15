@@ -1,14 +1,13 @@
 <template>
   <div>
-    <section class="section-y-0 hero-home">
-      <div class="content-half hero-home-left">
+    <section ref="hero" :class="'section-y-0 hero-home hero-home-version'+scrolled">
+      <div class="content-half hero-home-left" :style="{opacity: 100-scrolled*10+'%'}">
         <p class="p-large">FuturexForwardxPartners</p>
         <Logo-Tertiary></Logo-Tertiary>
       </div>
-      <div class="content-half hero-home-right">
+      <div class="content-half hero-home-right" :style="{opacity: 100-scrolled*10+'%'}">
         <p>Together we work both as a collective and individuals to solve future challenges of humanity. Through our intimate craft, authentic voice, and intricate eye on aesthetics, we deliver the best necessary results for you</p>
       </div>
-      <div class="hero-home-img"><img src="~@/assets/img/bg/hero-home-desktop.jpg" alt="BIA Background" /></div>
     </section>
 
     <section class="section-large">
@@ -65,12 +64,22 @@
   export default {
     data() {
       return {
-        title: 'Home'
+        title: 'Home',
+        scrolled: 0
       }
     },
     computed: {
       feedTemplate() {
         return this.$store.state.feedData.feedTemplate;
+      }
+    },
+    methods: {
+      changeScrollVersion() {
+        let heroHeight = this.$refs.hero.offsetHeight
+        let scrollPosition = window.scrollY
+        let chunk = heroHeight / 11 //number of versions in _hero-home.scss; default 11
+        let version = Math.floor(scrollPosition / chunk)
+        this.scrolled = version
       }
     },
     head() {
@@ -88,5 +97,8 @@
         },
       }
     },
+    mounted() {
+      window.onscroll = () => this.changeScrollVersion()
+    }
   }
 </script>
