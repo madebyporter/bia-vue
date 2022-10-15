@@ -6,12 +6,17 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    mix-blend-mode: difference;
+    a {
+      color: #fff;
+    }
   }
 }
 .Home .global-header {
   position: absolute;
   top: 0;
   width: 100%;
+  mix-blend-mode: normal;
   z-index: 100;
   @media screen and (min-width: $ssLaptop) {
     position: fixed;
