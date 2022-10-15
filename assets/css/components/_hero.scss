@@ -20,9 +20,11 @@
   }
   .hero-home {
     align-items: flex-end;
+    padding-top: $sp225;
     position: relative;
     @media screen and (min-width: $ssLaptop) {
       height: 680px;
+      padding-top: 0;
     }
     & * {
       color: $clWhite;

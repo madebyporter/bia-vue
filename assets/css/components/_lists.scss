@@ -8,17 +8,64 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $sp10;
     & + ul, & + ol {
       margin: $sp40 0 0;
     }
   }
+  .list-default-large {
+    @extend .list-default;
+    gap: $sp40;
+    @media screen and (min-width: $ssLaptop) {
+      gap: $sp80;
+    }
+  }
   .list-default > li {
     display: flex;
-    margin-bottom: $sp10;
     align-items: center;
     @media screen and (min-width: $ssLaptop) {
       align-items: flex-start;
+    }
+  }
+  .list-item {
+    display: flex;
+    margin-bottom: $sp10;
+    align-items: center;
+    gap: $sp10;
+    flex-direction: column;
+    @media screen and (min-width: $ssLaptop) {
+      align-items: flex-start;
       margin-bottom: $sp10;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: $sp20;
+    }
+  }
+  .list-item-narrow {
+    padding: 0;
+    @media screen and (min-width: $ssLaptop) {
+      padding: 0 $sp160;
+    }
+  }
+  .list-item-full {
+    @extend .list-item;
+    width: 100%;
+  }
+  .list-item-half {
+    @extend .list-item;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    & > * {
+      width: 100%;
+    }
+    @media screen and (min-width: $ssLaptop) {
+      & > * {
+        width: 50%;
+      }
     }
   }
   .list-item-avatar {

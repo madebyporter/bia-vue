@@ -13,10 +13,14 @@
   }
 }
 .Home .global-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   mix-blend-mode: normal;
+  z-index: 100;
+  @media screen and (min-width: $ssLaptop) {
+    position: fixed;
+  }
   & * {
     color: $clWhite;
     fill: $clWhite;

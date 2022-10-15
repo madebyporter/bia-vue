@@ -1,62 +1,114 @@
 <template>
-  <section class="section">
-    <div class="content-full">
-      <h1 class="h1">{{ member.fields.name }}</h1>
-      <p v-if="member.fields.title">{{ member.fields.title }}</p>
-      <p v-if="member.fields.bio">{{ member.fields.bio }}</p>
-      <p v-if="member.fields.avatar"><img :src="`${member.fields.avatar.fields.file.url}`" /></p>
-
-      <div v-if="member.fields.links">
-        <h2>Links:</h2>
-        <ul>
+  <div>
+    <section class="section">
+      <div class="content-half">
+        <div v-if="member.fields.avatar"><img :src="`${member.fields.avatar.fields.file.url}`" class="image-rounded profile-image" /></div>
+      </div>
+      <div class="content-half align-self-center">
+        <div class="content-header">
+          <h1 class="h1 margin-b-5">{{ member.fields.name }}</h1>
+          <p v-if="member.fields.title">{{ member.fields.title }}</p>
+        </div>
+        <div v-if="member.fields.bio"  v-html="$md.render(member.fields.bio)"></div>
+      </div>
+    </section>
+    <section class="section-dark section-large padding-b-0">
+      <div class="content-full">
+        <h2 class="h2">More partner info</h2>
+      </div>
+    </section>
+    <section class="section-dark section-large">
+      <div class="content-thirds">
+        <div class="content-header-bordered">
+          <h3 class="h3 margin-b-0">Links:</h3>
+        </div>
+        <ul v-if="member.fields.links" class="list-default">
           <li v-for="link in member.fields.links">
-            <a :href="`${link}`">{{ link }}</a>
+            <a :href="`${link.fields.linkUrl}`" target="_blank">{{ link.fields.linkType }}</a>
           </li>
         </ul>
       </div>
-
-      <div v-if="member.fields.disciplines">
-        <h2>Disciplines:</h2>
-        <ul>
+      <div class="content-thirds">
+        <div class="content-header-bordered">
+          <h3 class="h3 margin-b-0">Disciplines:</h3>
+        </div>
+        <ul v-if="member.fields.disciplines" class="list-default">
           <li v-for="discipline in member.fields.disciplines">
             {{ discipline.fields.title }}
           </li>
         </ul>
       </div>
-
-      <div v-if="member.fields.verticals">
-        <h2>Verticals:</h2>
-        <ul>
-          <li v-for="vertical in member.fields.verticals">
-            {{ vertical }}
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Cases:</h2>
-        <ul>
-          <li v-for="caseStudy in cases" :key="caseStudy.fields.slug">
-            <h2><NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">{{ caseStudy.fields.title }}</NuxtLink></h2>
-            <p>{{ caseStudy.fields.challenge }}</p>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Ventures:</h2>
-        <div v-for="venture in ventures">
-          <div v-for="team in venture.fields.team">
-            <ul v-if="team.fields.slug === member.fields.slug">
-              <li :key="venture.fields.slug">
-                <h2><NuxtLink :to="/cases/+`${venture.fields.slug}`">{{ venture.fields.title }}</NuxtLink></h2>
-                <p>{{ venture.fields.summary }}</p>
-              </li>
-            </ul>
-          </div>
+      <div class="content-thirds">
+        <div class="content-header-bordered">
+          <h3 class="h3 margin-b-0">Verticals:</h3>
         </div>
+        <ul v-if="member.fields.verticals" class="list-default">
+          <li v-for="vertical in member.fields.verticals">
+            {{ vertical.fields.title }}
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="section-large">
+      <div class="content-full">
+        <h2 class="h2">Cases</h2>
+      </div>
+      <div class="content-full">
+        <ul class="list-content">
+          <li v-for="caseStudy in cases" :key="caseStudy.fields.slug">
+            <div class="list-content-left">
+              <div class="list-item-image" v-if="caseStudy.fields.featuredImage">
+                <NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">
+                  <img class="image-rounded" :src="`${caseStudy.fields.featuredImage.fields.file.url}`" />
+                </NuxtLink>
+              </div>
+            </div>
+            <div class="list-content-right">
+              <div class="list-content-header">
+                <h2 class="h2"><NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">{{ caseStudy.fields.title }}</NuxtLink></h2>
+                <ul class="list-tag">
+                  <li v-for="delivarables in caseStudy.fields.delivarables">
+                    {{ delivarables }}
+                  </li>
+                </ul>
+              </div>
+              <div class="list-content-data">
+                <div class="list-content-data-left">
+                  <h3 class="h3 list-content-data-heading">Team</h3>
+                  <ul class="list-default">
+                    <li v-for="(role, i) in caseStudy.fields.roles" :key="'role-'+i">
+                      <div class="list-item-avatar">
+                        <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
+                      </div>
+                      <div class="list-item-person">
+                        <h3 class="h-mb-0 person-name">
+                          <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
+                            {{ role.fields.member.fields.name }}
+                          </NuxtLink>
+                        </h3>
+                        <p class="person-role">
+                          <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-content-data-right">
+                  <h3 class="h3 list-content-data-heading">Verticals</h3>
+                  <ul class="list-default">
+                    <li v-for="(vertical, i) in caseStudy.fields.verticals">
+                      <p>{{ vertical.fields.title }}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  
 </template>
 
 <script>

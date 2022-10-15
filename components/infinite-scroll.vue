@@ -59,7 +59,7 @@ export default {
             window.setTimeout(() => {
               this.screenHeight = document.body.scrollHeight
               this.active.shift()
-            }, 1000)
+            }, 400)
           }
         });
       });
