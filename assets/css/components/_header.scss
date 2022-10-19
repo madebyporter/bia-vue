@@ -16,7 +16,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  mix-blend-mode: normal;
   z-index: 100;
   @media screen and (min-width: $ssLaptop) {
     position: fixed;
@@ -25,19 +24,21 @@
     color: $clWhite;
     fill: $clWhite;
   }
-  .global-header--logo svg {
-    width: 70px;
-  }
 }
 
 .global-header--logo {
   @include grid-column(1,2);
   @media screen and (min-width: $ssLaptop) {
-    @include grid-column(2,2);
+    @include grid-column(1,2);
   }
   svg {
     height: 48px;
-    width: 110px;
+    width: auto;
+  }
+  > div {
+    display: flex;
+    align-items: start;
+    justify-content: start;
   }
 }
 .global-header--nav {
