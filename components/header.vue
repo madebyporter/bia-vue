@@ -1,8 +1,7 @@
 <template>
   <header class="global-header">
     <NuxtLink to="/" class="global-header--logo">
-      <Logo-Secondary v-if="homePage()"></Logo-Secondary>
-      <Logo v-else-if="!homePage()"></Logo>
+      <Logo></Logo>
     </NuxtLink>
     <nav class="global-header--nav">
       <NuxtLink to="/collective">Collective</NuxtLink>
