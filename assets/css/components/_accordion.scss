@@ -6,39 +6,37 @@
   @include bottom-border($color: $clWhite);
   padding: $sp40 0;
   position: relative;
-  input[type="radio"] {
-    display: none;
+  .accordion-content {
+    transition: max-height 600ms ease;
     /* closed */
-    & + .accordion-content {
-      transition: max-height 500ms ease;
-      max-height: 0;
-      &:after {
-        content: "\f531";
-        font: normal normal normal 1em/1 "Phosphor";
-        @include font-size(36px);
-        color: inherit;
-        flex-shrink: 0;
-        speak: none;
-        text-transform: none;
-        text-decoration: inherit;
-        text-align: center;
-        -webkit-font-smoothing: antialiased;
-        @include vertical-center;
-        right: 0;
-        z-index: 0;
-        position: absolute;
-        top: 15px;
-        right: 0;
-        @media screen and (min-width: $ssLaptop) {
-          top: 60px;
-        }
-      }
-    }
-    /* opneed */
-    &:checked + .accordion-content {
+    max-height: 0;
+    /* opened */
+    &.open {
       max-height: 600px; /* arbitrary, will go to 100% height max */
+      transition: max-height 200ms ease;
       &:after {
         content: "\f4bf";
+      }
+    }
+    &:after {
+      content: "\f531";
+      font: normal normal normal 1em/1 "Phosphor";
+      @include font-size(36px);
+      color: inherit;
+      flex-shrink: 0;
+      speak: none;
+      text-transform: none;
+      text-decoration: inherit;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      @include vertical-center;
+      right: 0;
+      z-index: 0;
+      position: absolute;
+      top: 15px;
+      right: 0;
+      @media screen and (min-width: $ssLaptop) {
+        top: 60px;
       }
     }
   }
