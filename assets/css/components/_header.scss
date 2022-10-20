@@ -1,14 +1,16 @@
 .global-header {
   @extend .grid;
   padding: $sp20 $sp20;
+  @media screen and (min-width: $ssTablet) {
+    mix-blend-mode: difference;
+  }
   @media screen and (min-width: $ssLaptop) {
     padding: $sp40 $sp40;
     position: sticky;
     top: 0;
     z-index: 100;
-    mix-blend-mode: difference;
     a {
-      color: #fff;
+      color: $clWhite;
     }
   }
 }
@@ -17,6 +19,7 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  background: none;
   @media screen and (min-width: $ssLaptop) {
     position: fixed;
   }
@@ -28,6 +31,9 @@
 
 .global-header--logo {
   @include grid-column(1,2);
+  @media screen and (max-width: $ssTablet) {
+    mix-blend-mode: difference;
+  }
   @media screen and (min-width: $ssLaptop) {
     @include grid-column(1,2);
   }
