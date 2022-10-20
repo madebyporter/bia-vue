@@ -1,7 +1,7 @@
 <template>
   <header class="global-header">
     <NuxtLink to="/" class="global-header--logo">
-      <Logo></Logo>
+      <Logo :fullLogo="fullLogo"></Logo>
     </NuxtLink>
     <nav class="global-header--nav">
       <NuxtLink to="/collective">Collective</NuxtLink>
@@ -13,15 +13,7 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      homePage() {
-        if(this.$route.path == "/" || this.$route.path == "/home" ) {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
-  }
+export default {
+  props: ['fullLogo']
+}
 </script>
