@@ -75,7 +75,7 @@
     },
     methods: {
       changeScrollVersion() {
-        let heroHeight = this.$refs.hero.offsetHeight
+        let heroHeight = this.$refs.hero.clientHeight
         let scrollPosition = window.scrollY
         let chunk = heroHeight / 11 //number of versions in _hero-home.scss; default 11
         let version = Math.floor(scrollPosition / chunk)
