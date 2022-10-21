@@ -23,7 +23,7 @@
     padding-top: $sp225;
     position: relative;
     @media screen and (min-width: $ssLaptop) {
-      height: 680px;
+      height: 100vh;
       padding-top: 0;
     }
     & * {
