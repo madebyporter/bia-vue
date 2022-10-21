@@ -49,10 +49,12 @@
 }
 .global-header--nav {
   @include grid-column(3,2);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: $sp5;
+  .nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $sp5;
+  }
   @media screen and (min-width: $ssLaptop) {
     @include grid-column(10,2);
   }
