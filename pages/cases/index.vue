@@ -63,12 +63,13 @@
   export default {
     data() {
       return {
-        title: 'Cases'
+        title: 'Case Studies'
       }
     },
     head() {
       return {
         title: this.title,
+        titleTemplate: '%s - Bia',
         meta: [
           {
             hid: 'description',
