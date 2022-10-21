@@ -10,7 +10,7 @@
       </div>
     </section>
 
-    <section class="section-large">
+    <section class="section-large homepage-content">
       <div class="content-full" v-for="feed in feedTemplate">
         <ul class="list-default-large">
           <li class="list-item" v-for="feedItem in feed.fields.feedContent" :key="feedItem.fields.slug">
@@ -75,9 +75,11 @@
     },
     methods: {
       changeScrollVersion() {
+        // 6 versions of the gradient css
+        // flip through them on scroll
         let heroHeight = this.$refs.hero.clientHeight
         let scrollPosition = window.scrollY
-        let chunk = heroHeight / 11 //number of versions in _hero-home.scss; default 11
+        let chunk = heroHeight / 6 //number of versions in _hero-home.scss
         let version = Math.floor(scrollPosition / chunk)
         this.scrolled = version
       }
