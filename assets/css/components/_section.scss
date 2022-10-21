@@ -1,6 +1,8 @@
 .section {
   @extend .grid;
+  background-color: $clWhite;
   padding: $sp40 $sp20;
+  color: $clBlack;
   @media screen and (min-width: $ssTablet) {
     padding: $sp40;
   }
@@ -35,7 +37,7 @@
 
 .section-dark {
   @extend .section;
-  background: $clBlack;
+  background-color: $clBlack;
   & > * {
     color: $clWhite;
   }

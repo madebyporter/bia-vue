@@ -35,6 +35,9 @@
         @include grid-column(8,6);
       } 
     }
+    .content-header {
+      margin-bottom: $sp40;
+    }
   }
   .content-thirds {
     @include grid-column(1,4);
