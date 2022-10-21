@@ -20,13 +20,14 @@
   flex-direction: column;
   justify-content: center;
   gap: $sp10;
-  padding: $sp80 $sp40;
+  padding: $sp40 $sp20;
   color: $clWhite;
   & > * {
     color: $clWhite !important;
   }
   @media screen and (min-width: $ssLaptop) {
     gap: $sp10;
+    padding: $sp80 $sp40;
   }
 }
 .card-color-yellow {
