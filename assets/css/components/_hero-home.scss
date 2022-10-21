@@ -3,7 +3,7 @@
   transition: background 0.5s ease-in-out;
   @media screen and (min-width: $ssLaptop) {
     background-position: left 30% bottom 20%;
-    background-size: 150vw 150vh;
+    background-size: 100vw 100vh;
     &-version0 {
       background-image: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 15.95%, #5177FD 41.03%, #111111 80.7%);
     }
