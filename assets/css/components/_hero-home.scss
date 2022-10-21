@@ -1,6 +1,6 @@
 .hero-home {
   background-attachment: fixed;
-  transition: background 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   @media screen and (min-width: $ssLaptop) {
     background-position: left 30% bottom 20%;
     background-size: 100vw 100vh;
@@ -25,6 +25,7 @@
   }
   @media screen and (max-width: $ssLaptop) {
     background-position: left 25% top 88%;
+    transition: background-size 0.5s ease-in-out, background-image 0.5s ease-in-out;
     &-version0 {
       background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 12.9%, #5177FD 31.82%, #111111 45.04%);
       background-size: 150vw 150vh;
