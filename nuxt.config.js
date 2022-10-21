@@ -100,6 +100,7 @@ export default {
     "~/plugins/ventures",
     "~/plugins/journal",
     "~/plugins/feedTemplate",
+    "~/plugins/analytics",
   ],
 
   // Contentful
