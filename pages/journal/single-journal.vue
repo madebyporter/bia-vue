@@ -40,7 +40,15 @@
     },
     head() {
       return {
-        title: this.journal.fields.title
+        title: this.journal.fields.title,
+        titleTemplate: '%s - Bia',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.journal.fields.title
+          }
+        ]
       };
     }
   }

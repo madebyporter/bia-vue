@@ -127,7 +127,15 @@ export default {
   },
   head() {
     return {
-      title: this.cases.fields.name
+      title: this.cases.fields.title,
+      titleTemplate: '%s - Case Studies - Bia',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.cases.fields.title
+        }
+      ]
     };
   }
 }

@@ -80,7 +80,15 @@
     },
     head() {
       return {
-        title: this.venture.fields.name
+        title: this.venture.fields.name,
+        titleTemplate: '%s - Bia',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.venture.fields.title
+          }
+        ]
       };
     }
   }

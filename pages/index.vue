@@ -85,6 +85,7 @@
     head() {
       return {
         title: this.title,
+        titleTemplate: '%s - Bia',
         meta: [
           {
             hid: 'description',

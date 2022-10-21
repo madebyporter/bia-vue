@@ -138,7 +138,15 @@
     },
     head() {
       return {
-        title: this.member.fields.name
+        title: this.member.fields.name,
+        titleTemplate: '%s - Collective - Bia',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.member.fields.bio
+          }
+        ]
       };
     }
   }
