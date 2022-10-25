@@ -1,54 +1,96 @@
 .hero-home {
-  background-attachment: fixed;
-  transition: background-image 0.5s ease-in-out;
+  background: $clBlack;
+  &:before {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    display: block;
+    transition: background-image 1s ease-in-out;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $ssLaptop) {
+      background-size: 100vw 100vh;
+      transform: scale(2);
+      top: 8%;
+      left: -25%;
+      transform-origin: bottom left;
+    }
+    @media screen and (min-width: $ssLaptop) {
+      background-size: 100vw 100vh;
+      background-position: top left -250px;
+      top: 0;
+      left: 0;
+    }
+  }
   @media screen and (min-width: $ssLaptop) {
-    background-position: left 30% bottom 20%;
-    background-size: 100vw 100vh;
-    &-version0 {
-      background-image: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 15.95%, #5177FD 41.03%, #111111 80.7%);
+    &-version0:before {
+      background: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 15.95%, #5177FD 30.03%, #111111 80.7%);
     }
-    &-version1 {
-      background-image: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 34.05%, #5177FD 58.6%, #111111 85.24%);
+    &-version1:before {
+      background: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 28.37%, #5177FD 50.49%, #111111 80.7%);
     }
-    &-version2 {
-      background-image: radial-gradient(69.56% 107.61% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 39.15%, #5177FD 65.91%, #111111 95.78%);
+    &-version2:before {
+      background: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 34.05%, #5177FD 58.6%, #111111 85.24%);
     }
-    &-version3 {
-      background-image: radial-gradient(87.11% 134.76% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    &-version3:before {
+      background: radial-gradient(61.77% 95.56% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 39.15%, #5177FD 65.91%, #111111 95.78%);
     }
-    &-version4 {
-      background-image: radial-gradient(105.01% 162.46% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    &-version4:before {
+      background: radial-gradient(69.56% 107.61% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 39.15%, #5177FD 65.91%, #111111 95.78%);
     }
-    &-version5 {
-      background-image: radial-gradient(139.7% 216.12% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    &-version5:before {
+      background: radial-gradient(76.32% 118.07% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 39.15%, #5177FD 65.91%, #111111 95.78%);
+    }
+    &-version6:before {
+      background: radial-gradient(87.11% 134.76% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    }
+    &-version7:before {
+      background: radial-gradient(96.24% 148.88% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    }
+    &-version8:before {
+      background: radial-gradient(105.01% 162.46% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    }
+    &-version9:before {
+      background: radial-gradient(139.7% 216.12% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
+    }
+    &-version10:before {
+      background: radial-gradient(139.7% 216.12% at 22.77% 80.08%, #E5EA00 0%, #FF7B51 42.47%, #5177FD 68.25%, #111111 95.78%);
     }
   }
   @media screen and (max-width: $ssLaptop) {
-    background-position: left 25% top 88%;
-    transition: background-size 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    &-version0 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 12.9%, #5177FD 31.82%, #111111 45.04%);
-      background-size: 150vw 150vh;
+    transition: background-image 0.5s ease-in-out;
+    &-version0:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 12.9%, #5177FD 31.82%, #111111 45.04%);
     }
-    &-version1 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 23.1%, #5177FD 40.94%, #111111 57.16%);
-      background-size: 150vw 150vh;
+    &-version1:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 17.35%, #5177FD 34.55%, #111111 46.4%);
     }
-    &-version2 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 37.25%, #5177FD 58.87%, #111111 72.57%);
-      background-size: 200vw 250vh;
+    &-version2:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 23.1%, #5177FD 40.94%, #111111 57.16%);
     }
-    &-version3 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 31.8%, #5177FD 62.69%, #111111 81.98%);
-      background-size: 200vw 250vh;
+    &-version3:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 29.09%, #5177FD 50.36%, #111111 64.11%);
     }
-    &-version4 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 54.4%, #5177FD 77.19%, #111111 88.94%);
-      background-size: 300vw 400vh;
+    &-version4:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 37.25%, #5177FD 58.87%, #111111 72.57%);
     }
-    &-version5 {
-      background-image: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 56.38%, #5177FD 98.43%, #111111 100%);
-      background-size: 300vw 400vh;
+    &-version5:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 22.17%, #5177FD 62.69%, #111111 74.75%);
+    }
+    &-version6:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 31.8%, #5177FD 62.69%, #111111 81.98%);
+    }
+    &-version7:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 42.01%, #5177FD 69.14%, #111111 88.94%);
+    }
+    &-version8:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 54.4%, #5177FD 77.19%, #111111 88.94%);
+    }
+    &-version9:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 55.66%, #5177FD 83.33%, #111111 100%);
+    }
+    &-version10:before {
+      background: radial-gradient(123.91% 69.81% at 22.5% 86.8%, #E5EA00 0%, #FF7B51 55.66%, #5177FD 83.33%, #111111 100%);
     }
   }
 }
