@@ -6,9 +6,11 @@
       </div>
     </section>
 
-    <section class="section-xy-0">
+    <section class="section-xy-0" v-if="cases.fields.featuredImage">
       <div class="content-wide">
-        <div class="hero-image" v-if="cases.fields.featuredImage"><img :src="`${cases.fields.featuredImage.fields.file.url}`" /></div>
+        <div class="hero-image">
+          <img :src="`${cases.fields.featuredImage.fields.file.url}`" />
+        </div>
       </div>
     </section>
 
@@ -16,7 +18,7 @@
       <div class="content-sidebar">
         <aside class="content-sidebar-aside" v-if="cases.fields.type">
           <ul class="list-default">
-            <li><h3>{{ cases.fields.type }}</h3></li>
+            <li><div class="tag">{{ cases.fields.type }}</div></li>
           </ul>
         </aside>
 
@@ -54,23 +56,25 @@
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="cases.fields.challenge">
           <h2 class="content-header h6">Challenge:</h2>
-          <div class="p-large" v-if="cases.fields.challenge" v-html="$md.render(cases.fields.challenge)"></div>
+          <div class="content-text" v-if="cases.fields.challenge" v-html="$md.render(cases.fields.challenge)"></div>
         </div>
 
         <div class="content-inner" v-if="cases.fields.solution">
           <h2 class="content-header h6">Solution:</h2>
-          <div class="p-large" v-if="cases.fields.solution" v-html="$md.render(cases.fields.solution)"></div>
+          <div class="content-text" v-if="cases.fields.solution" v-html="$md.render(cases.fields.solution)"></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" v-if="cases.fields.bodyImage">
       <div class="content-full">
-        <div v-if="cases.fields.bodyImage"><img class="case-image-full image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" /></div>
+        <div class="case-image-full">
+          <img class="image-rounded" :src="`${cases.fields.bodyImage.fields.file.url}`" />
+        </div>
       </div>
     </section>
 
-    <section class="section-xy-0">
+    <section class="section-xy-0" v-if="cases.fields.postImages">
       <div class="content-wide">
         <div class="carousel">
           <ul class="carousel-track">
@@ -82,30 +86,34 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" v-if="cases.fields.imageFloatLeft">
       <div class="content-full">
-        <div v-if="cases.fields.imageFloatLeft"><img class="case-image-left image-rounded" :src="`${cases.fields.imageFloatLeft.fields.file.url}`" /></div>
+        <div class="case-image-left">
+          <img class="image-rounded" :src="`${cases.fields.imageFloatLeft.fields.file.url}`" />
+        </div>
       </div>
     </section>
 
-    <section class="section-large">
+    <section class="section-large" v-if="cases.fields.bodyContent">
       <div class="content-normal">
-        <div class="p-large" v-if="cases.fields.bodyContent" v-html="$md.render(cases.fields.bodyContent)"></div>
+        <div class="p-large" v-html="$md.render(cases.fields.bodyContent)"></div>
       </div>
     </section>
 
 
-    <section class="section">
+    <section class="section" v-if="cases.fields.finalMockupImage">
       <div class="content-wide">
-        <div v-if="cases.fields.finalMockupImage">
-          <img class="case-image-full image-rounded" :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
+        <div class="case-image-full">
+          <img class="image-rounded" :src="`${cases.fields.finalMockupImage.fields.file.url}`" />
         </div>
       </div>
     </section>
 
     <section class="section" v-if="cases.fields.imageFloatRight">
       <div class="content-full">
-        <img class="case-image-right image-rounded" :src="`${cases.fields.imageFloatRight.fields.file.url}`" />
+        <div class="case-image-right">
+          <img class="image-rounded" :src="`${cases.fields.imageFloatRight.fields.file.url}`" />
+        </div>
       </div>
     </section>
   </div>

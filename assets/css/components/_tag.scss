@@ -1,0 +1,12 @@
+.tag {
+    align-items: center;
+    background: $clGrayLight;
+    border-radius: 80px;
+    display: flex;
+    @include font-size($fs12);
+    font-weight: $fwNormal;
+    letter-spacing: 0.03rem;
+    line-height: 1;
+    padding: $sp5 $sp10;
+    text-transform: uppercase;
+}
