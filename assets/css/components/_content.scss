@@ -77,7 +77,10 @@
     margin-bottom: $sp10;
   }
   .content-inner {
-    margin: 0 0 $sp80;
+    margin-bottom: 0;
+    & + .content-inner {
+      margin-top: $sp80;
+    }
   }
   .content-subgrid-thirds {
     @extend .grid;
@@ -85,5 +88,13 @@
     grid-template-columns: 1fr;
     @media screen and (min-width: $ssLaptop) {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .content-text {
+    p {
+      margin-bottom: 0;
+    }
+    p + p {
+      margin-top: $sp20;
     }
   }
