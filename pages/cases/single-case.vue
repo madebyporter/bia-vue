@@ -54,12 +54,12 @@
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="cases.fields.challenge">
           <h2 class="content-header h6">Challenge:</h2>
-          <div class="p-large" v-if="cases.fields.challenge">{{ cases.fields.challenge }}</div>
+          <div class="p-large" v-if="cases.fields.challenge" v-html="$md.render(cases.fields.challenge)"></div>
         </div>
 
         <div class="content-inner" v-if="cases.fields.solution">
           <h2 class="content-header h6">Solution:</h2>
-          <div class="p-large" v-if="cases.fields.solution">{{ cases.fields.solution }}</div>
+          <div class="p-large" v-if="cases.fields.solution" v-html="$md.render(cases.fields.solution)"></div>
         </div>
       </div>
     </section>
