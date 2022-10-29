@@ -49,8 +49,9 @@ export default {
       })
     },
     loadNext() {
+      const footerHeight = document.querySelector('.global-footer').offsetHeight
       window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
           this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
           let nextEntry = this.all[this.currentIndex]
           this.active.push(nextEntry)
