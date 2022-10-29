@@ -1,6 +1,7 @@
 .global-header {
   @extend .grid;
   padding: $sp20 $sp20;
+  align-items: start;
   @media screen and (min-width: $ssTablet) {
     mix-blend-mode: difference;
   }
@@ -29,7 +30,7 @@
   }
 }
 
-.global-header--logo {
+.global-header-logo {
   @include grid-column(1,2);
   @media screen and (max-width: $ssTablet) {
     mix-blend-mode: difference;
@@ -41,13 +42,16 @@
     height: 48px;
     width: auto;
   }
+}
+.global-header-logo-link {
+  display: inline-block;
   > div {
     display: flex;
     align-items: start;
     justify-content: start;
   }
 }
-.global-header--nav {
+.global-header-nav {
   @include grid-column(3,2);
   .nav-group {
     display: flex;
