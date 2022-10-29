@@ -60,6 +60,11 @@ html {
   .h-mb-0 {
     margin-bottom: 0;
   }
+  .h-border {
+    border-bottom: 1px solid $clGrayLight;
+    padding-bottom: $sp10;
+    margin-bottom: $sp20;
+  }
 
 // Paragraphs
   p {

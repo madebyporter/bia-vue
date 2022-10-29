@@ -23,7 +23,7 @@
         </aside>
 
         <aside class="content-sidebar-aside" v-if="cases.fields.delivarables">
-          <h2 class="list-header h6">Deliverables</h2>
+          <h2 class="list-header h6 h-border">Deliverables</h2>
           <ul class="list-default">
             <li v-for="delivarables in cases.fields.delivarables">
               {{ delivarables }}
@@ -32,7 +32,7 @@
         </aside>
 
         <aside class="content-sidebar-aside" v-if="cases.fields.roles">
-          <h2 class="list-header h6">Team</h2>
+          <h2 class="list-header h6 h-border">Team</h2>
           <ul class="list-default">
             <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
               <div class="list-item-avatar">
@@ -55,12 +55,12 @@
 
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="cases.fields.challenge">
-          <h2 class="content-header h6">Challenge:</h2>
+          <h2 class="content-header h6 h-border">Challenge</h2>
           <div class="content-text" v-if="cases.fields.challenge" v-html="$md.render(cases.fields.challenge)"></div>
         </div>
 
         <div class="content-inner" v-if="cases.fields.solution">
-          <h2 class="content-header h6">Solution:</h2>
+          <h2 class="content-header h6 h-border">Solution</h2>
           <div class="content-text" v-if="cases.fields.solution" v-html="$md.render(cases.fields.solution)"></div>
         </div>
       </div>
