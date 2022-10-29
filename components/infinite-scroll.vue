@@ -58,7 +58,7 @@ export default {
           window.history.pushState({}, document.title, nextEntry);
           window.setTimeout(() => {
             this.active.shift()
-          }, 200)
+          }, 1000)
           window.setTimeout(() => {
             this.screenHeight = document.body.scrollHeight
           }, 400)
