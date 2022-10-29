@@ -55,11 +55,6 @@ export default {
             let nextEntry = this.all[this.currentIndex]
             this.active.push(nextEntry)
             window.history.pushState({}, document.title, nextEntry);
-            window.scrollTo({top: this.screenHeight, behavior: 'smooth'});
-            window.setTimeout(() => {
-              this.screenHeight = document.body.scrollHeight
-              this.active.shift()
-            }, 400)
           }
         });
       });
