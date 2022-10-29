@@ -108,7 +108,7 @@
       </div>
     </section>
   </div>
-  
+
 </template>
 
 <script>
@@ -128,7 +128,9 @@
       cases() {
         return this.$store.state.caseData.cases.filter((caseStudy) => {
           if (caseStudy.fields.roles) {
-            return caseStudy.fields.roles.filter((role) => role.fields.member.fields.slug === this.slug);
+            return caseStudy.fields.roles.some((role) => {
+              return role.fields.member.fields.slug === this.slug;
+            });
           }
         });
       },
