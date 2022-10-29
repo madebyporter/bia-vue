@@ -1,12 +1,25 @@
 // Images
   .image-rounded {
     border-radius: $sp40;
+    overflow: hidden;
     @media screen and (min-width: $ssLaptop) {
       border-radius: $sp80;
     }
   }
 
   .profile-image {
+    height: 400px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media screen and (min-width: $ssLaptop) {
+      height: 800px;
+    }
+  }
+  .case-image {
     height: 400px;
     width: 100%;
     img {
@@ -19,12 +32,12 @@
     }
   }
   .case-image-full {
-    @extend .profile-image;
+    @extend .case-image;
   }
   .case-image-left {
-    @extend .profile-image;
+    @extend .case-image;
   }
   .case-image-right {
-    @extend .profile-image;
+    @extend .case-image;
     float: right;
   }
