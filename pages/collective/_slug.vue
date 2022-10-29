@@ -2,7 +2,7 @@
   <div>
     <section class="section">
       <div class="content-half">
-        <div v-if="member.fields.avatar"><img :src="`${member.fields.avatar.fields.file.url}`" class="image-rounded profile-image" /></div>
+        <div v-if="member.fields.avatar" class="profile-image image-rounded"><img :src="`${member.fields.avatar.fields.file.url}`" /></div>
       </div>
       <div class="content-half align-self-center">
         <div class="content-header">
