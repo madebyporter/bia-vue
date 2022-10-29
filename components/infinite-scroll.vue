@@ -18,6 +18,7 @@
 import SingleCase from '@/pages/cases/single-case.vue'
 import SingleJournal from '@/pages/journal/single-journal.vue'
 import SingleVenture from '@/pages/ventures/single-venture.vue'
+import { WSAEINVALIDPROCTABLE } from 'constants'
 
 export default {
   components: {
@@ -48,18 +49,20 @@ export default {
       })
     },
     loadNext() {
-      const loadNew = new IntersectionObserver(elems => {
-        elems.forEach(elem => {
-          if (elem.isIntersecting) {
-            this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
-            let nextEntry = this.all[this.currentIndex]
-            this.active.push(nextEntry)
-            window.history.pushState({}, document.title, nextEntry);
-          }
-        });
-      });
-
-      loadNew.observe(document.querySelector('.global-footer'));
+      window.onscroll = () => {
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+          this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
+          let nextEntry = this.all[this.currentIndex]
+          this.active.push(nextEntry)
+          window.history.pushState({}, document.title, nextEntry);
+          window.setTimeout(() => {
+            this.active.shift()
+          }, 200)
+          window.setTimeout(() => {
+            this.screenHeight = document.body.scrollHeight
+          }, 400)
+        }
+      }
     }
   },
   mounted() {
