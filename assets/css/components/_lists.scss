@@ -37,13 +37,13 @@
       margin-bottom: $sp10;
       flex-wrap: wrap;
       flex-direction: row;
-      gap: $sp20;
+      gap: $sp40;
     }
   }
   .list-item-narrow {
     padding: 0;
     @media screen and (min-width: $ssLaptop) {
-      padding: 0 $sp160;
+      padding: 0 $sp80;
     }
   }
   .list-item-full {
