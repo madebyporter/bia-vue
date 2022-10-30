@@ -23,7 +23,7 @@
               <h2 class="h2 margin-b-0">
                 <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">{{feedItem.fields.title}}</NuxtLink>
               </h2>
-              <p class="p-large">{{feedItem.fields.description}}</p>
+              <p>{{feedItem.fields.description}}</p>
             </div>
           </li>
         </ul>
