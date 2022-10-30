@@ -74,7 +74,10 @@
   }
   .list-item-image {
     height: 354px;
-    @media screen and (min-width: $ssLaptop) {
+    @media screen and (min-width: $ssPhoneL) {
+      height: 100%;
+    }
+    @media screen and (min-width: $ssDesktop) {
       height: 520px;
     }
     img {
@@ -88,8 +91,11 @@
     padding: 0;
     list-style: none; 
     display: flex;
-    gap: $sp40;
+    gap: $sp80;
     flex-direction: column;
+    @media screen and (min-width: $ssDesktop) {
+      gap: $sp160;
+    }
   }
   .list-content > li {
     display: flex;
@@ -100,7 +106,10 @@
     & > * {
       width: 100%;
     }
-    @media screen and (min-width: $ssLaptop) {
+    @media screen and (min-width: $ssPhoneL) {
+      align-items: stretch;
+    }
+    @media screen and (min-width: $ssDesktop) {
       gap: $sp10 $sp40;
       flex-direction: row;
       & > * {
@@ -112,7 +121,7 @@
     border-bottom: 1px solid $clGrayLight;
     padding: 0 0 $sp20;
     margin: 0 0 $sp20;
-    @media screen and (min-width: $ssLaptop) {
+    @media screen and (min-width: $ssDesktop) {
       padding: 0 0 $sp40;
       margin: 0 0 $sp40;
     }
@@ -124,6 +133,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: $sp20;
+    @media screen and (min-width: $ssPhoneL) {
+      flex-wrap: nowrap;
+    }
     @media screen and (min-width: $ssLaptop) {
       gap: $sp40;
       flex-wrap: nowrap;
@@ -137,7 +149,7 @@
   }
   .list-content-data-heading {
     margin-bottom: $sp10;
-    @media screen and (min-width: $ssLaptop) {
+    @media screen and (min-width: $ssDesktop) {
       margin-bottom: $sp20;
     }
   }

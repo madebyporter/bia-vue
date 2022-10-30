@@ -3,7 +3,7 @@
   background-color: $clWhite;
   padding: $sp40 $sp20;
   color: $clBlack;
-  @media screen and (min-width: $ssTablet) {
+  @media screen and (min-width: $ssDesktop) {
     padding: $sp40;
   }
 }
@@ -23,14 +23,14 @@
 }
 .section-small {
   @extend .section;
-  @media screen and (min-width: $ssTablet) {
+  @media screen and (min-width: $ssDesktop) {
     padding: $sp20 $sp40;
   }
 }
 .section-large {
   @extend .section;
   padding: $sp40 $sp20;
-  @media screen and (min-width: $ssTablet) {
+  @media screen and (min-width: $ssDesktop) {
     padding: $sp80 $sp40;
   }
 }

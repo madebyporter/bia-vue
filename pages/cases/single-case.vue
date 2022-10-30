@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <section class="section-xy-0" v-if="cases.fields.postImages">
+    <section class="section-x-0" v-if="cases.fields.postImages">
       <div class="content-wide">
         <div class="carousel">
           <ul class="carousel-track">
@@ -96,7 +96,7 @@
 
     <section class="section-large" v-if="cases.fields.bodyContent">
       <div class="content-normal">
-        <div class="p-large" v-html="$md.render(cases.fields.bodyContent)"></div>
+        <div class="content-text" v-html="$md.render(cases.fields.bodyContent)"></div>
       </div>
     </section>
 
