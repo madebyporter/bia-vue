@@ -29,15 +29,17 @@
     height: 100%;
     margin: 0;
     padding: 0 $sp20 0 $sp20;
-    position: absolute;
+    width: 100%;
     @media screen and (min-width: $ssLaptop) {
+      width: auto;
+      position: absolute;
       @include grid-column(1,12);
       gap: $sp40;
       padding: 0 $sp160 0 $sp320;
     }
   }
   .carousel-element {
-    width: $widthMobile;
+    width: 50vw;
     height: $heightMobile;
     img {
       object-fit: cover;
