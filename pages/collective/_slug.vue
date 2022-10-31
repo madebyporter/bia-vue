@@ -58,14 +58,14 @@
           <li v-for="caseStudy in cases" :key="caseStudy.fields.slug">
             <div class="list-content-left">
               <div class="list-item-image" v-if="caseStudy.fields.featuredImage">
-                <NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">
+                <NuxtLink :to="/cases/+`${caseStudy.fields.slug}`" class="no-underline">
                   <img class="image-rounded" :src="`${caseStudy.fields.featuredImage.fields.file.url}`" />
                 </NuxtLink>
               </div>
             </div>
             <div class="list-content-right">
               <div class="list-content-header">
-                <h2 class="h2"><NuxtLink :to="/cases/+`${caseStudy.fields.slug}`">{{ caseStudy.fields.title }}</NuxtLink></h2>
+                <h2 class="h2"><NuxtLink :to="/cases/+`${caseStudy.fields.slug}`" class="no-underline">{{ caseStudy.fields.title }}</NuxtLink></h2>
                 <ul class="list-tag">
                   <li v-for="delivarables in caseStudy.fields.delivarables">
                     {{ delivarables }}
@@ -82,7 +82,7 @@
                       </div>
                       <div class="list-item-person">
                         <h3 class="h-mb-0 person-name">
-                          <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
+                          <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
                             {{ role.fields.member.fields.name }}
                           </NuxtLink>
                         </h3>
