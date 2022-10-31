@@ -40,7 +40,7 @@
               </div>
               <div class="list-item-person">
                 <h3 class="h-mb-0 person-name">
-                  <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`">
+                  <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
                     {{ role.fields.member.fields.name }}
                   </NuxtLink>
                 </h3>
