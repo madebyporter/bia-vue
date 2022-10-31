@@ -13,11 +13,11 @@ html {
   a {
     color: $clBlack;
     font-weight: $fwLight;
-    text-decoration: none;
-  }
-  a.link-underline {
-    @extend a;
     text-decoration: underline;
+  }
+  a.no-underline {
+    @extend a;
+    text-decoration: none;
   }
   a.link-large {
     @extend a;

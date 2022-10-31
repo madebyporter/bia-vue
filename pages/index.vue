@@ -21,7 +21,7 @@
             </div>
             <div class="list-item-half list-item-narrow">
               <h2 class="h2 margin-b-0">
-                <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">{{feedItem.fields.title}}</NuxtLink>
+                <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`" class="no-underline">{{feedItem.fields.title}}</NuxtLink>
               </h2>
               <p>{{feedItem.fields.description}}</p>
             </div>

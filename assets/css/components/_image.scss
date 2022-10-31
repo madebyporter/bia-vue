@@ -40,8 +40,14 @@
   }
   .case-image-left {
     @extend .case-image;
+    @media screen and (min-width: $ssLaptop) {
+      width: 660px;
+    }
   }
   .case-image-right {
     @extend .case-image;
-    float: right;
+    @media screen and (min-width: $ssLaptop) {
+      width: 660px;
+      float: right;
+    }
   }

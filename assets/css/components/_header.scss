@@ -59,6 +59,9 @@
     align-items: flex-start;
     gap: $sp5;
   }
+  a {
+    @extend .no-underline;
+  }
   @media screen and (min-width: $ssLaptop) {
     @include grid-column(10,2);
   }
