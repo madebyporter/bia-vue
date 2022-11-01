@@ -31,6 +31,7 @@ export default {
       active: [],
       firstIndex: 0,
       currentIndex: 0,
+      scrollYPositions: [],
       screenHeight: document.body.scrollHeight,
       timeout: null
     }
@@ -47,6 +48,8 @@ export default {
           this.active.push(elem.fields.slug)
           this.firstIndex = index
           this.currentIndex = index
+          this.screenHeight = document.body.scrollHeight
+          this.scrollYPositions.push([0, document.body.scrollHeight])
         }
       })
     },
@@ -57,15 +60,20 @@ export default {
       }
       this.timeout = window.setTimeout((() => {
         window.onscroll = () => {
+          this.scrollYPositions.forEach((entry) => {
+            if (window.scrollY >= entry[0] && window.scrollY <= entry[1]) {
+              let currentIndex = this.scrollYPositions.indexOf(entry)
+              window.history.pushState({}, document.title, this.active[currentIndex])
+            }
+          })
+
           if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
             this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
             let nextEntry = this.all[this.currentIndex]
-            if (this.active.includes(nextEntry)) return
+            if (this.active.includes(nextEntry)) return;
             this.active.push(nextEntry)
-            window.history.pushState({}, document.title, nextEntry);
-            window.setTimeout(() => {
-              this.screenHeight = document.body.scrollHeight
-            }, 400)
+            this.scrollYPositions.push([this.screenHeight, document.body.scrollHeight])
+            this.screenHeight = document.body.scrollHeight
           }
         }
       }), 100);
