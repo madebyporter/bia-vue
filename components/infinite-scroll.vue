@@ -18,7 +18,6 @@
 import SingleCase from '@/pages/cases/single-case.vue'
 import SingleJournal from '@/pages/journal/single-journal.vue'
 import SingleVenture from '@/pages/ventures/single-venture.vue'
-import { WSAEINVALIDPROCTABLE } from 'constants'
 
 export default {
   components: {
