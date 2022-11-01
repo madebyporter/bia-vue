@@ -31,7 +31,8 @@ export default {
       all: [],
       active: [],
       currentIndex: 0,
-      screenHeight: document.body.scrollHeight
+      screenHeight: document.body.scrollHeight,
+      timeout: null
     }
   },
   props: [
@@ -50,11 +51,10 @@ export default {
     },
     loadNext() {
       const footerHeight = document.querySelector('.global-footer').offsetHeight
-      let timeout;
-      if (timeout !== undefined) {
-        window.clearTimeout(timeout);
+      if (this.timeout !== null) {
+        window.clearTimeout(this.timeout);
       }
-      timeout = window.setTimeout((() => {
+      this.timeout = window.setTimeout((() => {
         window.onscroll = () => {
           if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
             this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
