@@ -50,20 +50,26 @@ export default {
     },
     loadNext() {
       const footerHeight = document.querySelector('.global-footer').offsetHeight
-      window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
-          this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
-          let nextEntry = this.all[this.currentIndex]
-          this.active.push(nextEntry)
-          window.history.pushState({}, document.title, nextEntry);
-          window.setTimeout(() => {
-            this.active.shift()
-          }, 1000)
-          window.setTimeout(() => {
-            this.screenHeight = document.body.scrollHeight
-          }, 400)
-        }
+      let timeout;
+      if (timeout !== undefined) {
+        window.clearTimeout(timeout);
       }
+      timeout = window.setTimeout((() => {
+        window.onscroll = () => {
+          if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
+            this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
+            let nextEntry = this.all[this.currentIndex]
+            this.active.push(nextEntry)
+            window.history.pushState({}, document.title, nextEntry);
+            window.setTimeout(() => {
+              this.active.shift()
+            }, 1000)
+            window.setTimeout(() => {
+              this.screenHeight = document.body.scrollHeight
+            }, 400)
+          }
+        }
+      }), 100);
     }
   },
   mounted() {
