@@ -30,6 +30,7 @@ export default {
     return {
       all: [],
       active: [],
+      firstIndex: 0,
       currentIndex: 0,
       screenHeight: document.body.scrollHeight,
       timeout: null
@@ -45,6 +46,7 @@ export default {
         this.all.push(elem.fields.slug)
         if (this.slug === elem.fields.slug) {
           this.active.push(elem.fields.slug)
+          this.firstIndex = index
           this.currentIndex = index
         }
       })
@@ -59,11 +61,9 @@ export default {
           if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
             this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
             let nextEntry = this.all[this.currentIndex]
+            if (this.active.includes(nextEntry)) return
             this.active.push(nextEntry)
             window.history.pushState({}, document.title, nextEntry);
-            window.setTimeout(() => {
-              this.active.shift()
-            }, 1000)
             window.setTimeout(() => {
               this.screenHeight = document.body.scrollHeight
             }, 400)
