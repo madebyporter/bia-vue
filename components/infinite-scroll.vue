@@ -18,7 +18,6 @@
 import SingleCase from '@/pages/cases/single-case.vue'
 import SingleJournal from '@/pages/journal/single-journal.vue'
 import SingleVenture from '@/pages/ventures/single-venture.vue'
-import { WSAEINVALIDPROCTABLE } from 'constants'
 
 export default {
   components: {
@@ -30,8 +29,11 @@ export default {
     return {
       all: [],
       active: [],
+      firstIndex: 0,
       currentIndex: 0,
-      screenHeight: document.body.scrollHeight
+      scrollYPositions: [],
+      screenHeight: document.body.scrollHeight,
+      timeout: null
     }
   },
   props: [
@@ -44,26 +46,37 @@ export default {
         this.all.push(elem.fields.slug)
         if (this.slug === elem.fields.slug) {
           this.active.push(elem.fields.slug)
+          this.firstIndex = index
           this.currentIndex = index
+          this.screenHeight = document.body.scrollHeight
+          this.scrollYPositions.push([0, document.body.scrollHeight])
         }
       })
     },
     loadNext() {
       const footerHeight = document.querySelector('.global-footer').offsetHeight
-      window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
-          this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
-          let nextEntry = this.all[this.currentIndex]
-          this.active.push(nextEntry)
-          window.history.pushState({}, document.title, nextEntry);
-          window.setTimeout(() => {
-            this.active.shift()
-          }, 1000)
-          window.setTimeout(() => {
-            this.screenHeight = document.body.scrollHeight
-          }, 400)
-        }
+      if (this.timeout !== null) {
+        window.clearTimeout(this.timeout);
       }
+      this.timeout = window.setTimeout((() => {
+        window.onscroll = () => {
+          this.scrollYPositions.forEach((entry) => {
+            if (window.scrollY >= entry[0] && window.scrollY <= entry[1]) {
+              let currentIndex = this.scrollYPositions.indexOf(entry)
+              window.history.pushState({}, document.title, this.active[currentIndex])
+            }
+          })
+
+          if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
+            this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
+            let nextEntry = this.all[this.currentIndex]
+            if (this.active.includes(nextEntry)) return;
+            this.active.push(nextEntry)
+            this.scrollYPositions.push([this.screenHeight, document.body.scrollHeight])
+            this.screenHeight = document.body.scrollHeight
+          }
+        }
+      }), 100);
     }
   },
   mounted() {
