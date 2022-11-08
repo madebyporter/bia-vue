@@ -37,7 +37,7 @@ export default {
   ],
   mounted() {
     window.onscroll = () => {
-      let scrollPosition = window.scrollY + window.innerHeight / 2
+      let scrollPosition = window.scrollY
       setTimeout(() => {
         this.meta.forEach((entry) => {
           if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
@@ -62,12 +62,12 @@ export default {
       let slug = entry.fields.slug
       setTimeout(() => {
         this.entries.push(slug)
-        this.meta.push({
-          slug,
-          title: document.title,
-          offsetY: [screenEnd, document.body.scrollHeight]
-        })
         setTimeout(() => {
+          this.meta.push({
+            slug,
+            title: document.title,
+            offsetY: [screenEnd, document.body.scrollHeight]
+          })
           document.title = this.meta.filter((entry) => entry.slug === this.slug)[0].title
           screenEnd = document.body.scrollHeight
         }, 100)
