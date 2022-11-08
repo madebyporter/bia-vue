@@ -62,12 +62,12 @@ export default {
       let slug = entry.fields.slug
       setTimeout(() => {
         this.entries.push(slug)
+        this.meta.push({
+          slug,
+          title: document.title,
+          offsetY: [screenEnd, document.body.scrollHeight]
+        })
         setTimeout(() => {
-          this.meta.push({
-            slug,
-            title: document.title,
-            offsetY: [screenEnd, document.body.scrollHeight]
-          })
           document.title = this.meta.filter((entry) => entry.slug === this.slug)[0].title
           screenEnd = document.body.scrollHeight
         }, 100)
