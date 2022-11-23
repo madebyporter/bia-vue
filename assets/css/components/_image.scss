@@ -1,9 +1,9 @@
 // Images
   .image-rounded {
-    border-radius: $sp40;
+    border-radius: $sp20;
     overflow: hidden;
     @media screen and (min-width: $ssLaptop) {
-      border-radius: $sp80;
+      border-radius: $sp40;
     }
   }
 
