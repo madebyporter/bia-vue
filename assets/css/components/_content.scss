@@ -1,5 +1,4 @@
 // Content
-
   .content-wide {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {

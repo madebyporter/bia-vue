@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="entry in active" :key="entry">
+    <div v-for="entry in active" :key="entry" class="single-post">
       <div v-if="content.name === 'cases'">
         <single-case :slug="entry" />
       </div>
