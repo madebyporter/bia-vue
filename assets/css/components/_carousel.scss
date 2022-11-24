@@ -6,13 +6,16 @@
 
   .carousel {
     @extend .grid;
-    height: $heightMobile;
+    height: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
     width: 100%;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    @media screen and (min-width: $ssPhone) {
+      height: $heightMobile;
+    }
     @media screen and (min-width: $ssLaptop) {
       height: $heightDesktop;
     }
@@ -24,12 +27,15 @@
     list-style: none;
     @include grid-column(1,4);
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: $sp20;
     height: 100%;
     margin: 0;
     padding: 0 $sp20 0 $sp20;
     width: 100%;
+    @media screen and (min-width: $ssPhone) {
+      flex-wrap: nowrap;
+    }
     @media screen and (min-width: $ssLaptop) {
       width: auto;
       position: absolute;
@@ -39,12 +45,15 @@
     }
   }
   .carousel-element {
-    width: 50vw;
+    width: 100%;
     height: $heightMobile;
     img {
       object-fit: cover;
       height: 100%;
       width: 100%;
+    }
+    @media screen and (min-width: $ssPhone) {
+      width: 50vw;
     }
     @media screen and (min-width: $ssLaptop) {
       width: $widthDesktop;
