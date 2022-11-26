@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero :title="title" description="A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained."></Hero>
+    <Hero :title="title" description="A group of creators with backgrounds in engineering, design, and systems that make a difference. Human-focused, human-forward."></Hero>
     <section class="section">
       <div class="content content-full">
         <ul class="list-people">
