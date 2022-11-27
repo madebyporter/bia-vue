@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Hero :title="title" description="Work we’ve created that’s stimulating, curious, and smart–with real-world feedback. We know the rules and strive to break them in order to create a connection that is authentic, emotional, and powerful."></Hero>
+    <Hero :title="title">
+      <p>Work we’ve created that’s stimulating, curious, and smart–with real-world feedback. We know the rules and strive to break them in order to create a connection that is authentic, emotional, and powerful.</p>
+    </Hero>
     <section class="section-large">
       <div class="content-full">
         <ul class="list-content">

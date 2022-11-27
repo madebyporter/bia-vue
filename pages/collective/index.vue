@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Hero :title="title" description="A group of creators with backgrounds in engineering, design, and systems that make a difference. Human-focused, human-forward."></Hero>
+    <Hero :title="title">
+      <p>A group of creators with backgrounds in engineering, design, and systems that make a difference. Human-focused, human-forward.</p>
+    </Hero>
     <section class="section">
       <div class="content content-full">
         <ul class="list-people">

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Hero :title="title" description="A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained." description2="Dive deeper into our personality and vibe and resonate with us. Based on MBTI and Carl Jung Socionics. We look like Pokemon cards."></Hero>
+    <Hero :title="title">
+      <p>We are designers who have joined as a collective to solve future challenges for humanity. A small team delivering big results–we approach our work through the lens of curiosity, diversity, and authenticity.</p>
+        
+      <p>Learn more about each of us through our <a href="https://en.wikipedia.org/wiki/Myers–Briggs_Type_Indicator">Myers-Briggs Type Indicators</a>.</p>
+    </Hero>
     <section class="section">
       <div class="content content-full sub-grid-thirds">
         <div class="card card-person">
@@ -37,6 +41,7 @@ import AccordionItems from '@/components/accordion-items.vue'
     data() {
       return {
         title: 'About',
+        description: ``,
         faqs: [
           {
             question: 'who we <span class="s-underline-white">be</span>lieve',
