@@ -82,8 +82,13 @@ export default {
     ],
     script: [
       {
+        hid: 'phosphor',
         src: "https://unpkg.com/phosphor-icons",
       },
+      {
+        hid: 'externalLinks',
+        src: 'externalLinks.js',
+      }
     ],
   },
 
