@@ -123,7 +123,8 @@
 
 export default {
   props: [
-    'slug'
+    'slug',
+    'activeTitle'
   ],
   computed: {
     cases() {
@@ -135,16 +136,16 @@ export default {
   },
   head() {
     return {
-      title: this.cases.fields.title,
+      title: this.activeTitle,
       titleTemplate: '%s - Case Studies - Bia',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.cases.fields.title
+          content: this.activeTitle
         }
       ]
-    };
+    }
   }
 }
 </script>
