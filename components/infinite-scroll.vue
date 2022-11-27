@@ -2,7 +2,7 @@
   <div>
     <div v-for="entry in entries" :key="entry">
       <div v-if="content.name === 'cases'">
-        <single-case :slug="entry" />
+        <single-case :activeTitle="title" :slug="entry" />
       </div>
       <div v-if="content.name === 'journal'">
         <single-journal :slug="entry" />
@@ -28,7 +28,8 @@ export default {
   data() {
     return {
       entries: [],
-      meta: []
+      meta: [],
+      title: ''
     }
   },
   props: [
@@ -36,16 +37,20 @@ export default {
     'slug'
   ],
   mounted() {
+    var timer = null;
     window.onscroll = () => {
-      let scrollPosition = window.scrollY
-      setTimeout(() => {
+      let scrollPosition = window.scrollY + window.innerHeight*.5
+      if(timer !== null) {
+        clearTimeout(timer);        
+      }
+      timer = setTimeout(() => {
         this.meta.forEach((entry) => {
           if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
-            document.title = entry.title
+            this.title = entry.title
             history.pushState(null, null, entry.slug)
           }
         })
-      }, 500)
+      }, 200);
     }
 
     let screenEnd = 0
@@ -55,6 +60,7 @@ export default {
       return elem.fields.slug === this.slug
     })[0]
 
+    this.title = activeEntry.fields.title
     let activeIndex = storeEntries.indexOf(activeEntry)
     let reorderedEntries = [storeEntries[activeIndex], ...storeEntries.slice(0, activeIndex), ...storeEntries.slice(activeIndex + 1)]
 
@@ -65,17 +71,13 @@ export default {
         setTimeout(() => {
           this.meta.push({
             slug,
-            title: document.title,
+            title: entry.fields.title,
             offsetY: [screenEnd, document.body.scrollHeight]
           })
-          document.title = this.meta.filter((entry) => entry.slug === this.slug)[0].title
           screenEnd = document.body.scrollHeight
         }, 100)
       }, 200 * index)
     })
-    setTimeout(() => {
-      document.title = this.meta.filter(entry => entry.slug === this.slug)[0].title
-    }, 300 * reorderedEntries.length)
   }
 }
 </script>
