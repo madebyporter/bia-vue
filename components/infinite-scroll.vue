@@ -39,7 +39,7 @@ export default {
   mounted() {
     var timer = null;
     window.onscroll = () => {
-      let scrollPosition = window.scrollY + window.innerHeight*.5
+      let scrollPosition = window.scrollY + window.innerHeight
       if(timer !== null) {
         clearTimeout(timer);        
       }
@@ -50,7 +50,7 @@ export default {
             history.pushState(null, null, entry.slug)
           }
         })
-      }, 200);
+      }, 150);
     }
 
     let screenEnd = 0
