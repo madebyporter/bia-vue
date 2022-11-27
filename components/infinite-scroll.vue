@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-for="entry in active" :key="entry">
+    <div v-for="entry in entries" :key="entry">
       <div v-if="content.name === 'cases'">
-        <single-case :slug="entry" />
+        <single-case :activeTitle="title" :slug="entry" />
       </div>
       <div v-if="content.name === 'journal'">
         <single-journal :slug="entry" />
@@ -27,63 +27,58 @@ export default {
   },
   data() {
     return {
-      all: [],
-      active: [],
-      firstIndex: 0,
-      currentIndex: 0,
-      scrollYPositions: [],
-      screenHeight: document.body.scrollHeight,
-      timeout: null
+      entries: [],
+      meta: [],
+      title: ''
     }
   },
   props: [
     'content',
     'slug'
   ],
-  methods: {
-    populateEntries() {
-      this.$store.state[this.content.store][this.content.name].forEach((elem, index, array) => {
-        this.all.push(elem.fields.slug)
-        if (this.slug === elem.fields.slug) {
-          this.active.push(elem.fields.slug)
-          this.firstIndex = index
-          this.currentIndex = index
-          this.screenHeight = document.body.scrollHeight
-          this.scrollYPositions.push([0, document.body.scrollHeight])
-        }
-      })
-    },
-    loadNext() {
-      const footerHeight = document.querySelector('.global-footer').offsetHeight
-      if (this.timeout !== null) {
-        window.clearTimeout(this.timeout);
-      }
-      this.timeout = window.setTimeout((() => {
-        window.onscroll = () => {
-          this.scrollYPositions.forEach((entry) => {
-            if (window.scrollY >= entry[0] && window.scrollY <= entry[1]) {
-              let currentIndex = this.scrollYPositions.indexOf(entry)
-              window.history.pushState({}, document.title, this.active[currentIndex])
-            }
-          })
-
-          if (window.innerHeight + window.scrollY >= document.body.scrollHeight - footerHeight) {
-            this.currentIndex = this.all[this.currentIndex + 1] ? this.currentIndex + 1 : 0
-            let nextEntry = this.all[this.currentIndex]
-            if (this.active.includes(nextEntry)) return;
-            this.active.push(nextEntry)
-            this.scrollYPositions.push([this.screenHeight, document.body.scrollHeight])
-            this.screenHeight = document.body.scrollHeight
-          }
-        }
-      }), 100);
-    }
-  },
   mounted() {
-    this.populateEntries();
-    if (this.all.length > 1) {
-      this.loadNext();
+    var timer = null;
+    window.onscroll = () => {
+      let scrollPosition = window.scrollY + window.innerHeight*.5
+      if(timer !== null) {
+        clearTimeout(timer);        
+      }
+      timer = setTimeout(() => {
+        this.meta.forEach((entry) => {
+          if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
+            this.title = entry.title
+            history.pushState(null, null, entry.slug)
+          }
+        })
+      }, 200);
     }
+
+    let screenEnd = 0
+    let storeEntries = this.$store.state[this.content.store][this.content.name]
+
+    let activeEntry = storeEntries.filter((elem, index) => {
+      return elem.fields.slug === this.slug
+    })[0]
+
+    this.title = activeEntry.fields.title
+
+    let activeIndex = storeEntries.indexOf(activeEntry)
+    let reorderedEntries = [storeEntries[activeIndex], ...storeEntries.slice(0, activeIndex), ...storeEntries.slice(activeIndex + 1)]
+
+    reorderedEntries.forEach((entry, index, array) => {
+      let slug = entry.fields.slug
+      setTimeout(() => {
+        this.entries.push(slug)
+        setTimeout(() => {
+          this.meta.push({
+            slug,
+            title: entry.fields.title,
+            offsetY: [screenEnd, document.body.scrollHeight]
+          })
+          screenEnd = document.body.scrollHeight
+        }, 100)
+      }, 200 * index)
+    })
   }
 }
 </script>
