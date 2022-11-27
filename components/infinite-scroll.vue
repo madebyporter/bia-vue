@@ -37,21 +37,23 @@ export default {
     'slug'
   ],
   mounted() {
-    var timer = null;
-    window.onscroll = () => {
+    let timer = null;
+    window.addEventListener('scroll', () => {
       let scrollPosition = window.scrollY + window.innerHeight
-      if(timer !== null) {
+      if (timer !== null) {
         clearTimeout(timer);        
       }
       timer = setTimeout(() => {
         this.meta.forEach((entry) => {
           if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
             this.title = entry.title
-            history.pushState(null, null, entry.slug)
+            if (document.body.scrollHeight === this.meta[this.meta.length - 1].offsetY[1]) {
+              history.pushState(null, null, entry.slug)
+            }
           }
         })
       }, 150);
-    }
+    })
 
     let screenEnd = 0
     let storeEntries = this.$store.state[this.content.store][this.content.name]
