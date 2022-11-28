@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="entry in entries" :key="entry">
-      <div v-if="content.name === 'cases'">
+    <div v-for="(entry, i) in entries" :key="entry">
+      <div v-if="content.name === 'cases'" :class="i === activeIndex ? 'active case' : 'case'">
         <single-case :activeTitle="title" :slug="entry" />
       </div>
       <div v-if="content.name === 'journal'">
@@ -29,7 +29,8 @@ export default {
     return {
       entries: [],
       meta: [],
-      title: ''
+      title: '',
+      activeIndex: 0
     }
   },
   props: [
@@ -44,9 +45,10 @@ export default {
         clearTimeout(timer);        
       }
       timer = setTimeout(() => {
-        this.meta.forEach((entry) => {
+        this.meta.forEach((entry, key) => {
           if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
             this.title = entry.title
+            this.activeIndex = key
             if (document.body.scrollHeight === this.meta[this.meta.length - 1].offsetY[1]) {
               history.pushState(null, null, entry.slug)
             }
@@ -63,8 +65,8 @@ export default {
     })[0]
 
     this.title = activeEntry.fields.title
-    let activeIndex = storeEntries.indexOf(activeEntry)
-    let reorderedEntries = [storeEntries[activeIndex], ...storeEntries.slice(0, activeIndex), ...storeEntries.slice(activeIndex + 1)]
+    this.activeIndex = storeEntries.indexOf(activeEntry)
+    let reorderedEntries = [storeEntries[this.activeIndex], ...storeEntries.slice(0, this.activeIndex), ...storeEntries.slice(this.activeIndex + 1)]
 
     reorderedEntries.forEach((entry, index, array) => {
       let slug = entry.fields.slug
@@ -83,3 +85,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.case {
+  opacity: .25;
+  transition: opacity 1s ease;
+}
+.case.active {
+  opacity: 1;
+}
+</style>
