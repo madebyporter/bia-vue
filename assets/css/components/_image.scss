@@ -1,9 +1,9 @@
 // Images
   .image-rounded {
-    border-radius: $sp40;
+    border-radius: $sp20;
     overflow: hidden;
     @media screen and (min-width: $ssLaptop) {
-      border-radius: $sp80;
+      border-radius: $sp40;
     }
   }
 
@@ -20,19 +20,12 @@
     }
   }
   .case-image {
-    height: 400px;
     width: 100%;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    @media screen and (min-width: $ssTablet) {
-      height: 480px;
-    }
-    @media screen and (min-width: $ssLaptop) {
-      height: 800px;
     }
   }
   .case-image-full {

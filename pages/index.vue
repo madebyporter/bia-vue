@@ -6,7 +6,7 @@
         <Logo-Tertiary></Logo-Tertiary>
       </div>
       <div class="content-half hero-home-right" :style="{opacity: 100-scrolled*10+'%'}">
-        <p>Together we work both as a collective and individuals to solve future challenges of humanity. Through our intimate craft, authentic voice, and intricate eye on aesthetics, we deliver the best necessary results for you</p>
+        <p>Together we work both as a collective and individuals to solve future challenges of humanity. Through our intimate craft, authentic voice, and intricate eye on aesthetics, we deliver the best necessary results for you.</p>
       </div>
     </section>
 

@@ -1,5 +1,4 @@
 // Content
-
   .content-wide {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
@@ -79,7 +78,7 @@
   .content-inner {
     margin-bottom: 0;
     & + .content-inner {
-      margin-top: $sp80;
+      margin-top: $sp40;
     }
   }
   .content-subgrid-thirds {

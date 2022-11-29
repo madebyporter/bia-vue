@@ -1,6 +1,8 @@
 <template>
     <div>
-      <Hero :title="title" description="A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained." description2="Dive deeper into our personality and vibe and resonate with us. Based on MBTI and Carl Jung Socionics. We look like Pokemon cards."></Hero>
+      <Hero :title="title">
+        <p>Together we unite our individual strengths to create impactful results for clients with values that match our own. Get in touch.</p>
+      </Hero>
     </div>
   </template>
   

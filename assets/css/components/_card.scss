@@ -18,12 +18,12 @@
 .card-color {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flext-start;
   gap: $sp10;
   padding: $sp40 $sp20;
-  color: $clWhite;
+  color: $clBlack;
   & > * {
-    color: $clWhite !important;
+    color: $clBlack !important;
   }
   @media screen and (min-width: $ssLaptop) {
     gap: $sp10;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(entry, i) in entries" :key="entry">
+    <div v-for="(entry, i) in entries" :key="entry" class="single-post">
       <div v-if="content.name === 'cases'" :class="i === activeIndex ? 'active case' : 'case'">
         <single-case :activeTitle="title" :slug="entry" />
       </div>

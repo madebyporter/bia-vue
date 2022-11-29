@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Hero :title="title" description="A collective group of designers, engineers, thinkers, makers creators that get shit done for the better of humanity. Consciousness explained." description2="Dive deeper into our personality and vibe and resonate with us. Based on MBTI and Carl Jung Socionics. We look like Pokemon cards."></Hero>
+    <Hero :title="title">
+      <p>We are designers who have joined as a collective to solve future challenges for humanity. A small team delivering big results–we approach our work through the lens of curiosity, diversity, and authenticity.</p>
+        
+      <p>Learn more about each of us through our <a href="https://en.wikipedia.org/wiki/Myers–Briggs_Type_Indicator">Myers-Briggs Type Indicators</a>.</p>
+    </Hero>
     <section class="section">
       <div class="content content-full sub-grid-thirds">
         <div class="card card-person">
@@ -37,18 +41,19 @@ import AccordionItems from '@/components/accordion-items.vue'
     data() {
       return {
         title: 'About',
+        description: ``,
         faqs: [
           {
             question: 'who we <span class="s-underline-white">be</span>lieve',
-            answer: "Companies, entities, and individuals who value communities, transparency interested in working with a small team to produce big results for humaity’s future."
+            answer: "Together we unite our individual strengths to create impactful results for clients with values that match our own. Get in touch."
           },
           {
             question: 'how we <span class="s-underline-white">be</span>have',
-            answer: 'First principle thinkers by design, they find themselves more at home in quantum physics creation myth we are so familiar with.'
+            answer: "From research, to functionality, to form, we approach every step of the process with two things at the forefront–you, the client, and the problem we aim to solve through first-principles."
           },
           {
             question: 'why we <span class="s-underline-white">be</span>long',
-            answer: 'Quality, aesthetics, and care through experiences for people to build sustainable systems overtime for our Human problems.'
+            answer: "We aren’t just production designers–we care about the core issues that cause the problems we solve, and the impact we can make by solving them for you."
           },
         ]
       }
