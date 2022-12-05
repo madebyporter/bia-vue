@@ -16,7 +16,9 @@
             </div>
             <div class="list-content-right">
               <div class="list-content-header">
-                <h2 class="h2"><NuxtLink :to="/cases/+`${cases.fields.slug}`" class="no-underline">{{ cases.fields.title }}</NuxtLink></h2>
+                <h2 class="h2">
+                  <NuxtLink :to="/cases/+`${cases.fields.slug}`" class="no-underline">{{ cases.fields.title }}</NuxtLink>
+                </h2>
                 <ul class="list-tag">
                   <li v-for="delivarables in cases.fields.delivarables">
                     {{ delivarables }}
@@ -32,11 +34,11 @@
                         <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
                       </div>
                       <div class="list-item-person">
-                        <h3 class="h-mb-0 person-name">
+                        <h4 class="h4 h-mb-0 person-name">
                           <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
                             {{ role.fields.member.fields.name }}
                           </NuxtLink>
-                        </h3>
+                        </h4>
                         <p class="person-role">
                           <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
                         </p>

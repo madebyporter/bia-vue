@@ -57,6 +57,14 @@ html {
       margin-left: 0;
     }
   }
+  .h4 {
+    @include font-size($fs12);
+    margin-left: 0;
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs20);
+      margin-left: 0;
+    }
+  }
   .h-mb-0 {
     margin-bottom: 0;
   }
