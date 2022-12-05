@@ -70,7 +70,9 @@
     margin-right: $sp10;
     height: 36px;
     width: 36px;
-    margin-top: $sp5;
+    @media screen and (min-width: $ssTablet) {
+      margin-top: $sp5;
+    }
   }
   .list-item-image {
     height: 354px;

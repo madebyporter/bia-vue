@@ -1,6 +1,6 @@
 // Persons
   .person-role {
-    @include font-size($fs14);
+    @include font-size($fs12);
     margin: 0;
   }
   .person-role-title:not(:last-child):after {
