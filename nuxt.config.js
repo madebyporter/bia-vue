@@ -108,6 +108,10 @@ export default {
     "~/plugins/analytics",
   ],
 
+  middleware: [
+    'contentful.staging'
+  ],
+
   // Contentful
   env: {
     CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
