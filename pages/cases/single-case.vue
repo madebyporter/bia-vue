@@ -120,32 +120,31 @@
 </template>
 
 <script>
-
-export default {
-  props: [
-    'slug',
-    'activeTitle'
-  ],
-  computed: {
-    cases() {
-      let cases = this.$store.state.caseData.cases.filter(
-        el => el.fields.slug === this.slug
-      );
-      return cases[0];
+  export default {
+    props: [
+      'slug',
+      'activeTitle'
+    ],
+    computed: {
+      cases() {
+        let cases = this.$store.state.caseData.cases.filter(
+          el => el.fields.slug === this.slug
+        );
+        return cases[0];
+      },
     },
-  },
-  head() {
-    return {
-      title: this.activeTitle,
-      titleTemplate: '%s - Case Studies - Bia',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.activeTitle
-        }
-      ]
+    head() {
+      return {
+        title: this.activeTitle,
+        titleTemplate: '%s - Case Studies - Bia',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.activeTitle
+          }
+        ]
+      }
     }
   }
-}
 </script>
