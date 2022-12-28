@@ -25,7 +25,7 @@
           </ul>
         </aside>
 
-        <aside class="content-sidebar-aside" v-if="journal.fields.roles">
+        <aside class="content-sidebar-aside" v-if="journal.fields.collaborators">
           <h2 class="list-header h6 h-border">Collaborators</h2>
           <ul class="list-default">
             <li v-for="c in journal.fields.collaborators">
