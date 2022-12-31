@@ -58,6 +58,9 @@
   .content-sidebar {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
+      @include grid-column(2,4);
+    }
+    @media screen and (min-width: $ssDesktop) {
       @include grid-column(2,3);
     }
   }
@@ -67,6 +70,9 @@
   .content-post-sidebar {
     @include grid-column(1,4);
     @media screen and (min-width: $ssLaptop) {
+      @include grid-column(6,8);
+    }
+    @media screen and (min-width: $ssDesktop) {
       @include grid-column(6,7);
     }
   }
