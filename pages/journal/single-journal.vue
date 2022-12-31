@@ -1,11 +1,13 @@
 <template>
   <div>
+    <!-- Title -->
     <section class="section-large">
       <div class="content-full">
         <h1 class="h1 h-mb-0">{{ journal.fields.title }}</h1>
       </div>
     </section>
 
+    <!-- Hero Image -->
     <section class="section-xy-0" v-if="journal.fields.heroImage">
       <div class="content-wide">
         <div class="hero-image">
@@ -14,8 +16,11 @@
       </div>
     </section>
 
+    <!-- Sidebar -->
     <section class="section-large">
       <div class="content-sidebar">
+
+        <!-- Topics -->
         <aside class="content-sidebar-aside" v-if="journal.fields.topic">
           <h2 class="list-header h6 h-border">Topics</h2>
           <ul class="list-default">
@@ -25,6 +30,7 @@
           </ul>
         </aside>
 
+        <!-- Collaborators -->
         <aside class="content-sidebar-aside" v-if="journal.fields.collaborators">
           <h2 class="list-header h6 h-border">Collaborators</h2>
           <ul class="list-default">
