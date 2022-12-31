@@ -57,6 +57,11 @@
   }
   .content-sidebar {
     @include grid-column(1,4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 $sp20;
+    align-items: flex-start;
+    align-content: flex-start;
     @media screen and (min-width: $ssLaptop) {
       @include grid-column(2,4);
     }
@@ -64,8 +69,16 @@
       @include grid-column(2,3);
     }
   }
+  .content-sidebar-aside-header {
+    margin: 0 0 $sp40 0;
+    width: 100%;
+  }
   .content-sidebar-aside {
     margin: 0 0 $sp40 0;
+    flex-grow: 2;
+    @media screen and (min-width: $ssPhoneL) {
+      flex-grow: 1;
+    }
   }
   .content-post-sidebar {
     @include grid-column(1,4);
