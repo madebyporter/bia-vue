@@ -19,34 +19,25 @@
     </section>
     <section class="section-dark section-large">
       <div class="content-thirds">
-        <div class="content-header-bordered">
-          <h3 class="h3 margin-b-0">Links:</h3>
-        </div>
-        <ul v-if="member.fields.links" class="list-default">
+        <List v-if="member.fields.links" title="Links">
           <li v-for="link in member.fields.links">
             <a :href="`${link.fields.linkUrl}`" target="_blank" rel="noreferrer noopener">{{ link.fields.linkType }}</a>
           </li>
-        </ul>
+        </List>
       </div>
       <div class="content-thirds">
-        <div class="content-header-bordered">
-          <h3 class="h3 margin-b-0">Disciplines:</h3>
-        </div>
-        <ul v-if="member.fields.disciplines" class="list-default">
+        <List v-if="member.fields.disciplines" title="Disciplines">
           <li v-for="discipline in member.fields.disciplines">
             {{ discipline.fields.title }}
           </li>
-        </ul>
+        </List>
       </div>
       <div class="content-thirds">
-        <div class="content-header-bordered">
-          <h3 class="h3 margin-b-0">Verticals:</h3>
-        </div>
-        <ul v-if="member.fields.verticals" class="list-default">
+        <List v-if="member.fields.verticals" title="Verticals">
           <li v-for="vertical in member.fields.verticals">
             {{ vertical.fields.title }}
           </li>
-        </ul>
+        </List>
       </div>
     </section>
     <section class="section-large">
@@ -74,32 +65,25 @@
               </div>
               <div class="list-content-data">
                 <div class="list-content-data-left">
-                  <h3 class="h3 list-content-data-heading">Team</h3>
-                  <ul class="list-default">
+                  <List title="Team">
                     <li v-for="(role, i) in caseStudy.fields.roles" :key="'role-'+i">
-                      <div class="list-item-avatar">
-                        <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
-                      </div>
-                      <div class="list-item-person">
-                        <h3 class="h-mb-0 person-name">
-                          <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
-                            {{ role.fields.member.fields.name }}
-                          </NuxtLink>
-                        </h3>
-                        <p class="person-role">
-                          <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
-                        </p>
-                      </div>
+                      <Placard>
+                        <Avatar v-if="role.fields.member.fields.avatar" :imgSrc="role.fields.member.fields.avatar.fields.file.url"></Avatar>
+                        <Person :personLink="/collective/+`${role.fields.member.fields.slug}`" :personName="role.fields.member.fields.name">
+                          <p class="p-small" v-for="(discipline, i) in role.fields.disciplines" :key="i" v-if="i === 0">
+                            {{discipline.fields.title}}
+                          </p>
+                        </Person>
+                      </Placard>
                     </li>
-                  </ul>
+                  </List>
                 </div>
                 <div class="list-content-data-right">
-                  <h3 class="h3 list-content-data-heading">Verticals</h3>
-                  <ul class="list-default">
+                  <List title="Verticals">
                     <li v-for="(vertical, i) in caseStudy.fields.verticals">
-                      <p>{{ vertical.fields.title }}</p>
+                      {{ vertical.fields.title }}
                     </li>
-                  </ul>
+                  </List>
                 </div>
               </div>
             </div>

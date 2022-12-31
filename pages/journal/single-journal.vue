@@ -16,42 +16,38 @@
       </div>
     </section>
 
-    <!-- Sidebar -->
     <section class="section-large">
+
+      <!-- Sidebar -->
       <div class="content-sidebar">
 
         <!-- Topics -->
         <aside class="content-sidebar-aside" v-if="journal.fields.topic">
-          <h2 class="list-header h6 h-border">Topics</h2>
-          <ul class="list-default">
+          <List title="Topics">
             <li v-for="t in journal.fields.topic">
               {{ t.fields.title }}
             </li>
-          </ul>
+          </List>
         </aside>
 
-        <!-- Collaborators -->
+        <!-- Collaborators-->
         <aside class="content-sidebar-aside" v-if="journal.fields.collaborators">
-          <h2 class="list-header h6 h-border">Collaborators</h2>
-          <ul class="list-default">
-            <li v-for="c in journal.fields.collaborators">
-              <div class="list-item-avatar">
-                <p class="avatar-small" v-if="c.fields.avatar"><img :src="`${c.fields.avatar.fields.file.url}`" /></p>
-              </div>
-              <div class="list-item-person">
-                <h3 class="h-mb-0 person-name">
-                  <NuxtLink :to="/collective/+`${c.fields.slug}`" class="no-underline">
-                    {{ c.fields.name }}
-                  </NuxtLink>
-                </h3>
-                <p class="person-role">
-                  <span class="person-role-title" v-for="discipline in c.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
-                </p>
-              </div>
+          <List title="Collaborators">
+            <li v-for="person in journal.fields.collaborators">
+              <Placard>
+                <Avatar v-if="person.fields.avatar" :imgSrc="person.fields.avatar.fields.file.url"></Avatar>
+                <Person :personLink="/collective/+`${person.fields.slug}`" :personName="person.fields.name">
+                  <p class="p-small" v-for="(discipline, i) in person.fields.disciplines" :key="i" v-if="i === 0">
+                    {{discipline.fields.title}}
+                  </p>
+                </Person>
+              </Placard>
             </li>
-          </ul>
+          </List>
         </aside>
       </div>
+
+      <!-- Post Sidebar -->
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="journal.fields.content">
           <div class="content-text" v-html="$md.render(journal.fields.content)"></div>

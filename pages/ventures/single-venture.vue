@@ -15,7 +15,7 @@
     </section>
 
     <section class="section-large">
-      <div class="content-sidebar">
+      <div class="content-columns2-four8">
         <aside v-if="venture.fields.delivarables">
           <h2 class="list-header h6">Deliverables</h2>
           <ul class="list-default">

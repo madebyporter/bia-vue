@@ -1,9 +1,13 @@
 // Avatars
-  .avatar-small {
+  .avatar {
     border-radius: 36px;
-    height: 36px;
+    margin-right: $sp10;
     overflow: hidden;
+    height: 36px;
     width: 36px;
+    @media screen and (min-width: $ssTablet) {
+      margin-top: $sp5;
+    }
     img {
       object-fit: cover;
       height: 100%;

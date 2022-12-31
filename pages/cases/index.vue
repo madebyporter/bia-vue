@@ -27,32 +27,25 @@
               </div>
               <div class="list-content-data">
                 <div class="list-content-data-left">
-                  <h3 class="h3 list-content-data-heading">Team</h3>
-                  <ul class="list-default">
+                  <List title="Team">
                     <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
-                      <div class="list-item-avatar">
-                        <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
-                      </div>
-                      <div class="list-item-person">
-                        <h4 class="h4 h-mb-0 person-name">
-                          <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
-                            {{ role.fields.member.fields.name }}
-                          </NuxtLink>
-                        </h4>
-                        <p class="person-role">
-                          <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
-                        </p>
-                      </div>
+                      <Placard>
+                        <Avatar v-if="role.fields.member.fields.avatar" :imgSrc="role.fields.member.fields.avatar.fields.file.url"></Avatar>
+                        <Person :personLink="/collective/+`${role.fields.member.fields.slug}`" :personName="role.fields.member.fields.name">
+                          <p class="p-small" v-for="(discipline, i) in role.fields.disciplines" :key="i" v-if="i === 0">
+                            {{discipline.fields.title}}
+                          </p>
+                        </Person>
+                      </Placard>
                     </li>
-                  </ul>
+                  </List>
                 </div>
                 <div class="list-content-data-right">
-                  <h3 class="h3 list-content-data-heading">Verticals</h3>
-                  <ul class="list-default">
+                  <List title="Verticals">
                     <li v-for="(vertical, i) in cases.fields.verticals">
-                      <p>{{ vertical.fields.title }}</p>
+                      {{ vertical.fields.title }}
                     </li>
-                  </ul>
+                  </List>
                 </div>
               </div>
             </div>

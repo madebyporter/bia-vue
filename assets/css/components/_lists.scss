@@ -120,11 +120,11 @@
     }
   }
   .list-content-header {
-    border-bottom: 1px solid $clGrayLight;
-    padding: 0 0 $sp20;
+    // border-bottom: 1px solid $clGrayLight;
+    // padding: 0 0 $sp20;
     margin: 0 0 $sp20;
     @media screen and (min-width: $ssDesktop) {
-      padding: 0 0 $sp40;
+      // padding: 0 0 $sp40;
       margin: 0 0 $sp40;
     }
     & > * {

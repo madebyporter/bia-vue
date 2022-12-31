@@ -88,6 +88,12 @@ html {
       @include font-size($fs24);
     }
   }
+  .p-small {
+    @include font-size($fs12);
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs14);
+    }
+  }
   .p-large {
     font-weight: $fwLight;
     @include font-size($fs20);
