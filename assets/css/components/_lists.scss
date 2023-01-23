@@ -21,9 +21,9 @@
   }
   .list-default > li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     @media screen and (min-width: $ssLaptop) {
-      align-items: center;
+      align-items: flex-start;
     }
   }
   .list-item {
@@ -66,11 +66,13 @@
     }
   }
   .list-item-avatar {
-    background: $clGrayLight;
     border-radius: 36px;
     margin-right: $sp10;
     height: 36px;
     width: 36px;
+    @media screen and (min-width: $ssTablet) {
+      margin-top: $sp5;
+    }
   }
   .list-item-image {
     height: 354px;
@@ -118,11 +120,11 @@
     }
   }
   .list-content-header {
-    border-bottom: 1px solid $clGrayLight;
-    padding: 0 0 $sp20;
+    // border-bottom: 1px solid $clGrayLight;
+    // padding: 0 0 $sp20;
     margin: 0 0 $sp20;
     @media screen and (min-width: $ssDesktop) {
-      padding: 0 0 $sp40;
+      // padding: 0 0 $sp40;
       margin: 0 0 $sp40;
     }
     & > * {

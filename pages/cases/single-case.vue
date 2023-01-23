@@ -16,40 +16,33 @@
 
     <section class="section-large">
       <div class="content-sidebar">
-        <aside class="content-sidebar-aside" v-if="cases.fields.type">
-          <ul class="list-default">
+        <aside class="content-sidebar-aside-header" v-if="cases.fields.type">
+          <List>
             <li><div class="tag">{{ cases.fields.type }}</div></li>
-          </ul>
+          </List>
         </aside>
 
         <aside class="content-sidebar-aside" v-if="cases.fields.delivarables">
-          <h2 class="list-header h6 h-border">Deliverables</h2>
-          <ul class="list-default">
+          <List title="Deliverables">
             <li v-for="delivarables in cases.fields.delivarables">
               {{ delivarables }}
             </li>
-          </ul>
+          </List>
         </aside>
 
         <aside class="content-sidebar-aside" v-if="cases.fields.roles">
-          <h2 class="list-header h6 h-border">Team</h2>
-          <ul class="list-default">
+          <List title="Team">
             <li v-for="(role, i) in cases.fields.roles" :key="'role-'+i">
-              <div class="list-item-avatar">
-                <p class="avatar-small" v-if="role.fields.member.fields.avatar"><img :src="`${role.fields.member.fields.avatar.fields.file.url}`" /></p>
-              </div>
-              <div class="list-item-person">
-                <h3 class="h-mb-0 person-name">
-                  <NuxtLink :to="/collective/+`${role.fields.member.fields.slug}`" class="no-underline">
-                    {{ role.fields.member.fields.name }}
-                  </NuxtLink>
-                </h3>
-                <p class="person-role">
-                  <span class="person-role-title" v-for="discipline in role.fields.disciplines" :key="discipline.fields.title">{{discipline.fields.title}}</span>
-                </p>
-              </div>
+              <Placard>
+                <Avatar v-if="role.fields.member.fields.avatar" :imgSrc="role.fields.member.fields.avatar.fields.file.url"></Avatar>
+                <Person :personLink="/collective/+`${role.fields.member.fields.slug}`" :personName="role.fields.member.fields.name">
+                  <p class="p-small" v-for="(discipline, i) in role.fields.disciplines" :key="i" v-if="i === 0">
+                    {{discipline.fields.title}}
+                  </p>
+                </Person>
+              </Placard>
             </li>
-          </ul>
+          </List>
         </aside>
       </div>
 
@@ -120,32 +113,31 @@
 </template>
 
 <script>
-
-export default {
-  props: [
-    'slug',
-    'activeTitle'
-  ],
-  computed: {
-    cases() {
-      let cases = this.$store.state.caseData.cases.filter(
-        el => el.fields.slug === this.slug
-      );
-      return cases[0];
+  export default {
+    props: [
+      'slug',
+      'activeTitle'
+    ],
+    computed: {
+      cases() {
+        let cases = this.$store.state.caseData.cases.filter(
+          el => el.fields.slug === this.slug
+        );
+        return cases[0];
+      },
     },
-  },
-  head() {
-    return {
-      title: this.activeTitle,
-      titleTemplate: '%s - Case Studies - Bia',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.activeTitle
-        }
-      ]
+    head() {
+      return {
+        title: this.activeTitle,
+        titleTemplate: '%s - Case Studies - Bia',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.activeTitle
+          }
+        ]
+      }
     }
   }
-}
 </script>

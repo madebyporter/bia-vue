@@ -1,28 +1,60 @@
 <template>
-  <section class="section">
-    <div class="content-full">
-      <h1 class="h1">{{ journal.fields.title }}</h1>
-      <div v-if="journal.fields.collaborators">
-        <h2>Collaborators:</h2>
-        <ul>
-          <li v-for="c in journal.fields.collaborators">
-            {{ c.fields.name }}
-          </li>
-        </ul>
+  <div>
+    <!-- Title -->
+    <section class="section-large">
+      <div class="content-full">
+        <h1 class="h1 h-mb-0">{{ journal.fields.title }}</h1>
+      </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="section-xy-0" v-if="journal.fields.heroImage">
+      <div class="content-wide">
+        <div class="hero-image">
+          <img :src="`${journal.fields.heroImage.fields.file.url}`" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-large">
+
+      <!-- Sidebar -->
+      <div class="content-sidebar">
+
+        <!-- Topics -->
+        <aside class="content-sidebar-aside" v-if="journal.fields.topic">
+          <List title="Topics">
+            <li v-for="t in journal.fields.topic">
+              {{ t.fields.title }}
+            </li>
+          </List>
+        </aside>
+
+        <!-- Collaborators-->
+        <aside class="content-sidebar-aside" v-if="journal.fields.collaborators">
+          <List title="Collaborators">
+            <li v-for="person in journal.fields.collaborators">
+              <Placard>
+                <Avatar v-if="person.fields.avatar" :imgSrc="person.fields.avatar.fields.file.url"></Avatar>
+                <Person :personLink="/collective/+`${person.fields.slug}`" :personName="person.fields.name">
+                  <p class="p-small" v-for="(discipline, i) in person.fields.disciplines" :key="i" v-if="i === 0">
+                    {{discipline.fields.title}}
+                  </p>
+                </Person>
+              </Placard>
+            </li>
+          </List>
+        </aside>
       </div>
 
-      <div v-if="journal.fields.topic">
-        <h2>Topics:</h2>
-        <ul>
-          <li v-for="t in journal.fields.topic">
-            {{ t.fields.title }}
-          </li>
-        </ul>
+      <!-- Post Sidebar -->
+      <div class="content-post-sidebar">
+        <div class="content-inner" v-if="journal.fields.content">
+          <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
+        </div>
       </div>
-
-      <div v-html="$md.render(journal.fields.content)"></div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>

@@ -1,8 +1,11 @@
-// Persons
-  .person-role {
-    @include font-size($fs14);
+// Person
+  .person {
+
+  }
+  .person-role p {
     margin: 0;
   }
+
   .person-role-title:not(:last-child):after {
     content: ', ';
   }
