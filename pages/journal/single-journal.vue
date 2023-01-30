@@ -78,7 +78,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: this.journal.fields.title
+            content: this.journal.fields.subTitle
           }
         ]
       };

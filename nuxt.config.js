@@ -74,7 +74,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Expert solutions for future challenges. Craft, authenticity, aesthetics. Best results for your business needs.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -99,13 +99,17 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/contentful",
+    { src: '~/plugins/contentful', mode: 'client'},
     "~/plugins/members",
     "~/plugins/cases",
     "~/plugins/ventures",
     "~/plugins/journal",
     "~/plugins/feedTemplate",
     "~/plugins/analytics",
+  ],
+
+  middleware: [
+    'contentful.staging'
   ],
 
   // Contentful
