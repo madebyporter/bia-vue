@@ -4,7 +4,7 @@
       <div class="accordion">
         <div class="accordion-item" v-for="(faq, i) in content" :key="i">
           <label @click="active === i ? active = null : active = i" class="accordion-panel">
-            <h2 v-html="faq.question" class="accordion-header h2 margin-b-0"></h2>
+            <h2 v-html="faq.question" class="accordion-header h1 margin-b-0"></h2>
             <div :class="active === i ? 'accordion-content open': 'accordion-content'">
               <p>{{faq.answer}}</p>
             </div>
