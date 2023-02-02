@@ -44,15 +44,15 @@ import AccordionItems from '@/components/accordion-items.vue'
         description: ``,
         faqs: [
           {
-            question: 'who we <span class="s-underline-white">be</span>lieve',
-            answer: "Together we unite our individual strengths to create impactful results for clients with values that match our own. Get in touch."
+            question: 'who we believe (in)',
+            answer: "Companies, entities, and individuals who value community, transparency, and are interested in working with a small team to produce big results."
           },
           {
-            question: 'how we <span class="s-underline-white">be</span>have',
+            question: 'how we work (together)',
             answer: "From research, to functionality, to form, we approach every step of the process with two things at the forefront–you, the client, and the problem we aim to solve through first-principles."
           },
           {
-            question: 'why we <span class="s-underline-white">be</span>long',
+            question: 'why we\'re here (for you)',
             answer: "We aren’t just production designers–we care about the core issues that cause the problems we solve, and the impact we can make by solving them for you."
           },
         ]
