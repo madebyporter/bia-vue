@@ -1,6 +1,26 @@
 .card {
-
+  border: 1px solid $clGrayLight;
+  border-radius: $sp10;
+  width: 100%;
+  &:hover {
+    border: 1px solid $clBlack;
+  }
 }
+.card-inner {
+  padding: $sp20;
+}
+
+.card-resource {
+  .card-top {
+    border-bottom: 1px solid $clGrayLight;
+  }
+  &:hover {
+    .card-top {
+      border-bottom: 1px solid $clBlack;
+    }
+  }
+}
+
 .card > img {
   margin: 0 0 $sp20 0;
 }

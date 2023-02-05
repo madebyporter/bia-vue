@@ -10,3 +10,7 @@
     padding: $sp5 $sp10;
     text-transform: uppercase;
 }
+
+.tag-group {
+    @extend .group;
+}

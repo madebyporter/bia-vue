@@ -16,6 +16,7 @@
 
     <section class="section-large">
       <div class="content-sidebar">
+        <!-- Sidebar-->
         <aside class="content-sidebar-aside-header" v-if="cases.fields.type">
           <List>
             <li><div class="tag">{{ cases.fields.type }}</div></li>

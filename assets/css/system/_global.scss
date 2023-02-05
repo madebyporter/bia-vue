@@ -1,6 +1,16 @@
-* {
-  box-sizing: border-box;
-}
-img {
-  width: 100%;
-}
+// Global Head Elements
+  * {
+    box-sizing: border-box;
+  }
+
+// Global Body Elements
+  img {
+    width: 100%;
+  }
+
+// Global Classes
+  .group {
+    display: flex;
+    gap: $sp20;
+    align-items: center;
+  }
