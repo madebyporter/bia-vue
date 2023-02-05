@@ -76,8 +76,12 @@
   .content-sidebar-aside {
     margin: 0 0 $sp40 0;
     flex-grow: 2;
+    width: 100%;
     @media screen and (min-width: $ssPhoneL) {
       flex-grow: 1;
+      width: auto;
+    }
+    @media screen and (min-width: $ssLaptop) {
       width: 100%;
     }
   }

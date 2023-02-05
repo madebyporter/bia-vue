@@ -11,10 +11,22 @@
 }
 
 .card-resource {
+  a {
+    text-decoration: none;
+  }
+  .avatar-large {
+    // border: 1px solid $clGrayLight;
+  }
   .card-top {
     border-bottom: 1px solid $clGrayLight;
   }
   &:hover {
+    a {
+      text-decoration: underline;
+    }
+    .avatar-large {
+      // border: 1px solid $clBlack;
+    }
     .card-top {
       border-bottom: 1px solid $clBlack;
     }

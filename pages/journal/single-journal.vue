@@ -53,7 +53,7 @@
           <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
         </div>
         <div class="content-inner" v-if="journal.fields.resourceList">
-          <ul class="list-default">
+          <ul class="list-default-medium">
             <li v-for="r in journal.fields.resourceList">
               <div class="card card-resource">
                 <div class="card-inner card-top">
@@ -69,11 +69,13 @@
                 <div class="card-inner card-bottom">
                   <div class="tag-group">
                     <div class="tag">
-                      {{ r.fields.resourceTags }}
-                    </div>
-                    <div class="tag">
                       {{ r.fields.resourceType }}
                     </div>
+                     <div class="tag-group" v-for="t in r.fields.resourceTag">
+                      <div class="tag">
+                        {{ t }}
+                      </div>
+                     </div>
                   </div>
                 </div>
               </div>

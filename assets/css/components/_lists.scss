@@ -10,6 +10,13 @@
       margin: $sp40 0 0;
     }
   }
+  .list-default-medium {
+    @extend .list-default;
+    gap: $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      gap: $sp40;
+    }
+  }
   .list-default-large {
     @extend .list-default;
     gap: $sp40;

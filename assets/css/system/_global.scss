@@ -10,7 +10,11 @@
 
 // Global Classes
   .group {
-    display: flex;
-    gap: $sp20;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $sp20;
+    @media screen and (min-width: $ssTablet) {
+      flex-wrap: nowrap;
+    }
   }
