@@ -46,6 +46,9 @@
   }
   path {
     fill: $clBlack;
+    @media screen and (min-width: $ssLaptop) {
+      fill: $clWhite;
+    }
   }
 }
 .global-header-logo-link {

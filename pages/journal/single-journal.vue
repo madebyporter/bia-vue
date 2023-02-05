@@ -61,9 +61,9 @@
                     <div class="avatar-large">
                       <img :src="r.fields.resourceAvatar.fields.file.url" :alt="r.fields.resourceName" />
                     </div>
-                    <h3 class="h3 margin-0">
+                    <h2 class="h2 margin-0">
                       <a :href="r.fields.resourceUrl" target="_blank">{{ r.fields.resourceName }}</a>
-                    </h3>
+                    </h2>
                   </div>
                 </div>
                 <div class="card-inner card-bottom">
