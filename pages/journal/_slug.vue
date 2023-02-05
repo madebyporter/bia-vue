@@ -1,7 +1,8 @@
 <template>
-  <infinite-scroll 
-    :content="content" 
-    :slug="slug" />
+  <infinite-scroll
+    :content="{store: 'journalData', name : 'journal'}"
+    :slug="slug"
+  />
 </template>
 
 <script>
@@ -12,24 +13,6 @@ export default {
   components: {
     SingleJournal,
     InfiniteScroll
-  },
-  computed: {
-    journal() {
-      let journal = this.$store.state.journalData.journal.filter(
-        el => el.fields.slug === this.slug
-      );
-      let journalResource = this.$store.state.journalData.journalResourceList.filter(
-        el => el.fields.slug === this.slug
-      );
-      return journal[0] || journalResource[0];
-    },
-    content() {
-      if (this.journal.type === 'journal') {
-        return {store: 'journalData', name: 'journal'};
-      } else if (this.journal.type === 'journalResourceList') {
-        return {store: 'journalData', name: 'journalResourceList'};
-      }
-    },
   },
   data() {
     return {

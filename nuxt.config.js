@@ -42,10 +42,6 @@ const dynamicRoutes = async () => {
     client.getEntries({
       content_type: "journal",
       include: 9
-    }),
-    client.getEntries({
-      content_type: "journalResourceList",
-      include: 9
     })
   ]).then(([journal]) => {
     return [...journal.items.map(entry => entry.fields.slug)];
