@@ -12,7 +12,7 @@
 
     <section class="section-large homepage-content">
       <div class="content-full" v-for="feed in feedTemplate">
-        <ul class="list-default-large">
+        <ul class="list-default list-large">
           <li class="list-item" v-for="feedItem in feed.fields.feedContent" :key="feedItem.fields.slug">
             <div class="list-item-full">
               <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">

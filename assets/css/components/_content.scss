@@ -120,4 +120,10 @@
     p + p {
       margin-top: $sp20;
     }
+    ol {
+      @extend .list-numbered;
+    }
+    ul {
+      @extend .list-default;
+    }
   }
