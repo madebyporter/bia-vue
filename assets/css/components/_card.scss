@@ -1,6 +1,42 @@
 .card {
-
+  border: 1px solid $clGrayLight;
+  border-radius: $sp10;
+  width: 100%;
+  &:hover {
+    border: 1px solid $clBlack;
+  }
 }
+.card-inner {
+  padding: $sp20;
+}
+
+.card-resource {
+  a {
+    text-decoration: none;
+  }
+  .card-top {
+    border-bottom: 1px solid $clGrayLight;
+    padding: $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      padding: $sp40;
+    }
+  }
+  .card-bottom {
+    padding: $sp20 $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      padding: $sp20 $sp40;
+    }
+  }
+  &:hover {
+    a {
+      text-decoration: underline;
+    }
+    .card-top {
+      border-bottom: 1px solid $clBlack;
+    }
+  }
+}
+
 .card > img {
   margin: 0 0 $sp20 0;
 }

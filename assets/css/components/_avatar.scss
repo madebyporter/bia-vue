@@ -14,3 +14,17 @@
       width: 100%;
     }
   }
+
+  .avatar-large {
+    border-radius: 72px;
+    overflow: hidden;
+    height: 72px;
+    width: 72px;
+  }
+
+  .avatar-group {
+    @extend .group;
+    .avatar {
+      margin: 0;
+    }
+  }

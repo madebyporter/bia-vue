@@ -1,6 +1,4 @@
 // Lists
-  .list-header {
-  }
   .list-default {
     list-style: none;
     margin: 0;
@@ -11,19 +9,40 @@
     & + ul, & + ol {
       margin: $sp40 0 0;
     }
+    & > li {
+      display: flex;
+      align-items: flex-start;
+      @media screen and (min-width: $ssLaptop) {
+        align-items: flex-start;
+      }
+    }
   }
-  .list-default-large {
+  .list-numbered {
+    list-style: decimal;
+    margin: 0;
+    padding-left: $sp20;
+    display: flex;
+    flex-direction: column;
+    gap: $sp20;
+    & + ul, & + ol {
+      margin: $sp40 0 0;
+    }
+    & > li {
+      display: list-item;
+    }
+  }
+  .list-medium {
+    @extend .list-default;
+    gap: $sp20;
+    @media screen and (min-width: $ssLaptop) {
+      gap: $sp40;
+    }
+  }
+  .list-large {
     @extend .list-default;
     gap: $sp40;
     @media screen and (min-width: $ssLaptop) {
       gap: $sp80;
-    }
-  }
-  .list-default > li {
-    display: flex;
-    align-items: flex-start;
-    @media screen and (min-width: $ssLaptop) {
-      align-items: flex-start;
     }
   }
   .list-item {

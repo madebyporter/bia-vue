@@ -47,10 +47,40 @@
         </aside>
       </div>
 
-      <!-- Post Sidebar -->
+      <!-- Main Content Area -->
       <div class="content-post-sidebar">
         <div class="content-inner" v-if="journal.fields.content">
           <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
+        </div>
+        <div class="content-inner" v-if="journal.fields.resourceList">
+          <ul class="list-default list-medium">
+            <li v-for="r in journal.fields.resourceList">
+              <div class="card card-resource">
+                <div class="card-inner card-top">
+                  <div class="avatar-group">
+                    <div class="avatar-large">
+                      <img :src="r.fields.resourceAvatar.fields.file.url" :alt="r.fields.resourceName" />
+                    </div>
+                    <h2 class="h2 margin-0">
+                      <a :href="r.fields.resourceUrl" target="_blank">{{ r.fields.resourceName }}</a>
+                    </h2>
+                  </div>
+                </div>
+                <div class="card-inner card-bottom">
+                  <div class="tag-group">
+                    <div class="tag">
+                      {{ r.fields.resourceType }}
+                    </div>
+                     <div class="tag-group" v-for="t in r.fields.resourceTag">
+                      <div class="tag">
+                        {{ t }}
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

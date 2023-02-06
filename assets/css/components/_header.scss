@@ -1,7 +1,8 @@
 .global-header {
+  align-items: start;
   @extend .grid;
   padding: $sp20 $sp20;
-  align-items: start;
+  transition: transform 400ms;
   @media screen and (min-width: $ssTablet) {
     mix-blend-mode: difference;
   }
@@ -9,6 +10,7 @@
     padding: $sp40 $sp40;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 100;
     a {
       color: $clWhite;
@@ -41,6 +43,12 @@
   svg {
     height: 48px;
     width: auto;
+  }
+  path {
+    fill: $clBlack;
+    @media screen and (min-width: $ssLaptop) {
+      fill: $clWhite;
+    }
   }
 }
 .global-header-logo-link {

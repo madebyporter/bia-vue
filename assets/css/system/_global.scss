@@ -1,6 +1,20 @@
-* {
-  box-sizing: border-box;
-}
-img {
-  width: 100%;
-}
+// Global Head Elements
+  * {
+    box-sizing: border-box;
+  }
+
+// Global Body Elements
+  img {
+    width: 100%;
+  }
+
+// Global Classes
+  .group {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $sp20;
+    @media screen and (min-width: $ssTablet) {
+      flex-wrap: nowrap;
+    }
+  }
