@@ -14,9 +14,9 @@
       All Rights Reserved
     </div>
     <div class="global-footer-slogan">
-      <span>Future</span> 
-      <span class="ssTablet-down-hide">x Forward</span> 
-      <span class="ssTablet-down-hide">x Partners</span>
+      <span class="ssTablet-down-hide">Future x</span> 
+      <span class="ssTablet-down-hide">Forward x</span> 
+      <span>Partners</span>
     </div>
   </footer>
 </template>
