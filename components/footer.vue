@@ -8,7 +8,7 @@
       </a>
     </div>
     <div class="global-footer-copyright">
-      &copy; 2022 Bia
+      &copy; {{ currentYear }} Bia
     </div>
     <div class="global-footer-rights">
       All Rights Reserved
@@ -20,3 +20,13 @@
     </div>
   </footer>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        currentYear: new Date().getFullYear()
+      };
+    }
+  };
+</script>
