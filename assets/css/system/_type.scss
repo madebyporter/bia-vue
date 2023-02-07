@@ -107,6 +107,12 @@ html {
   .p-gray {
     color: $clGrayLight;
   }
+  li {
+    @include font-size($fs14);
+    @media screen and (min-width: $ssLaptop) {
+      @include font-size($fs16);
+    }
+  }
 
 // Spans
   .s-underline-white {
