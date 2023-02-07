@@ -1,11 +1,15 @@
 .card {
-  border: 1px solid $clGrayLight;
-  border-radius: $sp10;
   width: 100%;
+}
+
+.card-bordered {
+  border: 1px solid $clGrayLight;
+  border-radius: $sp10; 
   &:hover {
     border: 1px solid $clBlack;
   }
 }
+
 .card-inner {
   padding: $sp20;
 }

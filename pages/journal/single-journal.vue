@@ -49,13 +49,16 @@
 
       <!-- Main Content Area -->
       <div class="content-post-sidebar">
+        <!-- Journal Content -->
         <div class="content-inner" v-if="journal.fields.content">
           <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
         </div>
+
+        <!-- Card Resource List -->
         <div class="content-inner" v-if="journal.fields.resourceList">
           <ul class="list-default list-medium">
             <li v-for="r in journal.fields.resourceList">
-              <div class="card card-resource">
+              <div class="card card-bordered card-resource">
                 <div class="card-inner card-top">
                   <div class="avatar-group">
                     <div class="avatar-large">
