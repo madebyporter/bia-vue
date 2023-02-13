@@ -85,6 +85,11 @@
             </li>
           </ul>
         </div>
+
+        <!-- Journal Closing -->
+        <div class="content-inner" v-if="journal.fields.closing">
+          <div class="content-text" v-html="$md.render(journal.fields.closing)"></div>
+        </div>
       </div>
     </section>
   </div>
