@@ -1,11 +1,11 @@
 <template>
   <div>
     <div v-for="(entry, i) in entries" :key="entry" class="single-post">
-      <div v-if="content.name === 'cases'" :class="i === activeIndex ? 'active case' : 'case'">
-        <single-case :activeTitle="title" :slug="entry" />
+      <div v-if="content.name === 'cases'">
+        <single-case :activeTitle="title" :activeDesc="description" :slug="entry" />
       </div>
       <div v-if="content.name === 'journal'">
-        <single-journal :slug="entry" />
+        <single-journal :activeTitle="title" :activeSubTitle="subTitle" :slug="entry" />
       </div>
       <div v-if="content.name === 'ventures'">
         <single-venture :slug="entry" />
@@ -30,7 +30,9 @@ export default {
       entries: [],
       meta: [],
       title: '',
-      activeIndex: 0
+      activeIndex: 0,
+      description: '',
+      subTitle: '',
     }
   },
   props: [
@@ -48,6 +50,8 @@ export default {
         this.meta.forEach((entry, key) => {
           if (scrollPosition >= entry.offsetY[0] && scrollPosition <= entry.offsetY[1]) {
             this.title = entry.title
+            this.description = entry.description
+            this.subTitle = entry.subTitle
             this.activeIndex = key
             if (document.body.scrollHeight === this.meta[this.meta.length - 1].offsetY[1]) {
               history.pushState(null, null, entry.slug)
@@ -65,6 +69,13 @@ export default {
     })[0]
 
     this.title = activeEntry.fields.title
+
+    if (this.$route.path.includes('/cases/')) {
+      this.description = activeEntry.fields.description;
+    } else if (this.$route.path.includes('/journal/')) {
+      this.subTitle = activeEntry.fields.subTitle;
+    }
+
     this.activeIndex = storeEntries.indexOf(activeEntry)
     let reorderedEntries = [storeEntries[this.activeIndex], ...storeEntries.slice(0, this.activeIndex), ...storeEntries.slice(this.activeIndex + 1)]
 
@@ -76,6 +87,8 @@ export default {
           this.meta.push({
             slug,
             title: entry.fields.title,
+            description: entry.fields.description,
+            subTitle: entry.fields.subTitle,
             offsetY: [screenEnd, document.body.scrollHeight]
           })
           screenEnd = document.body.scrollHeight

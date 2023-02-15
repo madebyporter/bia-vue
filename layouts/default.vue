@@ -7,10 +7,22 @@
 </template>
 
 <script>
+import { WEBSITE_TAG } from '~/plugins/globals.js';
+
 export default {
   data () {
     return {
       fullLogo: false
+    }
+  },
+  head() {
+    return {
+      title: this.title || 'Bia',
+      titleTemplate: '%s - ${WEBSITE_TAG}',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Future x Forward x Partners'},
+        { hid: 'og-type', property: 'og:type', content: 'website' },
+      ]
     }
   },
   watch: {

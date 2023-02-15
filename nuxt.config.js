@@ -67,15 +67,16 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Bia',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Expert solutions for future challenges. Craft, authenticity, aesthetics. Best results for your business needs.' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+
+      { hid: 'og-image', property: 'og:image', content: '/bia-og-image.jpg'},
+      { hid: 't-type', name: 'twitter:card', content: '/bia-og-image.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -100,6 +101,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/contentful', mode: 'client'},
+    '~/plugins/globals',
     "~/plugins/members",
     "~/plugins/cases",
     "~/plugins/ventures",

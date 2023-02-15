@@ -61,11 +61,32 @@
 </template>
 
 <script>
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
+
   export default {
     data() {
       return {
         title: 'Home',
         scrolled: 0
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        titleTemplate: `%s - ${WEBSITE_TAG}`,
+        meta: [
+          { hid: 'description', name: 'description', content: 'Future x Forward x Partners'},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: 'Future x Forward x Partners' },
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
+        bodyAttrs: {
+          class: this.title,
+        },
       }
     },
     computed: {
@@ -82,22 +103,6 @@
         let chunk = heroHeight / 11 //number of versions in _hero-home.scss
         let version = Math.floor(scrollPosition / chunk)
         this.scrolled = version
-      }
-    },
-    head() {
-      return {
-        title: this.title,
-        titleTemplate: '%s - Bia',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Home page description'
-          }
-        ],
-        bodyAttrs: {
-          class: this.title,
-        },
       }
     },
     mounted() {

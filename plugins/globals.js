@@ -1,0 +1,1 @@
+export const WEBSITE_TAG = 'Bia - A Design Engineering Collective';

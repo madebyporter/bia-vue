@@ -33,11 +33,9 @@
 </template>
 
 <script>
-import AccordionItems from '@/components/accordion-items.vue'
+  import AccordionItems from '@/components/accordion-items.vue'
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
   export default {
-    components: {
-      AccordionItems
-    },
     data() {
       return {
         title: 'About',
@@ -61,15 +59,24 @@ import AccordionItems from '@/components/accordion-items.vue'
     head() {
       return {
         title: this.title,
-        titleTemplate: '%s - Bia',
+        titleTemplate: `%s - ${WEBSITE_TAG}`,
         meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Home page description'
-          }
-        ]
+          { hid: 'description', name: 'description', content: 'We are designers who have joined as a collective to solve future challenges for humanity'},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: 'We are designers who have joined as a collective to solve future challenges for humanity.' },
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
+        bodyAttrs: {
+          class: this.title,
+        },
       }
+    },
+    components: {
+      AccordionItems
     },
   }
 </script>

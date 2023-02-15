@@ -96,9 +96,12 @@
 </template>
 
 <script>
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
   export default {
     props: [
-      'slug'
+      'slug',
+      'activeTitle',
+      'activeSubTitle'
     ],
     computed: {
       journal() {
@@ -110,16 +113,22 @@
     },
     head() {
       return {
-        title: this.journal.fields.title,
-        titleTemplate: '%s - Bia',
+        title: this.activeTitle,
+        titleTemplate: `%s - ${WEBSITE_TAG}`,
         meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.journal.fields.subTitle
-          }
-        ]
-      };
-    }
+          { hid: 'description', name: 'description', content: this.activeSubTitle},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: this.activeSubTitle},
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
+        bodyAttrs: {
+          class: this.title,
+        },
+      }
+    },
   }
 </script>

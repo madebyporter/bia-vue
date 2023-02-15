@@ -57,6 +57,7 @@
 </template>
 
 <script>
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
   export default {
     data() {
       return {
@@ -66,14 +67,20 @@
     head() {
       return {
         title: this.title,
-        titleTemplate: '%s - Bia',
+        titleTemplate: `%s - ${WEBSITE_TAG}`,
         meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Home page description'
-          }
-        ]
+          { hid: 'description', name: 'description', content: 'Work we’ve created that’s stimulating, curious, and smart–with real-world feedback. We know the rules and strive to break them in order to create a connection that is authentic, emotional, and powerful.'},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: 'Work we’ve created that’s stimulating, curious, and smart–with real-world feedback. We know the rules and strive to break them in order to create a connection that is authentic, emotional, and powerful.' },
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
+        bodyAttrs: {
+          class: this.title,
+        },
       }
     },
     computed: {

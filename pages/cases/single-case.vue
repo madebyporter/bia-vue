@@ -114,10 +114,12 @@
 </template>
 
 <script>
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
   export default {
     props: [
       'slug',
-      'activeTitle'
+      'activeTitle',
+      'activeDesc'
     ],
     computed: {
       cases() {
@@ -130,14 +132,20 @@
     head() {
       return {
         title: this.activeTitle,
-        titleTemplate: '%s - Case Studies - Bia',
+        titleTemplate: `%s - ${WEBSITE_TAG}`,
         meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.activeTitle
-          }
-        ]
+          { hid: 'description', name: 'description', content: this.activeDesc},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: this.activeDesc },
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
+        bodyAttrs: {
+          class: this.title,
+        },
       }
     }
   }

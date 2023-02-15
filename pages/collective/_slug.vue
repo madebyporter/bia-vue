@@ -96,10 +96,28 @@
 </template>
 
 <script>
+  import { WEBSITE_TAG } from '~/plugins/globals.js';
+
   export default {
     data() {
       return {
         slug: this.$route.params.slug
+      };
+    },
+    head() {
+      return {
+        title: this.member.fields.name,
+        titleTemplate: '%s - Collective - Bia',
+        meta: [
+          { hid: 'description', name: 'description', content: this.member.fields.bio},
+          { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },
+          { hid: 'og-desc', property: 'og:description', content: this.member.fields.bio },
+          // og-image is in nuxt.config.js
+          { hid: 'og-url', property: 'og:url', content: this.$nuxt.$route.path },
+        ],
+        link: [
+          { rel: 'canonical', href: this.$nuxt.$route.path, hid: 'canonical' }
+        ],
       };
     },
     computed: {
@@ -122,18 +140,5 @@
         return this.$store.state.ventureData.ventures;
       }
     },
-    head() {
-      return {
-        title: this.member.fields.name,
-        titleTemplate: '%s - Collective - Bia',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.member.fields.bio
-          }
-        ]
-      };
-    }
   }
 </script>
