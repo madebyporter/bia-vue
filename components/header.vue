@@ -35,8 +35,13 @@
         this.windowWidth = window.innerWidth;
       },
       handleScroll() {
-        if (window.scrollY > this.previousScrollY && this.windowWidth >= 1024) {
-          this.navTranslateY = -200;
+        const heightWithExtra = window.innerHeight + 100;
+        if (document.documentElement.scrollHeight > heightWithExtra) {
+          if (window.scrollY > this.previousScrollY && this.windowWidth >= 1024) {
+            this.navTranslateY = -200;
+          } else {
+            this.navTranslateY = 0;
+          }
         } else {
           this.navTranslateY = 0;
         }

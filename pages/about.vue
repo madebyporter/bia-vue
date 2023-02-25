@@ -1,34 +1,36 @@
 <template>
   <div>
-    <Hero :title="title">
-      <p>We are designers who have joined as a collective to solve future challenges for humanity. A small team delivering big results–we approach our work through the lens of curiosity, diversity, and authenticity.</p>
-        
-      <p>Learn more about each of us through our <a href="https://en.wikipedia.org/wiki/Myers–Briggs_Type_Indicator">Myers-Briggs Type Indicators</a>.</p>
-    </Hero>
-    <section class="section">
-      <div class="content content-full sub-grid-thirds">
-        <div class="card card-person">
-          <img class="card-image image-rounded" src="~/assets/img/people/person-stephenmiller.jpg" alt="Stephen Miller" />
-          <h2 class="h2">Stephen Miller</h2>
-          <p class="">ENTP</p>
-          <p class="p-gray margin-y-0">Seeker/inventor</p>
-        </div>
-        <div class="card card-person">
-          <img class="card-image image-rounded" src="~/assets/img/people/person-chrisporter.jpg" alt="Chris Porter" />
-          <h2 class="h2">Chris Porter</h2>
-          <p class="margin-b-0">INTJ</p>
-          <p class="p-gray margin-y-0">Analyst/scientist</p>
-        </div>
-        <div class="card card-person">
-          <img class="card-image image-rounded" src="~/assets/img/people/person-monicathynguyen.jpg" alt="Monica Thy Nguyen" />
-          <h2 class="h2">Monica Thy Nguyen</h2>
-          <p class="margin-b-0">INFJ</p>
-          <p class="p-gray margin-y-0">Humanist/empath</p>
-        </div>
-      </div>
-    </section>
+    <div v-for="aboutPage in aboutPage" :key="aboutPage.sys.id">
+      <Hero :title="aboutPage.fields.heroTitle">
+        <div v-html="$md.render(aboutPage.fields.heroParagraph)"></div>
+      </Hero>
 
-    <AccordionItems :content="faqs" />
+      <section class="section">
+        <div class="content content-full sub-grid-thirds">
+          <div class="card card-person">
+            <img class="card-image image-rounded" :src="aboutPage.fields.founderAPhoto.fields.file.url" :alt="aboutPage.fields.founderAName" />
+            <h2 class="h2">{{aboutPage.fields.founderAName}}</h2>
+            <p class="">{{aboutPage.fields.founderAType}}</p>
+            <p class="p-gray margin-y-0">{{aboutPage.fields.founderASubtype}}</p>
+          </div>
+          <div class="card card-person">
+            <img class="card-image image-rounded" :src="aboutPage.fields.founderBPhoto.fields.file.url" :alt="aboutPage.fields.founderBName" />
+            <h2 class="h2">{{aboutPage.fields.founderBName}}</h2>
+            <p class="">{{aboutPage.fields.founderBType}}</p>
+            <p class="p-gray margin-y-0">{{aboutPage.fields.founderBSubtype}}</p>
+          </div>
+          <div class="card card-person">
+            <img class="card-image image-rounded" :src="aboutPage.fields.founderCPhoto.fields.file.url" :alt="aboutPage.fields.founderCName" />
+            <h2 class="h2">{{aboutPage.fields.founderCName}}</h2>
+            <p class="">{{aboutPage.fields.founderCType}}</p>
+            <p class="p-gray margin-y-0">{{aboutPage.fields.founderCSubtype}}</p>
+          </div>
+        </div>
+      </section>
+
+      <AccordionItems :dataSource="aboutPage.fields.mission" />
+
+    </div>   
   </div>
 </template>
 
@@ -39,22 +41,15 @@
     data() {
       return {
         title: 'About',
-        description: ``,
-        faqs: [
-          {
-            question: 'who we believe (in)',
-            answer: "Companies, entities, and individuals who value community, transparency, and are interested in working with a small team to produce big results."
-          },
-          {
-            question: 'how we work (together)',
-            answer: "From research, to functionality, to form, we approach every step of the process with two things at the forefront–you, the client, and the problem we aim to solve through first-principles."
-          },
-          {
-            question: 'why we\'re here (for you)',
-            answer: "We aren’t just production designers–we care about the core issues that cause the problems we solve, and the impact we can make by solving them for you."
-          },
-        ]
       }
+    },
+    components: {
+      AccordionItems
+    },
+    computed: {
+      aboutPage() {
+        return this.$store.state.aboutPageData.aboutPage;
+      },
     },
     head() {
       return {
@@ -74,9 +69,6 @@
           class: this.title,
         },
       }
-    },
-    components: {
-      AccordionItems
     },
   }
 </script>

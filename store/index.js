@@ -4,6 +4,7 @@ import cases from '/store/cases';
 import ventures from '/store/ventures';
 import journal from '/store/journal';
 import feedTemplate from '/store/feedTemplate';
+import aboutPage from '/store/aboutPage';
 
 const store = () => {
   return new Vuex.Store({
@@ -14,6 +15,7 @@ const store = () => {
       ventureData: ventures,
       journalData: journal,
       feedData: feedTemplate,
+      aboutPageData: aboutPage,
     }
   });
 };
