@@ -55,7 +55,15 @@ const dynamicRoutes = async () => {
     })
   ])
 
-  return memberRoute, casesRoute, venturesRoute, journalRoute, feedRoute
+  // Fetch About
+  const aboutPageRoute = Promise.all([
+    client.getEntries({
+      content_type: "aboutPage",
+      include: 9
+    })
+  ])
+
+  return memberRoute, casesRoute, venturesRoute, journalRoute, feedRoute, aboutPageRoute
 }
 
 export default {
@@ -107,6 +115,7 @@ export default {
     "~/plugins/ventures",
     "~/plugins/journal",
     "~/plugins/feedTemplate",
+    "~/plugins/aboutPage",
     "~/plugins/analytics",
   ],
 
