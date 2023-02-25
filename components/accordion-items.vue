@@ -3,9 +3,9 @@
     <div class="content content-full">
       <div class="accordion">
         <div class="accordion-item" v-for="(ds, i) in dataSource" :key="i">
-          <label @click="active === i ? active = null : active = i" class="accordion-panel">
+          <label @click="active === i ? active = null : active = i" :class="active === i ? 'accordion-panel open': 'accordion-panel'">
             <h2 class="accordion-header h1 margin-b-0">{{ ds.key }}</h2>
-            <div :class="active === i ? 'accordion-content open': 'accordion-content'">
+            <div class="accordion-content" >
               <p>{{ ds.value }}</p>
             </div>
           </label>
