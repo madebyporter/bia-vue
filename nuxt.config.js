@@ -4,7 +4,8 @@ dotenv.config();
 const contentful = require("contentful");
 const client = contentful.createClient({
  space: process.env.CONTENTFUL_SPACE,
- accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+ accessToken: process.env.CONTENTFUL_ACCESSTOKEN,
+ previewAccessToken: process.env.CONTENTFUL_PREVIEWACCESSTOKEN,
 });
 
 const dynamicRoutes = async () => {
@@ -127,6 +128,7 @@ export default {
   env: {
     CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
     CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
+    CONTENTFUL_PREVIEW_ACCESS_TOKEN: process.env.CONTENTFUL_PREVIEWACCESSTOKEN,
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT
   },
 

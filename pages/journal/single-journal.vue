@@ -51,7 +51,14 @@
       <div class="content-post-sidebar">
         <!-- Journal Content -->
         <div class="content-inner" v-if="journal.fields.content">
-          <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
+          <!-- Use preview content if available -->
+          <div v-if="isPreview">
+            <div class="content-text" v-html="$md.render(previewContent)"></div>
+          </div>
+          <!-- Use regular content if preview is not active -->
+          <div v-else-if="journal.fields.content">
+            <div class="content-text" v-html="$md.render(journal.fields.content)"></div>
+          </div>
         </div>
 
         <!-- Card Resource List -->
@@ -109,6 +116,18 @@
           el => el.fields.slug === this.slug
         );
         return journal[0];
+      },
+      async journalPreview() {
+        const client = createClient({
+          space: process.env.CONTENTFUL_SPACE_ID,
+          accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+          host: 'preview.contentful.com'
+        })
+        const entry = await client.getEntry(this.$route.params.slug, {
+          include: 10, // Increase include level to fetch linked entries
+          preview: true // Use Preview API to fetch unpublished content
+        })
+        return entry
       }
     },
     head() {
