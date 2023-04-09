@@ -69,11 +69,8 @@ module.exports = {
     "~/plugins/analytics",
   ],
 
-  middleware: [
-    'contentful.staging'
-  ],
-
   generate: {
+    fallback: true,
     async routes() {
       const contentful = require('contentful');
       const client = contentful.createClient({
