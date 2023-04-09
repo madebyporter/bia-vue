@@ -77,9 +77,9 @@ module.exports = {
     async routes() {
       const contentful = require('contentful');
       const client = contentful.createClient({
-        space: ebblsgqwail2,
-        accessToken: _OktLrgp7NsYER7nEqKAuGZ4laF2Ly8XWEU4tdEFeTU,
-        environment: master
+        space: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_ACCESSTOKEN,
+        environment: process.env.CONTENTFUL_ENVIRONMENT
       });
 
       // Fetch Members
