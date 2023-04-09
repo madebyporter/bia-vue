@@ -129,18 +129,37 @@ module.exports = {
         return response.items.map((entry) => '/about');
       });
 
+      // Fetch all content types dynamically
+      const dynamicRoutes = client.getContentTypes()
+        .then((response) => {
+          return response.items.filter(item => item.fields.generatePages)
+            .map(item => item.sys.id)
+            .map(async (contentType) => {
+              const entries = await client.getEntries({ content_type: contentType });
+              return entries.items.map((entry) => `/${contentType}/${entry.fields.slug}`);
+            });
+        })
+        .then((promises) => {
+          return Promise.all(promises);
+        })
+        .then((values) => {
+          return values.flat();
+        });
+
       return Promise.all([
         memberRoute,
         casesRoute,
         venturesRoute,
         journalRoute,
         feedRoute,
-        aboutPageRoute
+        aboutPageRoute,
+        dynamicRoutes
       ]).then((values) => {
         return values.flat();
       });
     }
   },
+
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
