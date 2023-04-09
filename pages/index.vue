@@ -74,7 +74,7 @@
     head() {
       return {
         title: this.title,
-        titleTemplate: `%s - ${WEBSITE_TAG}`,
+        titleTemplate: `${WEBSITE_TAG}`,
         meta: [
           { hid: 'description', name: 'description', content: 'Future x Forward x Partners'},
           { hid: 'og-title', property: 'og:title', content: `${this.title} - ${WEBSITE_TAG}` },

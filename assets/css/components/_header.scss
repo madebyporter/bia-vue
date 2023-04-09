@@ -23,6 +23,7 @@
   width: 100%;
   z-index: 100;
   background: none;
+  mix-blend-mode: difference;
   @media screen and (min-width: $ssLaptop) {
     position: fixed;
   }
