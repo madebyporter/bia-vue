@@ -16,14 +16,15 @@
           <li class="list-item" v-for="feedItem in feed.fields.feedContent" :key="feedItem.fields.slug">
             <div class="list-item-full">
               <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`">
-                <img class="image-rounded" :src="`${feedItem.fields.featuredImage.fields.file.url}`" />
+                <img class="image-rounded" :src="`${feedItem.sys.contentType.sys.id === 'cases' ? feedItem.fields.featuredImage.fields.file.url : feedItem.fields.heroImage.fields.file.url}`" />
               </NuxtLink>
+
             </div>
             <div class="list-item-half list-item-narrow">
               <h2 class="h2 margin-b-0">
                 <NuxtLink :to="`${feedItem.sys.contentType.sys.id}`+`/`+`${feedItem.fields.slug}`" class="no-underline">{{feedItem.fields.title}}</NuxtLink>
               </h2>
-              <p>{{feedItem.fields.description}}</p>
+              <p>{{feedItem.sys.contentType.sys.id === 'cases' ? feedItem.fields.description : feedItem.fields.subTitle}}</p>
             </div>
           </li>
         </ul>

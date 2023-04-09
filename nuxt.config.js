@@ -1,72 +1,22 @@
-import dotenv from "dotenv";
-dotenv.config();
+const dotenv = require('dotenv');
+const path = require('path');
 
-const contentful = require("contentful");
-const client = contentful.createClient({
- space: process.env.CONTENTFUL_SPACE,
- accessToken: process.env.CONTENTFUL_ACCESSTOKEN
-});
+// Load .env.staging
+dotenv.config({ path: path.join(__dirname, '.env.staging') });
 
-const dynamicRoutes = async () => {
-  // Fetch Members
-  const memberRoute = Promise.all([
-    client.getEntries({
-      content_type: "member"
-    })
-  ]).then(([member]) => {
-    return [...member.items.map(entry => entry.fields.slug)];
-  })
+module.exports = {
+  env: {
+    // Production
+    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
+    CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+    CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
 
-  // Fetch Cases
-  const casesRoute = Promise.all([
-    client.getEntries({
-      content_type: "cases",
-      include: 9
-    })
-  ]).then(([cases]) => {
-    return [...cases.items.map(entry => entry.fields.slug)];
-  })
+    // Staging
+    CONTENTFUL_ENVIRONMENT_STAG: process.env.CONTENTFUL_ENVIRONMENT_STAG,
+    CONTENTFUL_SPACE_STAG: process.env.CONTENTFUL_SPACE_STAG,
+    CONTENTFUL_ACCESSTOKEN_STAG: process.env.CONTENTFUL_ACCESSTOKEN_STAG,
+  },
 
-  // Fetch Ventures
-  const venturesRoute = Promise.all([
-    client.getEntries({
-      content_type: "ventures",
-      include: 6
-    })
-  ]).then(([ventures]) => {
-    return [...ventures.items.map(entry => entry.fields.slug)];
-  })
-
-  // Fetch Journal
-  const journalRoute = Promise.all([
-    client.getEntries({
-      content_type: "journal",
-      include: 9
-    })
-  ]).then(([journal]) => {
-    return [...journal.items.map(entry => entry.fields.slug)];
-  })
-
-  // Fetch Homepage
-  const feedRoute = Promise.all([
-    client.getEntries({
-      content_type: "feedTemplate",
-      include: 9
-    })
-  ])
-
-  // Fetch About
-  const aboutPageRoute = Promise.all([
-    client.getEntries({
-      content_type: "aboutPage",
-      include: 9
-    })
-  ])
-
-  return memberRoute, casesRoute, venturesRoute, journalRoute, feedRoute, aboutPageRoute
-}
-
-export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -123,16 +73,73 @@ export default {
     'contentful.staging'
   ],
 
-  // Contentful
-  env: {
-    CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
-    CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
-    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT
-  },
-
   generate: {
-    fallback: true,
-    routes: dynamicRoutes
+    async routes() {
+      const contentful = require('contentful');
+      const client = contentful.createClient({
+        space: ebblsgqwail2,
+        accessToken: _OktLrgp7NsYER7nEqKAuGZ4laF2Ly8XWEU4tdEFeTU,
+        environment: master
+      });
+
+      // Fetch Members
+      const memberRoute = client.getEntries({
+        content_type: 'member'
+      }).then((response) => {
+        return response.items.map((entry) => entry.fields.slug);
+      });
+
+      // Fetch Cases
+      const casesRoute = client.getEntries({
+        content_type: 'cases',
+        include: 9
+      }).then((response) => {
+        return response.items.map((entry) => entry.fields.slug);
+      });
+
+      // Fetch Ventures
+      const venturesRoute = client.getEntries({
+        content_type: 'ventures',
+        include: 6
+      }).then((response) => {
+        return response.items.map((entry) => entry.fields.slug);
+      });
+
+      // Fetch Journal
+      const journalRoute = client.getEntries({
+        content_type: 'journal',
+        include: 9
+      }).then((response) => {
+        return response.items.map((entry) => entry.fields.slug);
+      });
+
+      // Fetch Homepage
+      const feedRoute = client.getEntries({
+        content_type: 'feedTemplate',
+        include: 9
+      }).then((response) => {
+        return response.items.map((entry) => '/');
+      });
+
+      // Fetch About
+      const aboutPageRoute = client.getEntries({
+        content_type: 'aboutPage',
+        include: 9
+      }).then((response) => {
+        return response.items.map((entry) => '/about');
+      });
+
+      return Promise.all([
+        memberRoute,
+        casesRoute,
+        venturesRoute,
+        journalRoute,
+        feedRoute,
+        aboutPageRoute
+      ]).then((values) => {
+        return values.flat();
+      });
+    }
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
