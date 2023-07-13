@@ -165,6 +165,7 @@ module.exports = {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxt/postcss8'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
