@@ -117,7 +117,7 @@
     p {
       margin-bottom: 0;
     }
-    p + p {
+    p + p, p + ul, p + ol {
       margin-top: $sp20;
     }
     ol {
