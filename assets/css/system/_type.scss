@@ -75,7 +75,7 @@ html {
   }
 
 // Paragraphs
-  p {
+  p, li {
     margin: 0;
     @include font-size($fs14);
     & + p {
@@ -106,12 +106,6 @@ html {
   }
   .p-gray {
     color: $clGrayLight;
-  }
-  li {
-    @include font-size($fs14);
-    @media screen and (min-width: $ssLaptop) {
-      @include font-size($fs16);
-    }
   }
 
 // Spans

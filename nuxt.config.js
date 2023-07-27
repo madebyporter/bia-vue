@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         hid: 'externalLinks',
-        src: 'externalLinks.js',
+        src: '/externalLinks.js',
       }
     ],
   },
@@ -175,9 +175,15 @@ module.exports = {
 
   // Markdown
   markdownit: {
-    runtime: true // Support `$md()`
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true,  // Inject '$md' in context
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
