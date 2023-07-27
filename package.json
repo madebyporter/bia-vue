@@ -2,11 +2,15 @@
   "name": "Bia",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "refresh": "NODE_ENV=development nuxt build"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^0.0.2",
