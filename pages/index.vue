@@ -97,13 +97,15 @@
     },
     methods: {
       changeScrollVersion() {
-        // 11 versions of the gradient css
-        // flip through them on scroll
-        let heroHeight = this.$refs.hero.clientHeight
-        let scrollPosition = window.scrollY
-        let chunk = heroHeight / 11 //number of versions in _hero-home.scss
-        let version = Math.floor(scrollPosition / chunk)
-        this.scrolled = version
+        if (this.$route.name === 'index') {
+          // 11 versions of the gradient css
+          // flip through them on scroll
+          let heroHeight = this.$refs.hero.clientHeight
+          let scrollPosition = window.scrollY
+          let chunk = heroHeight / 11 //number of versions in _hero-home.scss
+          let version = Math.floor(scrollPosition / chunk)
+          this.scrolled = version
+        }
       }
     },
     mounted() {

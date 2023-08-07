@@ -12,6 +12,7 @@
     & > li {
       display: flex;
       align-items: flex-start;
+      @include font-size($fs16);
       @media screen and (min-width: $ssLaptop) {
         align-items: flex-start;
       }

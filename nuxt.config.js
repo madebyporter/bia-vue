@@ -43,10 +43,6 @@ module.exports = {
       {
         hid: 'phosphor',
         src: "https://unpkg.com/phosphor-icons",
-      },
-      {
-        hid: 'externalLinks',
-        src: '/externalLinks.js',
       }
     ],
   },

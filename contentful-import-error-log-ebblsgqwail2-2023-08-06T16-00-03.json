@@ -1,0 +1,3080 @@
+[
+  {
+    "ts": "2023-08-06T20:03:34.305Z",
+    "level": "error",
+    "error": {
+      "name": "ValidationFailed",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1ETWDTCLnKVlPPSzBUXBVn",
+          "type": "Asset",
+          "createdAt": "2022-09-10T09:29:28.420Z",
+          "updatedAt": "2023-08-06T20:00:15.583Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2022-09-10T09:29:52.658Z",
+          "firstPublishedAt": "2022-09-10T09:29:52.658Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Porter-D"
+          },
+          "description": {
+            "en-US": ""
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "noFileFields",
+              "details": "The asset has no files"
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/assets/1ETWDTCLnKVlPPSzBUXBVn/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 6,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "884b82fe-adb9-4ed3-8d0c-48b262a71b51"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:03:55.682Z",
+    "level": "error",
+    "error": {
+      "name": "ValidationFailed",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1ETWDTCLnKVlPPSzBUXBVn",
+          "type": "Asset",
+          "createdAt": "2022-09-10T09:29:28.420Z",
+          "updatedAt": "2023-08-06T20:00:15.583Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2022-09-10T09:29:52.658Z",
+          "firstPublishedAt": "2022-09-10T09:29:52.658Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Porter-D"
+          },
+          "description": {
+            "en-US": ""
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "noFileFields",
+              "details": "The asset has no files"
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/assets/1ETWDTCLnKVlPPSzBUXBVn/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 6,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "a3829544-5c6f-4afc-9587-6ee9f706ea36"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:03:55.682Z",
+    "level": "error",
+    "error": "Could not publish the following entities: Porter-D (1ETWDTCLnKVlPPSzBUXBVn)"
+  },
+  {
+    "ts": "2023-08-06T20:04:21.082Z",
+    "level": "error",
+    "error": {
+      "name": "UnresolvedLinks",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1OTL7iNaJgkMkyaBDRO2BC",
+          "type": "Entry",
+          "createdAt": "2022-10-31T14:51:09.638Z",
+          "updatedAt": "2023-08-06T20:04:01.185Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "publishedAt": "2022-10-31T14:51:59.236Z",
+          "firstPublishedAt": "2022-10-31T14:51:59.236Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "roles"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Monica Thy Nguyen as User Researcher"
+          },
+          "member": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "316wQa51vN6hx3hcwQ7eQD"
+              }
+            }
+          },
+          "disciplines": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3JIxBdjJKWHHwpt9vvWxZ7"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "notResolvable",
+              "link": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "316wQa51vN6hx3hcwQ7eQD"
+              },
+              "path": [
+                "fields",
+                "member",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/1OTL7iNaJgkMkyaBDRO2BC/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 6,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "c93b7508-902a-4228-a546-014de5d47474"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:29.973Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "2b76yS5ruLXrgWmh2LJCxk",
+          "type": "Entry",
+          "createdAt": "2023-02-06T00:55:32.025Z",
+          "updatedAt": "2023-08-06T20:04:03.969Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "firstPublishedAt": "2023-02-06T01:16:06.219Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 26,
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "How Members of Bia use ChatGPT to Get Things Done"
+          },
+          "slug": {
+            "en-US": "how-members-of-bia-use-chatgpt-to-get-things-done"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1JfUhNUATF7P04VSU1ADXo"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5bZCQpGpSNVyTRZEL7GKkk"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "IFebWtA8ePqkuyejaQcAF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7nENpiUygtVc0Dw1neNbF6"
+              }
+            }
+          },
+          "content": {
+            "en-US": "![victor-carvalho-5p7U61lauRk-unsplash](//images.ctfassets.net/ebblsgqwail2/37QuhHUOgiYVcf0lw7Ldr7/1ba695a35df3a134d131f126c349ac66/victor-carvalho-5p7U61lauRk-unsplash.jpg)\n\n### Chris Porter: Coming up with Different Business Models and Ideas\n\n#### The Prompt\nWhat about 10 digital product ideas that I can build in a day, that's based on my personal brand as a digital product design engineer that are web focused? My target audience are: digital product designers, software developers and digital indie hackers.\n\n#### The Answer\n1. A simple, web-based wireframe and prototyping tool for digital product designers.\n2. A productivity tool for digital product designers that integrates with design software such as Sketch or Figma.\n3. A collection of design patterns and UI components for digital product designers to use in their work.\n4. A platform for organizing and sharing design resources such as icons, fonts, and templates.\n5. A tool that automatically generates style guides for digital product designs.\n6. A web-based collaboration tool for remote teams working on digital product design projects.\n7. A tool for conducting user research and testing on digital product designs.\n8. A platform for designers to showcase and sell their digital product design work.\n9. A tool for optimizing and automating the design handoff process between designers and developers.\n10. A web-based tool for managing and organizing design feedback and suggestions from stakeholders."
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "7nENpiUygtVc0Dw1neNbF6"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/2b76yS5ruLXrgWmh2LJCxk/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 26,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "4e64a31f-2eb7-4d8b-ba4e-a680e15a563d"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:30.614Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6hFJ8As0kBWhy0UVRqN3wI",
+          "type": "Entry",
+          "createdAt": "2023-03-16T03:36:01.674Z",
+          "updatedAt": "2023-08-06T20:04:05.017Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 36,
+          "publishedAt": "2023-03-16T04:13:16.711Z",
+          "firstPublishedAt": "2023-03-16T04:11:06.522Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 38,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Stephen Miller: The Skilled Photographer Influenced by his Mother"
+          },
+          "subTitle": {
+            "en-US": "My photographs are a visual diary for me"
+          },
+          "slug": {
+            "en-US": "stephen-miller-the-skilled-photographer-influenced-by-his-mother"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5bZCQpGpSNVyTRZEL7GKkk"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2W3C3pFac6Cy98jKruSt2j"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2rkMtMEOYLZ4cfWISFxrhM"
+              }
+            }
+          },
+          "content": {
+            "en-US": "*Written By Dan Ginn*\n\n(This interview first appeared on [Them Frames](https://www.themframes.com/features/stephen-stephen-miller-the-skilled-photographer-influenced-by-his-mother \"Them Frames\")) \n\nWhen Stephen Miller and I first connected, it was purely out of our shared love of photography. As we continued to converse I began to understand how much this man really adores the craft and that he manages to transmute that love into each image he makes — I had to talk to him more.\n\n![Bare by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/5P3Ddl297gWfvUKs5WLba0/9527c33a792c27eb330d0eb608617388/IMG_8029.jpeg)\n\nThankfully I have a digital magazine that allows photographers to express themselves in great detail, and Miller is more than happy to share his story. It’s the perfect combination for an interview, allowing all of you to learn more about Miller and his photographic talents.\n\nInspired in early life by his mother, Miller has creativity running through every cell in his body and mind. Whether it's stills to pay the bills or personal projects to fuel the passionate fire, each frame he creates shows this is a photographer who is so seasoned, image making is second nature — that’s what comes with 20 years behind the lens.\n\n__Stephen Miller:__ The photo below is just so special to me. When I met Angela we were both young and enjoying being college students. With some people you realize that’s the side they’re always going to give you. I feel like I still bring that out of her when we interact. I love this photo because it represents a new chapter in her life and her journey into motherhood.\n\n![Angela's Family by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/4bD99b29XlWgmPdw4NscBs/d0e24d5123a823d559215ba606cd3618/IMG_8020.jpeg)\n\n__Stephen Miller:__ To me portraiture is sacred. Anytime someone invites you to take a picture of them they are putting a lot of trust in you. The majority of my subjects are not professional models or people aspiring to be famous, so for them being on the other side of a camera is a very vulnerable position. They just want to be captured to remember a moment in their life. I imagine they want their ancestors to look back fondly at the photos and be inspired by their beauty, their legacy, their sense of style or their sense of adventure.\n\n![OJ & Kim by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/42k3G3ocvhUXEjeU1YO1Nz/ca6a2256f613ff52ce4eb0f6dfa385f9/IMG_8032.jpeg)\n\n__Them Frames:__ There’s a rawness to your style, one that avoids perceived perfection and focuses on the reality. Is that a fair assessment? How would you describe your style and why do you feel you have developed your work in the manner that you have?\n\n__Stephen Miller:__ That’s fair. Everything I love about photography involves vulnerability. I have always loved photos that showed how much the subject trusted the photographer. Professional models and actors have methods to open themselves up when a camera is pointed at them, it takes so much more for many people to get there. I enjoy the process of peeling those layers back so I can capture the real person.\n\n![Chèrie by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/iBAF4lWH1bJHzqNopfoHi/1b12a3bfaeac59b25ea3dc772b9c6d0f/IMG_8028.jpeg)\n\n__Them Frames:__ You're very much into movies. Can you share some titles that have influenced you creatively and how that’s impacted your photography journey?\n\n__Stephen Miller:__ Oh man there are so many…School Daze, There Will Be Blood, Zola, Love & Basketball, When Harry Met Sally, Y Tu Mamá También, The Talented Mr Ripley, Basic Instinct, Gattaca\n\nThe cinematography in these movies, the tone and costuming are absolutely beautiful. Film makers use a variety of shots, lighting and tricks of perspective to draw viewers in and to enhance emotions and connection. I try to do the same with my photography.\n\n![Memory by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/1adTwWy9Xed0TTPZN1OYNw/95642ec1545dd49c4151a7d11745b676/IMG_8039.jpeg)\n\n__Them Frames:__ Being such a movie buff, I’m interested to know why you took the move into still photography, rather than motion picture?\n\n__Stephen Miller:__ Honestly, I have ideas for movies but who doesn’t? Growing up in Ohio I didn’t even realize it was something people did for a living and I barely survived aspiring to be an artist. I had very few examples of working artists growing up. I had a friend whose father was a wedding cameraman but that was it. I went away to college, at Howard University. I learned about filmmakers like Gordon Parks, Spike Lee, Gina Prince-Bythewood and Haile Gerima. I made a documentary once with my brother but I haven’t studied film structure enough to call myself a filmmaker. I have a few friends in the film industry and I have the utmost respect for their commitment and passion to the medium.\n\nI enjoy being a fan of movies and using them for inspiration. I have been a Unit Photographer on a few sets. I love it, the environment is exhilarating for me.\n\n![Nina by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/qTUPJe3NXRmUMlryAHo1K/6327a255b8f0e876e3a9590785e89693/IMG_8034.jpeg)\n\n__Them Frames:__ Talk to me about your candid photography. How do you approach documenting compelling moments when working in unpredictable environments?\n\n__Stephen Miller:__ Candid photography is like a sport to me. I think most photographers can recognize a photo that isn’t planned, it’s kinda like hitting the lottery. My approach is to just try and stay ready when I’m in a visually interesting environment. I probably have more shots that could have been greater than ones I succeeded in actually capturing but, that’s the fun part!\n\n![Brother by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/6f6aJO38mIRVPCsTw6tbok/533f3cd2bf28c2d7571fb3f8b82eaaa3/IMG_8037.jpeg)\n\n__Them Frames:__ “Only boring people are bored” tell us more about the woman in your life that said that and how they influenced you as a person and as an artist.\n\n__Stephen Miller:__ This is a quote from my mother. There were months where she would literally hide the only television in our house from me and my siblings. We would plead with her to give it back and if we told her we wanted to watch TV or play video games because we were bored, that was her response. As I grew older I realized that for one reason or another we all arrive at moments like that in our lives. She taught me the power of entertaining myself, without technology, that our minds are a muscle and if we cannot find ways to entertain ourselves outside of what is being broadcast or streaming, our minds will atrophy and our power of imagination will disappear.\n\n![Mom by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/2wbnncJoXHufPUh0yUymmV/caec03533bf0f704754d4fef28098446/187a9742.jpg)\n\nStephen’s mother. Photo by Stephen Miller.\nThem Frames: Please share one song that you feel best relates to your photography.\n\n__Stephen Miller:__ Sweet Thing (feat. Chaka Khan) by Rufus | The way this song starts out so smooth and warm. I try to inject love into everything I do and this song is truly a love ballad. I don’t know anyone who can resist snapping their fingers when this song comes on.\n\n__Them Frames:__ Finally, finish this sentence, I need photography in my life because…\n\nStephen Miller: my photographs are a visual diary for me. My mother always had a camera handy when we were growing up and pouring back over those memories gives me so much joy. I started shooting me and my friends hanging out in high school and it continued in college. I treasure all those memories, the things I’ve kept and the things I’ve lost. \n\n![Boundless by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/3qu4gbaXyO7XenTCefrO9j/f421b627d4fc7956a0a72c357d93f95c/IMG_8038.jpg)"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2rkMtMEOYLZ4cfWISFxrhM"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6hFJ8As0kBWhy0UVRqN3wI/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 38,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "f3104fa5-f276-4d99-8cdd-f473f3f7a92f"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:30.875Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "26SpTxWI5kk978o60ERsd4",
+          "type": "Entry",
+          "createdAt": "2023-03-23T16:20:47.725Z",
+          "updatedAt": "2023-08-06T20:04:05.009Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 0,
+          "version": 14,
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Uses for ChatGPT as a Creative Entrepreneur"
+          },
+          "subTitle": {
+            "en-US": "From coding to writing, here's some ways ChatGPT can speed up your workflow."
+          },
+          "slug": {
+            "en-US": "uses-for-chatgpt-as-a-creative-entrepreneur"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "IFebWtA8ePqkuyejaQcAF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5oxb1iaZ4HKPlqQcYJZyVg"
+              }
+            }
+          },
+          "content": {
+            "en-US": "Test"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "5oxb1iaZ4HKPlqQcYJZyVg"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/26SpTxWI5kk978o60ERsd4/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 14,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "a32ce7fa-687d-432e-99d0-56f5b1ba9067"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:33.368Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "7cGx10J1wzLFIIZaKDtXkx",
+          "type": "Entry",
+          "createdAt": "2023-02-05T20:16:13.318Z",
+          "updatedAt": "2023-08-06T20:04:06.044Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 29,
+          "publishedAt": "2023-02-13T19:23:04.901Z",
+          "firstPublishedAt": "2023-02-05T20:17:44.840Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 9,
+          "version": 31,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "The Tools I Use to Run my Business: 2023 Edition"
+          },
+          "subTitle": {
+            "en-US": "Here's a list of the tools I use to run my digital agency business."
+          },
+          "slug": {
+            "en-US": "the-tools-i-use-to-run-my-business-2023-edition"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2VFLVx0cvNPWBRLkywGBRF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3XdCb20L8p7oXSLlL77eUE"
+              }
+            }
+          },
+          "content": {
+            "en-US": "As a Design Engineer, Music Producer, and Business owner, I wear many hats and have a lot of responsibilities to manage. To help me stay organized and productive, I rely on a variety of apps on a daily, weekly, and monthly basis. \n\nFrom task management tools to music production software, I have found that these apps are crucial in helping me achieve success in my diverse range of pursuits. In this article, I will be sharing the apps that have made a significant impact in my life and have helped me balance my many responsibilities.\n"
+          },
+          "resourceList": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6hb7aYAYyyKntPkpI7yjvR"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4i6VbAGQA7W5htNBDamhUL"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3zZqf6lbva19OOvgojKaeS"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5GaXBBjR8aHPTUNP2egN1J"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6sxPY2LXNYdD8KDIQ9EFXP"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "ELN7n4lGnye99hKsTBYGN"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1Hj83eVcHgGHRZmOxSfVVd"
+                }
+              }
+            ]
+          },
+          "closing": {
+            "en-US": "In conclusion, the apps that I use on a daily, weekly, and monthly basis play a critical role in helping me stay organized, productive, and on top of my many responsibilities. From task management tools to musical production software, these apps have helped me achieve success in my diverse range of pursuits and balance my many responsibilities. \n\nIf you have any questions or would like to share your own experiences, feel free to reach out to me on __Twitter [@madebyporter](https://www.twitter.com/madebyporter \"madebyporter on Twitter\")__. I would love to hear from you and continue the conversation about the importance of technology in our lives.\n"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "3XdCb20L8p7oXSLlL77eUE"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/7cGx10J1wzLFIIZaKDtXkx/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 31,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "0f51b60a-0f6a-4f67-a68a-3a9185018b92"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:34.067Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6GyFkJ4ni8ZZNbf8jYXdQu",
+          "type": "Entry",
+          "createdAt": "2022-10-30T18:44:55.777Z",
+          "updatedAt": "2023-08-06T20:04:06.029Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 34,
+          "publishedAt": "2022-12-02T00:29:04.230Z",
+          "firstPublishedAt": "2022-10-31T06:34:58.809Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "41LAJ6y95xR13piBoF9aIk"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 6,
+          "version": 36,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Mavely App Sharing Feature"
+          },
+          "description": {
+            "en-US": "Social commerce fashion sharing platform for D2C and retail brands."
+          },
+          "slug": {
+            "en-US": "mavely-app-sharing-feature"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6F2uRGFiz1ET6IKwRqomws"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Mobile App"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "50dn8P68wGEPUPcDvs725Y"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5dNl4caSJOrgnHEhYlV1pU"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "[Freelance Founders](https://www.freelancefounders.com/) referred me to the founders of [Mavely](https://www.joinmavely.com/). They expressed to me many of their community members had a hard time sharing their products, stores, and brands effectively on the app platform and came to me for expertise."
+          },
+          "solution": {
+            "en-US": "Reaccessing the entire Mavely ecosystem through an app audit to deeply understand the sharing issue the influences and creators on the platform were facing and desiging new UI flows for the sharing feature to  to increase and drive sales for all partner involved."
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1VVG8a9zILOgNOovRlMQC3"
+              }
+            }
+          },
+          "imageFloatLeft": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "0qzvCP5PZ6mMglbhiKwrJ"
+              }
+            }
+          },
+          "bodyContent": {
+            "en-US": "Native app that allows Mavely Partners to discover, shop, and share products from all the Mavely published brands. The primary share functions are designed around single product shares. Other core features include saved lists, dashboard, and activity feed. Mavely Ambassador Platform is web-based platform built to serve our B2B clients. Mavely B2B clients are looking to launch a white labeled social sales team with the Mavely tech. This Platform can be stood up for any brand in the Mavely database and appears as a Brand specific social share Ambassador Platform. The primary share feature is designed around a My Store I suggested sharing of brands for community building.\n\nThis project was done in 3-month sprints, working directly with the two founders, of which one of them was also a developer and I was their designer. User testing was also performed after the initial audit, which allowed me to dive deeper into the insights to drive my UI visual direction of the screens. It was amazing to work closely with the two founders directly as their designer.\n"
+          },
+          "imageFloatRight": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1jBW1VlkxtR1cWevFHlKWL"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "6F2uRGFiz1ET6IKwRqomws"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            },
+            {
+              "name": "assetFileSize",
+              "details": "File size must be at most 1MB",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "6F2uRGFiz1ET6IKwRqomws"
+                }
+              },
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6GyFkJ4ni8ZZNbf8jYXdQu/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 36,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "f73b8129-a7cf-4c43-bdd9-85b1cff10bfd"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:34.691Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6m92MBYFcLcBcB76CoDfNw",
+          "type": "Entry",
+          "createdAt": "2022-10-28T20:31:55.941Z",
+          "updatedAt": "2023-08-06T20:04:06.049Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 23,
+          "publishedAt": "2023-01-25T01:25:46.063Z",
+          "firstPublishedAt": "2022-10-28T20:51:14.411Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 25,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Organics Alive Shopify Redesign"
+          },
+          "description": {
+            "en-US": "A Southern California brand that specializes in providing organic fertilizer products to cannabis growers, small and large."
+          },
+          "slug": {
+            "en-US": "organics-alive-shopify-redesign"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "VB2oFZgQDQ3NcauAJVdLC"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Website"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2HZIfx44UT7DKuKYqGvyht"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1WfHoDs5w8g1rhbxgVPhrw"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3JgqReJxunlYtkUcHiBJEl"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "Organics Alive started their online business using Wordpress, but they were using many different web apps to manage products, shipping and customer service.\n\nThe design of their Wordpress store was growing stale and they needed a major facelift to keep up with the times. They also didn’t have a mobile friendly design, which is needed for farmers who spend most of their time in the fields and not on the laptop."
+          },
+          "solution": {
+            "en-US": "We help transfer their website to Shopify, where they were able to handle majority of their business on one platform.\n\nAlong with [Jennie McGuirk](https://www.creativepollinator.com/ \"Jennie McGuirk's Portfolio Site\") & [Spark6](https://www.spark6.com \"Spark6\"), we was able to rebuild their website, based on their updated branding, which bought a cleaner look, a much improved user experience."
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "72DyplubGPGc6fDlynCjjg"
+              }
+            }
+          },
+          "postImages": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4qRquxGQlyYf1lVIzmYHTI"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "1CtlrrYutLAzuseLVKZhn1"
+                }
+              }
+            ]
+          },
+          "bodyContent": {
+            "en-US": "After redesigning Organics Alive website and moving them from Wordpress to Shopify, their returning customer sales improved by 58% by the next year. \n\nConversion rates improved 24% from the past year, meaning people are able to quickly purchase product from the farm on their phone. Because of this improved user experience and conversations, their sales grew 25% from the year before the redesign."
+          },
+          "finalMockupImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2Rz9Qx5PV24dcW6DQOOjOK"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "VB2oFZgQDQ3NcauAJVdLC"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6m92MBYFcLcBcB76CoDfNw/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 25,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "b6685c8d-81d7-4f4e-a807-a114fb567585"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:34.929Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1MplJmy9WNH1TlPUxkIrYU",
+          "type": "Entry",
+          "createdAt": "2022-10-21T18:05:20.938Z",
+          "updatedAt": "2023-08-06T20:04:06.031Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 27,
+          "publishedAt": "2022-11-24T00:26:07.761Z",
+          "firstPublishedAt": "2022-10-28T22:03:52.716Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 4,
+          "version": 29,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Upbrief iOS Driver App"
+          },
+          "description": {
+            "en-US": "Upbrief is an internal iOS app for Faithful Homes to help their drivers log pick-ups and drop-offs and automate billing for admin."
+          },
+          "slug": {
+            "en-US": "upbrief-ios-driver-app"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4ztUjZDpqfpT8fFsCELqoW"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Mobile App",
+              "Website",
+              "Branding"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "646NVPrVNBB9FcNC7qPHRz"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "o9OyjRZtY8Z5RgIf8nGIc"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3xNPmcfFk6kwDEBQaeCiU4"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3prpdpjFtVfgPVp3kIdmd6"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "uTEeIIK1qJAV437L0lnwK"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4vldjEd9GW6W7HpGuTYrO9"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6a47X34kG7CkhPafHajH67"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "Drivers were logging client pickups and dropoffs using pencil and paper. The process was slow and tedious. Paper could get damaged on the route.\n\nAdmin were copying data from those paper logs to a Google spreadsheet. This made administration duties miserable because all logs had to be copied over manually. Driver’s handwriting and quality of paper logs made data admin more difficult."
+          },
+          "solution": {
+            "en-US": "Speed up client pickups and drop-off logging for drivers by automating much of the process with the iOS app.\n\nSpeed up the billing process by automating the logs and its data into easy to generate billing reports to send off to government agencies"
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5q7iYiGNbv6G9pUgUFQPVA"
+              }
+            }
+          },
+          "bodyContent": {
+            "en-US": "### Driver User Journey\nTo understand the driver process, we shadowed the driver’s routes throughout the day. We experienced how drivers picked up and dropped off clients. We saw how they logged each client, how some clients behaved in the vehicle, the vehicle inspection process, etc.\n\n### Admin User Journey\nTo understand the admin process, we shadowed the the administrator, who had to retype driver logs from paper to computer. They had to make sure to organize all those paper files, while organizing the digital files in Google Drive."
+          },
+          "finalMockupImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7M7DVQjIApfBrERePjZu9d"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4ztUjZDpqfpT8fFsCELqoW"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/1MplJmy9WNH1TlPUxkIrYU/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 29,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "5ad632ba-e342-4fa7-8e2a-f9869c6b0d69"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:39.642Z",
+    "level": "error",
+    "error": {
+      "name": "UnresolvedLinks",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1OTL7iNaJgkMkyaBDRO2BC",
+          "type": "Entry",
+          "createdAt": "2022-10-31T14:51:09.638Z",
+          "updatedAt": "2023-08-06T20:04:01.185Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "publishedAt": "2022-10-31T14:51:59.236Z",
+          "firstPublishedAt": "2022-10-31T14:51:59.236Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "roles"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Monica Thy Nguyen as User Researcher"
+          },
+          "member": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "316wQa51vN6hx3hcwQ7eQD"
+              }
+            }
+          },
+          "disciplines": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3JIxBdjJKWHHwpt9vvWxZ7"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "notResolvable",
+              "link": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "316wQa51vN6hx3hcwQ7eQD"
+              },
+              "path": [
+                "fields",
+                "member",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/1OTL7iNaJgkMkyaBDRO2BC/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 6,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "e17a0b4f-57b5-473b-888d-d709fda8e1b4"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:39.831Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "2b76yS5ruLXrgWmh2LJCxk",
+          "type": "Entry",
+          "createdAt": "2023-02-06T00:55:32.025Z",
+          "updatedAt": "2023-08-06T20:04:03.969Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "firstPublishedAt": "2023-02-06T01:16:06.219Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 26,
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "How Members of Bia use ChatGPT to Get Things Done"
+          },
+          "slug": {
+            "en-US": "how-members-of-bia-use-chatgpt-to-get-things-done"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1JfUhNUATF7P04VSU1ADXo"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5bZCQpGpSNVyTRZEL7GKkk"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "IFebWtA8ePqkuyejaQcAF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7nENpiUygtVc0Dw1neNbF6"
+              }
+            }
+          },
+          "content": {
+            "en-US": "![victor-carvalho-5p7U61lauRk-unsplash](//images.ctfassets.net/ebblsgqwail2/37QuhHUOgiYVcf0lw7Ldr7/1ba695a35df3a134d131f126c349ac66/victor-carvalho-5p7U61lauRk-unsplash.jpg)\n\n### Chris Porter: Coming up with Different Business Models and Ideas\n\n#### The Prompt\nWhat about 10 digital product ideas that I can build in a day, that's based on my personal brand as a digital product design engineer that are web focused? My target audience are: digital product designers, software developers and digital indie hackers.\n\n#### The Answer\n1. A simple, web-based wireframe and prototyping tool for digital product designers.\n2. A productivity tool for digital product designers that integrates with design software such as Sketch or Figma.\n3. A collection of design patterns and UI components for digital product designers to use in their work.\n4. A platform for organizing and sharing design resources such as icons, fonts, and templates.\n5. A tool that automatically generates style guides for digital product designs.\n6. A web-based collaboration tool for remote teams working on digital product design projects.\n7. A tool for conducting user research and testing on digital product designs.\n8. A platform for designers to showcase and sell their digital product design work.\n9. A tool for optimizing and automating the design handoff process between designers and developers.\n10. A web-based tool for managing and organizing design feedback and suggestions from stakeholders."
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "7nENpiUygtVc0Dw1neNbF6"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/2b76yS5ruLXrgWmh2LJCxk/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 26,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "92e82270-0ec2-4476-a720-6787a8ee0ddb"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:40.061Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6hFJ8As0kBWhy0UVRqN3wI",
+          "type": "Entry",
+          "createdAt": "2023-03-16T03:36:01.674Z",
+          "updatedAt": "2023-08-06T20:04:05.017Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 36,
+          "publishedAt": "2023-03-16T04:13:16.711Z",
+          "firstPublishedAt": "2023-03-16T04:11:06.522Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 38,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Stephen Miller: The Skilled Photographer Influenced by his Mother"
+          },
+          "subTitle": {
+            "en-US": "My photographs are a visual diary for me"
+          },
+          "slug": {
+            "en-US": "stephen-miller-the-skilled-photographer-influenced-by-his-mother"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5bZCQpGpSNVyTRZEL7GKkk"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2W3C3pFac6Cy98jKruSt2j"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2rkMtMEOYLZ4cfWISFxrhM"
+              }
+            }
+          },
+          "content": {
+            "en-US": "*Written By Dan Ginn*\n\n(This interview first appeared on [Them Frames](https://www.themframes.com/features/stephen-stephen-miller-the-skilled-photographer-influenced-by-his-mother \"Them Frames\")) \n\nWhen Stephen Miller and I first connected, it was purely out of our shared love of photography. As we continued to converse I began to understand how much this man really adores the craft and that he manages to transmute that love into each image he makes — I had to talk to him more.\n\n![Bare by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/5P3Ddl297gWfvUKs5WLba0/9527c33a792c27eb330d0eb608617388/IMG_8029.jpeg)\n\nThankfully I have a digital magazine that allows photographers to express themselves in great detail, and Miller is more than happy to share his story. It’s the perfect combination for an interview, allowing all of you to learn more about Miller and his photographic talents.\n\nInspired in early life by his mother, Miller has creativity running through every cell in his body and mind. Whether it's stills to pay the bills or personal projects to fuel the passionate fire, each frame he creates shows this is a photographer who is so seasoned, image making is second nature — that’s what comes with 20 years behind the lens.\n\n__Stephen Miller:__ The photo below is just so special to me. When I met Angela we were both young and enjoying being college students. With some people you realize that’s the side they’re always going to give you. I feel like I still bring that out of her when we interact. I love this photo because it represents a new chapter in her life and her journey into motherhood.\n\n![Angela's Family by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/4bD99b29XlWgmPdw4NscBs/d0e24d5123a823d559215ba606cd3618/IMG_8020.jpeg)\n\n__Stephen Miller:__ To me portraiture is sacred. Anytime someone invites you to take a picture of them they are putting a lot of trust in you. The majority of my subjects are not professional models or people aspiring to be famous, so for them being on the other side of a camera is a very vulnerable position. They just want to be captured to remember a moment in their life. I imagine they want their ancestors to look back fondly at the photos and be inspired by their beauty, their legacy, their sense of style or their sense of adventure.\n\n![OJ & Kim by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/42k3G3ocvhUXEjeU1YO1Nz/ca6a2256f613ff52ce4eb0f6dfa385f9/IMG_8032.jpeg)\n\n__Them Frames:__ There’s a rawness to your style, one that avoids perceived perfection and focuses on the reality. Is that a fair assessment? How would you describe your style and why do you feel you have developed your work in the manner that you have?\n\n__Stephen Miller:__ That’s fair. Everything I love about photography involves vulnerability. I have always loved photos that showed how much the subject trusted the photographer. Professional models and actors have methods to open themselves up when a camera is pointed at them, it takes so much more for many people to get there. I enjoy the process of peeling those layers back so I can capture the real person.\n\n![Chèrie by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/iBAF4lWH1bJHzqNopfoHi/1b12a3bfaeac59b25ea3dc772b9c6d0f/IMG_8028.jpeg)\n\n__Them Frames:__ You're very much into movies. Can you share some titles that have influenced you creatively and how that’s impacted your photography journey?\n\n__Stephen Miller:__ Oh man there are so many…School Daze, There Will Be Blood, Zola, Love & Basketball, When Harry Met Sally, Y Tu Mamá También, The Talented Mr Ripley, Basic Instinct, Gattaca\n\nThe cinematography in these movies, the tone and costuming are absolutely beautiful. Film makers use a variety of shots, lighting and tricks of perspective to draw viewers in and to enhance emotions and connection. I try to do the same with my photography.\n\n![Memory by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/1adTwWy9Xed0TTPZN1OYNw/95642ec1545dd49c4151a7d11745b676/IMG_8039.jpeg)\n\n__Them Frames:__ Being such a movie buff, I’m interested to know why you took the move into still photography, rather than motion picture?\n\n__Stephen Miller:__ Honestly, I have ideas for movies but who doesn’t? Growing up in Ohio I didn’t even realize it was something people did for a living and I barely survived aspiring to be an artist. I had very few examples of working artists growing up. I had a friend whose father was a wedding cameraman but that was it. I went away to college, at Howard University. I learned about filmmakers like Gordon Parks, Spike Lee, Gina Prince-Bythewood and Haile Gerima. I made a documentary once with my brother but I haven’t studied film structure enough to call myself a filmmaker. I have a few friends in the film industry and I have the utmost respect for their commitment and passion to the medium.\n\nI enjoy being a fan of movies and using them for inspiration. I have been a Unit Photographer on a few sets. I love it, the environment is exhilarating for me.\n\n![Nina by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/qTUPJe3NXRmUMlryAHo1K/6327a255b8f0e876e3a9590785e89693/IMG_8034.jpeg)\n\n__Them Frames:__ Talk to me about your candid photography. How do you approach documenting compelling moments when working in unpredictable environments?\n\n__Stephen Miller:__ Candid photography is like a sport to me. I think most photographers can recognize a photo that isn’t planned, it’s kinda like hitting the lottery. My approach is to just try and stay ready when I’m in a visually interesting environment. I probably have more shots that could have been greater than ones I succeeded in actually capturing but, that’s the fun part!\n\n![Brother by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/6f6aJO38mIRVPCsTw6tbok/533f3cd2bf28c2d7571fb3f8b82eaaa3/IMG_8037.jpeg)\n\n__Them Frames:__ “Only boring people are bored” tell us more about the woman in your life that said that and how they influenced you as a person and as an artist.\n\n__Stephen Miller:__ This is a quote from my mother. There were months where she would literally hide the only television in our house from me and my siblings. We would plead with her to give it back and if we told her we wanted to watch TV or play video games because we were bored, that was her response. As I grew older I realized that for one reason or another we all arrive at moments like that in our lives. She taught me the power of entertaining myself, without technology, that our minds are a muscle and if we cannot find ways to entertain ourselves outside of what is being broadcast or streaming, our minds will atrophy and our power of imagination will disappear.\n\n![Mom by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/2wbnncJoXHufPUh0yUymmV/caec03533bf0f704754d4fef28098446/187a9742.jpg)\n\nStephen’s mother. Photo by Stephen Miller.\nThem Frames: Please share one song that you feel best relates to your photography.\n\n__Stephen Miller:__ Sweet Thing (feat. Chaka Khan) by Rufus | The way this song starts out so smooth and warm. I try to inject love into everything I do and this song is truly a love ballad. I don’t know anyone who can resist snapping their fingers when this song comes on.\n\n__Them Frames:__ Finally, finish this sentence, I need photography in my life because…\n\nStephen Miller: my photographs are a visual diary for me. My mother always had a camera handy when we were growing up and pouring back over those memories gives me so much joy. I started shooting me and my friends hanging out in high school and it continued in college. I treasure all those memories, the things I’ve kept and the things I’ve lost. \n\n![Boundless by Stephen Miller](//images.ctfassets.net/ebblsgqwail2/3qu4gbaXyO7XenTCefrO9j/f421b627d4fc7956a0a72c357d93f95c/IMG_8038.jpg)"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2rkMtMEOYLZ4cfWISFxrhM"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6hFJ8As0kBWhy0UVRqN3wI/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 38,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "27f6e12e-16f6-431b-a644-2e8f5cbf8ca7"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.033Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "26SpTxWI5kk978o60ERsd4",
+          "type": "Entry",
+          "createdAt": "2023-03-23T16:20:47.725Z",
+          "updatedAt": "2023-08-06T20:04:05.009Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 0,
+          "version": 14,
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Uses for ChatGPT as a Creative Entrepreneur"
+          },
+          "subTitle": {
+            "en-US": "From coding to writing, here's some ways ChatGPT can speed up your workflow."
+          },
+          "slug": {
+            "en-US": "uses-for-chatgpt-as-a-creative-entrepreneur"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "IFebWtA8ePqkuyejaQcAF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5oxb1iaZ4HKPlqQcYJZyVg"
+              }
+            }
+          },
+          "content": {
+            "en-US": "Test"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "5oxb1iaZ4HKPlqQcYJZyVg"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/26SpTxWI5kk978o60ERsd4/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 14,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "38687dcb-935b-4cb9-b2d8-6434fa6b1317"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.246Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "7cGx10J1wzLFIIZaKDtXkx",
+          "type": "Entry",
+          "createdAt": "2023-02-05T20:16:13.318Z",
+          "updatedAt": "2023-08-06T20:04:06.044Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 29,
+          "publishedAt": "2023-02-13T19:23:04.901Z",
+          "firstPublishedAt": "2023-02-05T20:17:44.840Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 9,
+          "version": 31,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "journal"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "The Tools I Use to Run my Business: 2023 Edition"
+          },
+          "subTitle": {
+            "en-US": "Here's a list of the tools I use to run my digital agency business."
+          },
+          "slug": {
+            "en-US": "the-tools-i-use-to-run-my-business-2023-edition"
+          },
+          "collaborators": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "38qiiKxAHc2EkD9XN57A2L"
+                }
+              }
+            ]
+          },
+          "topic": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2VFLVx0cvNPWBRLkywGBRF"
+                }
+              }
+            ]
+          },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3XdCb20L8p7oXSLlL77eUE"
+              }
+            }
+          },
+          "content": {
+            "en-US": "As a Design Engineer, Music Producer, and Business owner, I wear many hats and have a lot of responsibilities to manage. To help me stay organized and productive, I rely on a variety of apps on a daily, weekly, and monthly basis. \n\nFrom task management tools to music production software, I have found that these apps are crucial in helping me achieve success in my diverse range of pursuits. In this article, I will be sharing the apps that have made a significant impact in my life and have helped me balance my many responsibilities.\n"
+          },
+          "resourceList": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6hb7aYAYyyKntPkpI7yjvR"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4i6VbAGQA7W5htNBDamhUL"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3zZqf6lbva19OOvgojKaeS"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5GaXBBjR8aHPTUNP2egN1J"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6sxPY2LXNYdD8KDIQ9EFXP"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "ELN7n4lGnye99hKsTBYGN"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1Hj83eVcHgGHRZmOxSfVVd"
+                }
+              }
+            ]
+          },
+          "closing": {
+            "en-US": "In conclusion, the apps that I use on a daily, weekly, and monthly basis play a critical role in helping me stay organized, productive, and on top of my many responsibilities. From task management tools to musical production software, these apps have helped me achieve success in my diverse range of pursuits and balance my many responsibilities. \n\nIf you have any questions or would like to share your own experiences, feel free to reach out to me on __Twitter [@madebyporter](https://www.twitter.com/madebyporter \"madebyporter on Twitter\")__. I would love to hear from you and continue the conversation about the importance of technology in our lives.\n"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "3XdCb20L8p7oXSLlL77eUE"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "heroImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/7cGx10J1wzLFIIZaKDtXkx/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 31,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "a60be82e-db5d-4308-9da7-7a1295ba34c5"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.443Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6GyFkJ4ni8ZZNbf8jYXdQu",
+          "type": "Entry",
+          "createdAt": "2022-10-30T18:44:55.777Z",
+          "updatedAt": "2023-08-06T20:04:06.029Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 34,
+          "publishedAt": "2022-12-02T00:29:04.230Z",
+          "firstPublishedAt": "2022-10-31T06:34:58.809Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "41LAJ6y95xR13piBoF9aIk"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 6,
+          "version": 36,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Mavely App Sharing Feature"
+          },
+          "description": {
+            "en-US": "Social commerce fashion sharing platform for D2C and retail brands."
+          },
+          "slug": {
+            "en-US": "mavely-app-sharing-feature"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6F2uRGFiz1ET6IKwRqomws"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Mobile App"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "50dn8P68wGEPUPcDvs725Y"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5dNl4caSJOrgnHEhYlV1pU"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "[Freelance Founders](https://www.freelancefounders.com/) referred me to the founders of [Mavely](https://www.joinmavely.com/). They expressed to me many of their community members had a hard time sharing their products, stores, and brands effectively on the app platform and came to me for expertise."
+          },
+          "solution": {
+            "en-US": "Reaccessing the entire Mavely ecosystem through an app audit to deeply understand the sharing issue the influences and creators on the platform were facing and desiging new UI flows for the sharing feature to  to increase and drive sales for all partner involved."
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1VVG8a9zILOgNOovRlMQC3"
+              }
+            }
+          },
+          "imageFloatLeft": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "0qzvCP5PZ6mMglbhiKwrJ"
+              }
+            }
+          },
+          "bodyContent": {
+            "en-US": "Native app that allows Mavely Partners to discover, shop, and share products from all the Mavely published brands. The primary share functions are designed around single product shares. Other core features include saved lists, dashboard, and activity feed. Mavely Ambassador Platform is web-based platform built to serve our B2B clients. Mavely B2B clients are looking to launch a white labeled social sales team with the Mavely tech. This Platform can be stood up for any brand in the Mavely database and appears as a Brand specific social share Ambassador Platform. The primary share feature is designed around a My Store I suggested sharing of brands for community building.\n\nThis project was done in 3-month sprints, working directly with the two founders, of which one of them was also a developer and I was their designer. User testing was also performed after the initial audit, which allowed me to dive deeper into the insights to drive my UI visual direction of the screens. It was amazing to work closely with the two founders directly as their designer.\n"
+          },
+          "imageFloatRight": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1jBW1VlkxtR1cWevFHlKWL"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "6F2uRGFiz1ET6IKwRqomws"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            },
+            {
+              "name": "assetFileSize",
+              "details": "File size must be at most 1MB",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "6F2uRGFiz1ET6IKwRqomws"
+                }
+              },
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6GyFkJ4ni8ZZNbf8jYXdQu/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 36,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "92df367d-48db-4a29-9ef7-74b4cf4e2f62"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.660Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "6m92MBYFcLcBcB76CoDfNw",
+          "type": "Entry",
+          "createdAt": "2022-10-28T20:31:55.941Z",
+          "updatedAt": "2023-08-06T20:04:06.049Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 23,
+          "publishedAt": "2023-01-25T01:25:46.063Z",
+          "firstPublishedAt": "2022-10-28T20:51:14.411Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 25,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Organics Alive Shopify Redesign"
+          },
+          "description": {
+            "en-US": "A Southern California brand that specializes in providing organic fertilizer products to cannabis growers, small and large."
+          },
+          "slug": {
+            "en-US": "organics-alive-shopify-redesign"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "VB2oFZgQDQ3NcauAJVdLC"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Website"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2HZIfx44UT7DKuKYqGvyht"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1WfHoDs5w8g1rhbxgVPhrw"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3JgqReJxunlYtkUcHiBJEl"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "Organics Alive started their online business using Wordpress, but they were using many different web apps to manage products, shipping and customer service.\n\nThe design of their Wordpress store was growing stale and they needed a major facelift to keep up with the times. They also didn’t have a mobile friendly design, which is needed for farmers who spend most of their time in the fields and not on the laptop."
+          },
+          "solution": {
+            "en-US": "We help transfer their website to Shopify, where they were able to handle majority of their business on one platform.\n\nAlong with [Jennie McGuirk](https://www.creativepollinator.com/ \"Jennie McGuirk's Portfolio Site\") & [Spark6](https://www.spark6.com \"Spark6\"), we was able to rebuild their website, based on their updated branding, which bought a cleaner look, a much improved user experience."
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "72DyplubGPGc6fDlynCjjg"
+              }
+            }
+          },
+          "postImages": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4qRquxGQlyYf1lVIzmYHTI"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "1CtlrrYutLAzuseLVKZhn1"
+                }
+              }
+            ]
+          },
+          "bodyContent": {
+            "en-US": "After redesigning Organics Alive website and moving them from Wordpress to Shopify, their returning customer sales improved by 58% by the next year. \n\nConversion rates improved 24% from the past year, meaning people are able to quickly purchase product from the farm on their phone. Because of this improved user experience and conversations, their sales grew 25% from the year before the redesign."
+          },
+          "finalMockupImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2Rz9Qx5PV24dcW6DQOOjOK"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "VB2oFZgQDQ3NcauAJVdLC"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/6m92MBYFcLcBcB76CoDfNw/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 25,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "9bc29103-d8a1-4456-a562-c99594a28f92"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.893Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "ebblsgqwail2"
+            }
+          },
+          "id": "1MplJmy9WNH1TlPUxkIrYU",
+          "type": "Entry",
+          "createdAt": "2022-10-21T18:05:20.938Z",
+          "updatedAt": "2023-08-06T20:04:06.031Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 27,
+          "publishedAt": "2022-11-24T00:26:07.761Z",
+          "firstPublishedAt": "2022-10-28T22:03:52.716Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "publishedCounter": 4,
+          "version": 29,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2k6ziWxOpV02Yv9Uthwodo"
+            }
+          },
+          "automationTags": [
+          ],
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cases"
+            }
+          }
+        },
+        "fields": {
+          "type": {
+            "en-US": "Client Work"
+          },
+          "title": {
+            "en-US": "Upbrief iOS Driver App"
+          },
+          "description": {
+            "en-US": "Upbrief is an internal iOS app for Faithful Homes to help their drivers log pick-ups and drop-offs and automate billing for admin."
+          },
+          "slug": {
+            "en-US": "upbrief-ios-driver-app"
+          },
+          "featuredImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4ztUjZDpqfpT8fFsCELqoW"
+              }
+            }
+          },
+          "delivarables": {
+            "en-US": [
+              "Mobile App",
+              "Website",
+              "Branding"
+            ]
+          },
+          "roles": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "646NVPrVNBB9FcNC7qPHRz"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "o9OyjRZtY8Z5RgIf8nGIc"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3xNPmcfFk6kwDEBQaeCiU4"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3prpdpjFtVfgPVp3kIdmd6"
+                }
+              }
+            ]
+          },
+          "verticals": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "uTEeIIK1qJAV437L0lnwK"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4vldjEd9GW6W7HpGuTYrO9"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6a47X34kG7CkhPafHajH67"
+                }
+              }
+            ]
+          },
+          "challenge": {
+            "en-US": "Drivers were logging client pickups and dropoffs using pencil and paper. The process was slow and tedious. Paper could get damaged on the route.\n\nAdmin were copying data from those paper logs to a Google spreadsheet. This made administration duties miserable because all logs had to be copied over manually. Driver’s handwriting and quality of paper logs made data admin more difficult."
+          },
+          "solution": {
+            "en-US": "Speed up client pickups and drop-off logging for drivers by automating much of the process with the iOS app.\n\nSpeed up the billing process by automating the logs and its data into easy to generate billing reports to send off to government agencies"
+          },
+          "bodyImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5q7iYiGNbv6G9pUgUFQPVA"
+              }
+            }
+          },
+          "bodyContent": {
+            "en-US": "### Driver User Journey\nTo understand the driver process, we shadowed the driver’s routes throughout the day. We experienced how drivers picked up and dropped off clients. We saw how they logged each client, how some clients behaved in the vehicle, the vehicle inspection process, etc.\n\n### Admin User Journey\nTo understand the admin process, we shadowed the the administrator, who had to retype driver logs from paper to computer. They had to make sure to organize all those paper files, while organizing the digital files in Google Drive."
+          },
+          "finalMockupImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7M7DVQjIApfBrERePjZu9d"
+              }
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "assetImageDimensions",
+              "details": "Image asset must satisfy dimensions bounds",
+              "value": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4ztUjZDpqfpT8fFsCELqoW"
+                }
+              },
+              "customMessage": "Please make dimensions 3456px x 1452px.",
+              "path": [
+                "fields",
+                "featuredImage",
+                "en-US"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/ebblsgqwail2/environments/master/entries/1MplJmy9WNH1TlPUxkIrYU/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/0.0.0-determined-by-semantic-release; feature space-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v16.20.1; os macOS/v16.20.1;",
+            "CF-Sequence": "ee7056f0-582e-4480-938f-7017df90e01a",
+            "Authorization": "Bearer ...N5qeI",
+            "X-Contentful-Version": 29,
+            "User-Agent": "axios/0.27.2"
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "b96d6d97-a2ae-41d2-a001-7eaa314484ab"
+      }
+    }
+  },
+  {
+    "ts": "2023-08-06T20:04:41.893Z",
+    "level": "error",
+    "error": "Could not publish the following entities: Monica Thy Nguyen as User Researcher (1OTL7iNaJgkMkyaBDRO2BC), How Members of Bia use ChatGPT to Get Things Done (2b76yS5ruLXrgWmh2LJCxk), Stephen Miller: The Skilled Photographer Influenced by his Mother (6hFJ8As0kBWhy0UVRqN3wI), Uses for ChatGPT as a Creative Entrepreneur (26SpTxWI5kk978o60ERsd4), The Tools I Use to Run my Business: 2023 Edition (7cGx10J1wzLFIIZaKDtXkx), Mavely App Sharing Feature (6GyFkJ4ni8ZZNbf8jYXdQu), Organics Alive Shopify Redesign (6m92MBYFcLcBcB76CoDfNw), Upbrief iOS Driver App (1MplJmy9WNH1TlPUxkIrYU)"
+  }
+]
